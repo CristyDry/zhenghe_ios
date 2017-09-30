@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="record" id="5Vy-qZ-b3s">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Vy-qZ-b3s" id="svy-6T-CQ8">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="血压" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCI-1s-dQa">
+                        <rect key="frame" x="80" y="5" width="100" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="0Sd-h9-zQh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08-20   9:30" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXL-Gy-upf">
+                        <rect key="frame" x="80" y="35" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Ymz-OP-D9D"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmhg" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqV-CL-88R">
+                        <rect key="frame" x="200" y="35" width="110" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="血压显示.png" translatesAutoresizingMaskIntoConstraints="NO" id="hi3-th-Ax5">
+                        <rect key="frame" x="10" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="0sG-0m-UPM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142/76" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJO-3F-hHR">
+                        <rect key="frame" x="200" y="5" width="110" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" red="1" green="0.2034096094" blue="0.1969700409" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZXL-Gy-upf" firstAttribute="top" secondItem="wCI-1s-dQa" secondAttribute="bottom" id="2Hk-bq-sSl"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RJO-3F-hHR" secondAttribute="trailing" constant="2" id="9pb-5K-TLq"/>
+                    <constraint firstItem="ZXL-Gy-upf" firstAttribute="baseline" secondItem="iqV-CL-88R" secondAttribute="baseline" id="EzP-iH-53w"/>
+                    <constraint firstItem="ZXL-Gy-upf" firstAttribute="trailing" secondItem="wCI-1s-dQa" secondAttribute="trailing" id="Hzt-Ul-8Uf"/>
+                    <constraint firstItem="ZXL-Gy-upf" firstAttribute="bottom" secondItem="hi3-th-Ax5" secondAttribute="bottom" id="I72-tf-mAB"/>
+                    <constraint firstItem="wCI-1s-dQa" firstAttribute="firstBaseline" secondItem="RJO-3F-hHR" secondAttribute="firstBaseline" id="Jtl-rM-ZRh"/>
+                    <constraint firstAttribute="trailing" secondItem="RJO-3F-hHR" secondAttribute="trailing" constant="40" id="KUR-3B-1iF"/>
+                    <constraint firstAttribute="trailing" secondItem="iqV-CL-88R" secondAttribute="trailing" constant="20" symbolic="YES" id="MZg-ug-yp6"/>
+                    <constraint firstItem="RJO-3F-hHR" firstAttribute="baseline" secondItem="wCI-1s-dQa" secondAttribute="baseline" id="Ww8-ZM-3vM"/>
+                    <constraint firstItem="hi3-th-Ax5" firstAttribute="leading" secondItem="svy-6T-CQ8" secondAttribute="leadingMargin" constant="2" id="XJB-k9-KRP"/>
+                    <constraint firstItem="wCI-1s-dQa" firstAttribute="leading" secondItem="hi3-th-Ax5" secondAttribute="trailing" constant="20" id="XTn-X2-eZ9"/>
+                    <constraint firstItem="RJO-3F-hHR" firstAttribute="leading" secondItem="wCI-1s-dQa" secondAttribute="trailing" constant="20" id="YBW-GQ-FRj"/>
+                    <constraint firstItem="iqV-CL-88R" firstAttribute="leading" secondItem="RJO-3F-hHR" secondAttribute="leading" id="dw7-pE-Zay"/>
+                    <constraint firstItem="hi3-th-Ax5" firstAttribute="top" secondItem="svy-6T-CQ8" secondAttribute="topMargin" constant="-3" id="fXL-Jn-iHd"/>
+                    <constraint firstItem="wCI-1s-dQa" firstAttribute="top" secondItem="hi3-th-Ax5" secondAttribute="top" id="gZV-Fv-sY2"/>
+                    <constraint firstItem="hi3-th-Ax5" firstAttribute="centerY" secondItem="svy-6T-CQ8" secondAttribute="centerY" id="jfb-VD-osN"/>
+                    <constraint firstItem="iqV-CL-88R" firstAttribute="firstBaseline" secondItem="ZXL-Gy-upf" secondAttribute="firstBaseline" id="o7m-f5-Iol"/>
+                    <constraint firstItem="RJO-3F-hHR" firstAttribute="trailing" secondItem="iqV-CL-88R" secondAttribute="trailing" id="pC0-fT-3tt"/>
+                    <constraint firstItem="wCI-1s-dQa" firstAttribute="leading" secondItem="ZXL-Gy-upf" secondAttribute="leading" id="sbx-Ki-nIt"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="KUR-3B-1iF"/>
+                        <exclude reference="MZg-ug-yp6"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="253" y="245"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="血压显示.png" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "07800f20-db3e-2f46-9cb6-c941a9d87fd2++2044",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "07800f20-db3e-2f46-9cb6-c941a9d87fd2++2044" : {
+
+    },
+    "07800f20-db3e-2f46-9cb6-c941a9d87fd2++1667" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "07800f20-db3e-2f46-9cb6-c941a9d87fd2++2044" : 0,
+    "07800f20-db3e-2f46-9cb6-c941a9d87fd2++1667" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CC853B37-D386-4A49-BC5F-F0D95DDA3430",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "07800f20-db3e-2f46-9cb6-c941a9d87fd2++2044" : "%E6%AD%A3%E5%90%88%E5%8C%BB%E7%96%97\/",
+    "07800f20-db3e-2f46-9cb6-c941a9d87fd2++1667" : "%E6%AD%A3%E5%92%8C%E5%8C%BB%E7%96%97\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZHHealth",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZHHealth.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/114.215.211.117:8088\/svn\/Medical_IOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "07800f20-db3e-2f46-9cb6-c941a9d87fd2++1667"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/114.215.211.117:8088\/svn\/Medical_IOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "07800f20-db3e-2f46-9cb6-c941a9d87fd2++2044"
+    }
+  ]
+}

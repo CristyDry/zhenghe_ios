@@ -1,0 +1,99 @@
+//
+//  ZHMedical.pch
+//  ZHMedical
+//
+//  Created by U1KJ on 15/11/6.
+//  Copyright © 2015年 U1KJ. All rights reserved.
+//
+
+#ifndef ZHMedical_pch
+#define ZHMedical_pch
+
+#ifdef __OBJC__
+
+//#define serverce_address @"http://120.24.97.63:8080/zhenghe/"
+#define serverce_address @"http://39.108.10.173:8080/zhenghe/"
+
+
+#define kToken [AppConfig getMiPushToken]
+#define kUserIdKey @"userIdKey"
+
+#define kUserDefaults [NSUserDefaults standardUserDefaults] // 数据存储
+#define kDateFormatter [[NSDateFormatter alloc] init]
+
+#define kMainWidth [[UIScreen mainScreen] bounds].size.width   // 屏幕的宽度
+#define kMainHeight [[UIScreen mainScreen] bounds].size.height   // 屏幕的高度
+#define KTopLayoutGuideHeight 64                // 状态栏和导航栏的高度
+#define KBottomLayoutGuideHeight 49                // 工具栏的高度
+#define kBorder 20             // 左右的边距
+
+#define KFont 20                 // 字体大小
+
+//自动适配宽度,width为原始iphone4/5的宽度
+#define AUTO_MATE_WIDTH(width) ((width) * kMainWidth / 320.0)
+//自动适配宽度,width为原始iphone4/5的高度
+#define AUTO_MATE_HEIGHT(height) ((height) * kMainHeight / 568.0)
+
+#define kBlackColor [UIColor colorWithHexString:@"#2a2a2a"]
+#define kGrayColor  [UIColor colorWithHexString:@"#999999"]
+#define kBackgroundColor [UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1]    // 视图背景颜色
+#define kNavigationBarColor [UIColor colorWithHexString:@"#05b7c3"]  // 导航栏背景的颜色
+#define KLineColor [UIColor colorWithHexString:@"#cccccc"]    // 线的颜色
+#define kAlertViewColor [UIColor colorWithHexString:@"#F5F5F5"]
+
+
+//客户端显示版本号
+#define kSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
+
+/**
+ *	@brief	调试输出
+ */
+#ifdef DEBUG
+#define CLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define CLog(format, ...)
+#endif
+
+#import "Tools.h"
+#import "ModeTextView.h"
+#import "ResponseModel.h"
+#import "httpUtil.h"
+#import "AppConfig.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "SelectPhotosTools.h"
+#import "NSData+ImageContentType.h"
+#import "SDImageCache.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "AFNetworking.h"
+#import "SDCycleScrollView.h"       // 图片轮播
+#import "TPKeyboardAvoidingScrollView.h"
+#import "SAMTextView.h"
+#import "CustomTools.h"
+#import "CoreArchive.h"
+#import "SSKeychain.h"
+#import "MBProgressHUD.h"
+#import "HZAreaPickerView.h"    // 地区选择器
+#import "RegExpValidate.h"
+#import "iOSMD5.h"
+#import "BaseTabBarController.h"
+#import "UIColor+Toos.h"
+#import "LoginResponseAccount.h"//患者登录信息
+#import "HLTLoginResponseAccount.h"//医生登陆信息
+#import "HLTLoginViewController.h"//医生登录界面
+#import "RegExpValidate.h" // 验证正则表达式
+//加入这句宏   可以不用使用mas_前缀
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+// 自定义的分类
+#import "CustomExtension.h"
+
+typedef  void(^ActionCallBlock)(id obj);
+
+#endif
+
+#endif
