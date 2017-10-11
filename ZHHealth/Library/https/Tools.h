@@ -13,6 +13,8 @@
 #define kMainWidth    [[UIScreen mainScreen] bounds].size.width
 /** 显示器屏幕的高度 */
 #define kMainHeight   [[UIScreen mainScreen] bounds].size.height
+/** 我的处方界面的 storyboard 布局 */
+#define GetPrescriptionStoryboard ([UIStoryboard storyboardWithName:@"myPrescription" bundle:nil])
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>

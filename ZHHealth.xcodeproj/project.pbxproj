@@ -302,6 +302,36 @@
 		18FDE53D1C3B588400DC510A /* BZProductListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDE53C1C3B588400DC510A /* BZProductListController.m */; };
 		18FDE5401C3B5D4A00DC510A /* BZProductListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDE53F1C3B5D4A00DC510A /* BZProductListCell.m */; };
 		18FDE5431C3B969C00DC510A /* BZOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDE5421C3B969C00DC510A /* BZOrderDetailController.m */; };
+		4812B7931F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B78F1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m */; };
+		4812B7941F8D35240087D2C9 /* myPrescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7901F8D35240087D2C9 /* myPrescription.storyboard */; };
+		4812B7951F8D35240087D2C9 /* MyPrescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B7921F8D35240087D2C9 /* MyPrescriptionViewController.m */; };
+		4812B7A21F8D35B10087D2C9 /* sexNoSel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7991F8D35B10087D2C9 /* sexNoSel.png */; };
+		4812B7A31F8D35B10087D2C9 /* sexNoSel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79A1F8D35B10087D2C9 /* sexNoSel@2x.png */; };
+		4812B7A41F8D35B10087D2C9 /* sexNoSel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79B1F8D35B10087D2C9 /* sexNoSel@3x.png */; };
+		4812B7A51F8D35B10087D2C9 /* sexSel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79C1F8D35B10087D2C9 /* sexSel.png */; };
+		4812B7A61F8D35B10087D2C9 /* sexSel@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79D1F8D35B10087D2C9 /* sexSel@2.png */; };
+		4812B7A71F8D35B10087D2C9 /* sexSel@3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79E1F8D35B10087D2C9 /* sexSel@3.png */; };
+		4812B7DB1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D21F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png */; };
+		4812B7DC1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D31F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png */; };
+		4812B7DD1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D41F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png */; };
+		4812B7DE1F8D36480087D2C9 /* 圆角矩形-1-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D51F8D36480087D2C9 /* 圆角矩形-1-拷贝.png */; };
+		4812B7DF1F8D36480087D2C9 /* 圆角矩形-1-拷贝@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D61F8D36480087D2C9 /* 圆角矩形-1-拷贝@2x.png */; };
+		4812B7E01F8D36480087D2C9 /* 圆角矩形-1-拷贝@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D71F8D36480087D2C9 /* 圆角矩形-1-拷贝@3x.png */; };
+		4812B7E11F8D36480087D2C9 /* 圆角矩形-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D81F8D36480087D2C9 /* 圆角矩形-1.png */; };
+		4812B7E21F8D36480087D2C9 /* 圆角矩形-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D91F8D36480087D2C9 /* 圆角矩形-1@2x.png */; };
+		4812B7E31F8D36480087D2C9 /* 圆角矩形-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7DA1F8D36480087D2C9 /* 圆角矩形-1@3x.png */; };
+		4812B7EA1F8D36600087D2C9 /* 后退-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7E41F8D365F0087D2C9 /* 后退-拷贝.png */; };
+		4812B7EB1F8D36600087D2C9 /* 后退-拷贝@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7E51F8D36600087D2C9 /* 后退-拷贝@2x.png */; };
+		4812B7EC1F8D36600087D2C9 /* 后退-拷贝@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7E61F8D36600087D2C9 /* 后退-拷贝@3x.png */; };
+		4812B7ED1F8D36600087D2C9 /* iconfont-gengduo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7E71F8D36600087D2C9 /* iconfont-gengduo-2.png */; };
+		4812B7EE1F8D36600087D2C9 /* iconfont-gengduo-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7E81F8D36600087D2C9 /* iconfont-gengduo-2@2x.png */; };
+		4812B7EF1F8D36600087D2C9 /* iconfont-gengduo-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7E91F8D36600087D2C9 /* iconfont-gengduo-2@3x.png */; };
+		4812B7F31F8D36B80087D2C9 /* diagnosis_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7F01F8D36B80087D2C9 /* diagnosis_icon.png */; };
+		4812B7F41F8D36B80087D2C9 /* diagnosis_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7F11F8D36B80087D2C9 /* diagnosis_icon@2x.png */; };
+		4812B7F51F8D36B80087D2C9 /* diagnosis_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7F21F8D36B80087D2C9 /* diagnosis_icon@3x.png */; };
+		4812B7F91F8D36CF0087D2C9 /* icon_ChuFang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7F61F8D36CF0087D2C9 /* icon_ChuFang.png */; };
+		4812B7FA1F8D36CF0087D2C9 /* icon_ChuFang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7F71F8D36CF0087D2C9 /* icon_ChuFang@2x.png */; };
+		4812B7FB1F8D36CF0087D2C9 /* icon_ChuFang@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7F81F8D36CF0087D2C9 /* icon_ChuFang@3x.png */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1536,6 +1566,38 @@
 		18FDE53F1C3B5D4A00DC510A /* BZProductListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZProductListCell.m; sourceTree = "<group>"; };
 		18FDE5411C3B969C00DC510A /* BZOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZOrderDetailController.h; sourceTree = "<group>"; };
 		18FDE5421C3B969C00DC510A /* BZOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZOrderDetailController.m; sourceTree = "<group>"; };
+		4812B78E1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTPrescriptionHistoryViewControllerViewController.h; sourceTree = "<group>"; };
+		4812B78F1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTPrescriptionHistoryViewControllerViewController.m; sourceTree = "<group>"; };
+		4812B7901F8D35240087D2C9 /* myPrescription.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = myPrescription.storyboard; sourceTree = "<group>"; };
+		4812B7911F8D35240087D2C9 /* MyPrescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPrescriptionViewController.h; sourceTree = "<group>"; };
+		4812B7921F8D35240087D2C9 /* MyPrescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPrescriptionViewController.m; sourceTree = "<group>"; };
+		4812B7991F8D35B10087D2C9 /* sexNoSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sexNoSel.png; sourceTree = "<group>"; };
+		4812B79A1F8D35B10087D2C9 /* sexNoSel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sexNoSel@2x.png"; sourceTree = "<group>"; };
+		4812B79B1F8D35B10087D2C9 /* sexNoSel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sexNoSel@3x.png"; sourceTree = "<group>"; };
+		4812B79C1F8D35B10087D2C9 /* sexSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sexSel.png; sourceTree = "<group>"; };
+		4812B79D1F8D35B10087D2C9 /* sexSel@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sexSel@2.png"; sourceTree = "<group>"; };
+		4812B79E1F8D35B10087D2C9 /* sexSel@3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sexSel@3.png"; sourceTree = "<group>"; };
+		4812B7D21F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1-拷贝-5.png"; sourceTree = "<group>"; };
+		4812B7D31F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1-拷贝-5@2x.png"; sourceTree = "<group>"; };
+		4812B7D41F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1-拷贝-5@3x.png"; sourceTree = "<group>"; };
+		4812B7D51F8D36480087D2C9 /* 圆角矩形-1-拷贝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1-拷贝.png"; sourceTree = "<group>"; };
+		4812B7D61F8D36480087D2C9 /* 圆角矩形-1-拷贝@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1-拷贝@2x.png"; sourceTree = "<group>"; };
+		4812B7D71F8D36480087D2C9 /* 圆角矩形-1-拷贝@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1-拷贝@3x.png"; sourceTree = "<group>"; };
+		4812B7D81F8D36480087D2C9 /* 圆角矩形-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1.png"; sourceTree = "<group>"; };
+		4812B7D91F8D36480087D2C9 /* 圆角矩形-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@2x.png"; sourceTree = "<group>"; };
+		4812B7DA1F8D36480087D2C9 /* 圆角矩形-1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@3x.png"; sourceTree = "<group>"; };
+		4812B7E41F8D365F0087D2C9 /* 后退-拷贝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "后退-拷贝.png"; sourceTree = "<group>"; };
+		4812B7E51F8D36600087D2C9 /* 后退-拷贝@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "后退-拷贝@2x.png"; sourceTree = "<group>"; };
+		4812B7E61F8D36600087D2C9 /* 后退-拷贝@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "后退-拷贝@3x.png"; sourceTree = "<group>"; };
+		4812B7E71F8D36600087D2C9 /* iconfont-gengduo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-gengduo-2.png"; sourceTree = "<group>"; };
+		4812B7E81F8D36600087D2C9 /* iconfont-gengduo-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-gengduo-2@2x.png"; sourceTree = "<group>"; };
+		4812B7E91F8D36600087D2C9 /* iconfont-gengduo-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-gengduo-2@3x.png"; sourceTree = "<group>"; };
+		4812B7F01F8D36B80087D2C9 /* diagnosis_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagnosis_icon.png; sourceTree = "<group>"; };
+		4812B7F11F8D36B80087D2C9 /* diagnosis_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diagnosis_icon@2x.png"; sourceTree = "<group>"; };
+		4812B7F21F8D36B80087D2C9 /* diagnosis_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diagnosis_icon@3x.png"; sourceTree = "<group>"; };
+		4812B7F61F8D36CF0087D2C9 /* icon_ChuFang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ChuFang.png; sourceTree = "<group>"; };
+		4812B7F71F8D36CF0087D2C9 /* icon_ChuFang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ChuFang@2x.png"; sourceTree = "<group>"; };
+		4812B7F81F8D36CF0087D2C9 /* icon_ChuFang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ChuFang@3x.png"; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -3545,6 +3607,18 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		4812B78D1F8D35240087D2C9 /* 我的处方 */ = {
+			isa = PBXGroup;
+			children = (
+				4812B78E1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.h */,
+				4812B78F1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m */,
+				4812B7901F8D35240087D2C9 /* myPrescription.storyboard */,
+				4812B7911F8D35240087D2C9 /* MyPrescriptionViewController.h */,
+				4812B7921F8D35240087D2C9 /* MyPrescriptionViewController.m */,
+			);
+			path = "我的处方";
+			sourceTree = "<group>";
+		};
 		DB8C72FF1BFC1CFA0033E5E8 = {
 			isa = PBXGroup;
 			children = (
@@ -4172,6 +4246,33 @@
 		DB8C74CD1BFC1D580033E5E8 /* iOS切图 */ = {
 			isa = PBXGroup;
 			children = (
+				4812B7F61F8D36CF0087D2C9 /* icon_ChuFang.png */,
+				4812B7F71F8D36CF0087D2C9 /* icon_ChuFang@2x.png */,
+				4812B7F81F8D36CF0087D2C9 /* icon_ChuFang@3x.png */,
+				4812B7F01F8D36B80087D2C9 /* diagnosis_icon.png */,
+				4812B7F11F8D36B80087D2C9 /* diagnosis_icon@2x.png */,
+				4812B7F21F8D36B80087D2C9 /* diagnosis_icon@3x.png */,
+				4812B7E41F8D365F0087D2C9 /* 后退-拷贝.png */,
+				4812B7E51F8D36600087D2C9 /* 后退-拷贝@2x.png */,
+				4812B7E61F8D36600087D2C9 /* 后退-拷贝@3x.png */,
+				4812B7E71F8D36600087D2C9 /* iconfont-gengduo-2.png */,
+				4812B7E81F8D36600087D2C9 /* iconfont-gengduo-2@2x.png */,
+				4812B7E91F8D36600087D2C9 /* iconfont-gengduo-2@3x.png */,
+				4812B7D21F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png */,
+				4812B7D31F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png */,
+				4812B7D41F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png */,
+				4812B7D51F8D36480087D2C9 /* 圆角矩形-1-拷贝.png */,
+				4812B7D61F8D36480087D2C9 /* 圆角矩形-1-拷贝@2x.png */,
+				4812B7D71F8D36480087D2C9 /* 圆角矩形-1-拷贝@3x.png */,
+				4812B7D81F8D36480087D2C9 /* 圆角矩形-1.png */,
+				4812B7D91F8D36480087D2C9 /* 圆角矩形-1@2x.png */,
+				4812B7DA1F8D36480087D2C9 /* 圆角矩形-1@3x.png */,
+				4812B7991F8D35B10087D2C9 /* sexNoSel.png */,
+				4812B79A1F8D35B10087D2C9 /* sexNoSel@2x.png */,
+				4812B79B1F8D35B10087D2C9 /* sexNoSel@3x.png */,
+				4812B79C1F8D35B10087D2C9 /* sexSel.png */,
+				4812B79D1F8D35B10087D2C9 /* sexSel@2.png */,
+				4812B79E1F8D35B10087D2C9 /* sexSel@3.png */,
 				F4C214E81C2B8BA900CF0343 /* icon_1.png */,
 				F4C214E91C2B8BA900CF0343 /* icon_1@2x.png */,
 				F4C214EA1C2B8BA900CF0343 /* icon_1@3x.png */,
@@ -5020,6 +5121,7 @@
 				F486F0351C27E7DE00F624C8 /* 患者申请 */,
 				F486F0301C27E7DE00F624C8 /* 分组管理 */,
 				F486F0381C27E7DE00F624C8 /* 我的名片 */,
+				4812B78D1F8D35240087D2C9 /* 我的处方 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5507,6 +5609,7 @@
 				DB8C76171BFC1D580033E5E8 /* 血压显示.png in Resources */,
 				DB8C75481BFC1D580033E5E8 /* 五官用药@2x.png in Resources */,
 				DB8C754A1BFC1D580033E5E8 /* 儿童专场.png in Resources */,
+				4812B7FB1F8D36CF0087D2C9 /* icon_ChuFang@3x.png in Resources */,
 				DB8C76511BFC1D580033E5E8 /* iconfont-jianpan-(1)@2x.png in Resources */,
 				DB8C79031BFC69060033E5E8 /* 矩形-2@3x.png in Resources */,
 				DB8C75951BFC1D580033E5E8 /* 轮播图圆圈-拷贝-2.png in Resources */,
@@ -5514,7 +5617,9 @@
 				DB8C75D01BFC1D580033E5E8 /* background@3x.png in Resources */,
 				1832BA1F1C31397900905755 /* iconfont-lumigouff580e-2@2x.png in Resources */,
 				183305B91C16855D008A4159 /* u349.png in Resources */,
+				4812B7941F8D35240087D2C9 /* myPrescription.storyboard in Resources */,
 				DB8C75611BFC1D580033E5E8 /* 图层-19@3x.png in Resources */,
+				4812B7A31F8D35B10087D2C9 /* sexNoSel@2x.png in Resources */,
 				DB8C76491BFC1D580033E5E8 /* 椭圆-1-拷贝@3x.png in Resources */,
 				DB8C768E1BFC1D580033E5E8 /* iconfont-automatic-configuration@3x.png in Resources */,
 				DB8C75511BFC1D580033E5E8 /* 12@2x.png in Resources */,
@@ -5586,6 +5691,7 @@
 				DB8C753E1BFC1D580033E5E8 /* rx.png in Resources */,
 				DB8C75A21BFC1D580033E5E8 /* 退烧止痛@2x.png in Resources */,
 				DB8C761A1BFC1D580033E5E8 /* 设置.png in Resources */,
+				4812B7DB1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png in Resources */,
 				DB8C76CE1BFC1D580033E5E8 /* 医生头像.png in Resources */,
 				DB8C766B1BFC1D580033E5E8 /* iconfont-zhishiku.png in Resources */,
 				DB8C757A1BFC1D580033E5E8 /* 找医生.png in Resources */,
@@ -5594,6 +5700,7 @@
 				DB8C765C1BFC1D580033E5E8 /* 后退12.png in Resources */,
 				DB8C75561BFC1D580033E5E8 /* 图层-16.png in Resources */,
 				DB8C76471BFC1D580033E5E8 /* 椭圆-1-拷贝.png in Resources */,
+				4812B7F41F8D36B80087D2C9 /* diagnosis_icon@2x.png in Resources */,
 				DB8C76BA1BFC1D580033E5E8 /* iconfont-shezhi-2.png in Resources */,
 				DB8C75601BFC1D580033E5E8 /* 图层-19@2x.png in Resources */,
 				DB8C75411BFC1D580033E5E8 /* 专家会诊.png in Resources */,
@@ -5641,6 +5748,7 @@
 				DB8C769A1BFC1D580033E5E8 /* iconfont-collect.png in Resources */,
 				DB8C76AE1BFC1D580033E5E8 /* iconfont-bianji-5.png in Resources */,
 				DB8C75C31BFC1D580033E5E8 /* 背景-拷贝@2x.png in Resources */,
+				4812B7A71F8D35B10087D2C9 /* sexSel@3.png in Resources */,
 				DB8C76541BFC1D580033E5E8 /* iconfont-yonghutouxiang@2x.png in Resources */,
 				DB8C75C81BFC1D580033E5E8 /* 快速导航栏.png in Resources */,
 				183305BD1C16855D008A4159 /* u389.png in Resources */,
@@ -5659,6 +5767,7 @@
 				DB8C759B1BFC1D580033E5E8 /* 轮播图圆圈.png in Resources */,
 				F4C214F11C2B8BA900CF0343 /* icon_2.png in Resources */,
 				DB8C76901BFC1D580033E5E8 /* iconfont-zhanghu@2x.png in Resources */,
+				4812B7A41F8D35B10087D2C9 /* sexNoSel@3x.png in Resources */,
 				DB8C75881BFC1D580033E5E8 /* 椭圆-1-拷贝-2@3x.png in Resources */,
 				DB8C76B21BFC1D580033E5E8 /* iconfont-fenxiang-3@2x.png in Resources */,
 				DB8C75C91BFC1D580033E5E8 /* 快速导航栏@2x.png in Resources */,
@@ -5671,6 +5780,7 @@
 				183CFEBC1C17D56300029DC0 /* u23.png in Resources */,
 				DB8C78F51BFC65A50033E5E8 /* iconfont-gou-2.png in Resources */,
 				DB8C75ED1BFC1D580033E5E8 /* iconfont-shenghuofuwu@2x.png in Resources */,
+				4812B7DD1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png in Resources */,
 				DB8C765F1BFC1D580033E5E8 /* 图文咨询框.png in Resources */,
 				DB8C75A71BFC1D580033E5E8 /* iconfont-zhishiku.png in Resources */,
 				DB8C75A11BFC1D580033E5E8 /* 退烧止痛.png in Resources */,
@@ -5703,6 +5813,7 @@
 				DB8C75E51BFC1D580033E5E8 /* iconfont-iconfontcolor23@3x.png in Resources */,
 				183305AE1C16855D008A4159 /* u162.png in Resources */,
 				18A4F6611C2A541100C7E13B /* 添加图片.png in Resources */,
+				4812B7EC1F8D36600087D2C9 /* 后退-拷贝@3x.png in Resources */,
 				DB8C76A41BFC1D580033E5E8 /* iconfont-xihuan-拷贝@2x.png in Resources */,
 				DB8C75751BFC1D580033E5E8 /* 感冒咳嗽@2x.png in Resources */,
 				DB8C75DD1BFC1D580033E5E8 /* iconfont-fenxiang-3.png in Resources */,
@@ -5721,8 +5832,10 @@
 				189068061C27B34900BB833B /* iconfont-tianjia.png in Resources */,
 				183305C11C16855D008A4159 /* u449.png in Resources */,
 				DB8C76851BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@3x.png in Resources */,
+				4812B7ED1F8D36600087D2C9 /* iconfont-gengduo-2.png in Resources */,
 				DB8C75DE1BFC1D580033E5E8 /* iconfont-fenxiang-3@2x.png in Resources */,
 				DB8C75921BFC1D580033E5E8 /* 购物车红点.png in Resources */,
+				4812B7FA1F8D36CF0087D2C9 /* icon_ChuFang@2x.png in Resources */,
 				187C17F51F7DF9D100A02BA9 /* ShareSDKConfigFile.bundle in Resources */,
 				DB8C75331BFC1D580033E5E8 /* iconfont-sousuo@2x.png in Resources */,
 				DB8C766F1BFC1D580033E5E8 /* shape-232.png in Resources */,
@@ -5745,9 +5858,11 @@
 				DB8C767D1BFC1D580033E5E8 /* 形状-12@3x.png in Resources */,
 				1896A76D1C0444C7009562BF /* u21.png in Resources */,
 				DB8C76AF1BFC1D580033E5E8 /* iconfont-bianji-5@2x.png in Resources */,
+				4812B7F91F8D36CF0087D2C9 /* icon_ChuFang.png in Resources */,
 				183305D11C16855D008A4159 /* u95.png in Resources */,
 				DB8C76C81BFC1D580033E5E8 /* 后退-拷贝@3x.png in Resources */,
 				DB8C76B91BFC1D580033E5E8 /* iconfont-miandarao@3x.png in Resources */,
+				4812B7A21F8D35B10087D2C9 /* sexNoSel.png in Resources */,
 				DB8C76951BFC1D580033E5E8 /* 我的诊室_spec.png in Resources */,
 				DB8C75DC1BFC1D580033E5E8 /* iconfont-dongtaiyemianxiaotubiao03@3x.png in Resources */,
 				DB8C78C51BFC1D850033E5E8 /* pinyinDictUTF8.plist in Resources */,
@@ -5775,6 +5890,7 @@
 				DB8C76231BFC1D580033E5E8 /* 圆角矩形-1-拷贝.png in Resources */,
 				183305BF1C16855D008A4159 /* u431.png in Resources */,
 				DB8C76641BFC1D580033E5E8 /* 圆角矩形-1-拷贝-2@3x.png in Resources */,
+				4812B7E01F8D36480087D2C9 /* 圆角矩形-1-拷贝@3x.png in Resources */,
 				182E8D681C43A996003767EE /* AlipaySDK.bundle in Resources */,
 				DB8C75431BFC1D580033E5E8 /* 专家会诊@3x.png in Resources */,
 				DB8C76651BFC1D580033E5E8 /* 圆角矩形-1-拷贝.png in Resources */,
@@ -5828,13 +5944,16 @@
 				DB8C760F1BFC1D580033E5E8 /* 电子病例@2x.png in Resources */,
 				DB8C764D1BFC1D580033E5E8 /* iconfont-biaoqing.png in Resources */,
 				DB8C76871BFC1D580033E5E8 /* 圆角矩形-1-拷贝@2x.png in Resources */,
+				4812B7EB1F8D36600087D2C9 /* 后退-拷贝@2x.png in Resources */,
 				DB8C75631BFC1D580033E5E8 /* 图层-20@2x.png in Resources */,
 				F4A8746C1C58668B0016788A /* release_notes_ios.txt in Resources */,
+				4812B7EE1F8D36600087D2C9 /* iconfont-gengduo-2@2x.png in Resources */,
 				DB8C754E1BFC1D580033E5E8 /* 后退-拷贝-2@2x.png in Resources */,
 				DB8C761B1BFC1D580033E5E8 /* 设置@2x.png in Resources */,
 				DB8C758F1BFC1D580033E5E8 /* 肠胃不适.png in Resources */,
 				DB8C754F1BFC1D580033E5E8 /* 后退-拷贝-2@3x.png in Resources */,
 				DB8C76AB1BFC1D580033E5E8 /* 后退12@3x.png in Resources */,
+				4812B7F51F8D36B80087D2C9 /* diagnosis_icon@3x.png in Resources */,
 				1896A7731C0444C7009562BF /* u74.png in Resources */,
 				DB8C756E1BFC1D580033E5E8 /* 家常必备.png in Resources */,
 				DB8C75C11BFC1D580033E5E8 /* 形状-8@3x.png in Resources */,
@@ -5860,6 +5979,7 @@
 				DB8C75D21BFC1D580033E5E8 /* iconfont-baoji@2x.png in Resources */,
 				DB8C75F21BFC1D580033E5E8 /* iconfont-yijianfankui.png in Resources */,
 				183305CF1C16855D008A4159 /* u72.png in Resources */,
+				4812B7A61F8D35B10087D2C9 /* sexSel@2.png in Resources */,
 				183305CC1C16855D008A4159 /* u540.png in Resources */,
 				DB8C75461BFC1D580033E5E8 /* 二维码框@3x.png in Resources */,
 				DB8C752B1BFC1D580033E5E8 /* iconfont-lumigouff580e@3x.png in Resources */,
@@ -5869,6 +5989,7 @@
 				DB8C75901BFC1D580033E5E8 /* 肠胃不适@2x.png in Resources */,
 				185A057F1C3A19830075F36A /* 201579103655.png in Resources */,
 				DB8C75D71BFC1D580033E5E8 /* iconfont-dingdan.png in Resources */,
+				4812B7EF1F8D36600087D2C9 /* iconfont-gengduo-2@3x.png in Resources */,
 				DB8C76A21BFC1D580033E5E8 /* iconfont-fenxiang-2@3x.png in Resources */,
 				183305CE1C16855D008A4159 /* u60.png in Resources */,
 				183305C31C16855D008A4159 /* u451.png in Resources */,
@@ -5876,6 +5997,7 @@
 				DB8C76371BFC1D580033E5E8 /* iconfont-fenxiang-2@3x.png in Resources */,
 				DB8C75731BFC1D580033E5E8 /* 心脑血管@3x.png in Resources */,
 				DB8C75F51BFC1D580033E5E8 /* 三点.png in Resources */,
+				4812B7EA1F8D36600087D2C9 /* 后退-拷贝.png in Resources */,
 				DB8C76CF1BFC1D580033E5E8 /* 导航栏.png in Resources */,
 				DB8C78FF1BFC69060033E5E8 /* 矩形-1@2x.png in Resources */,
 				DB8C76CD1BFC1D580033E5E8 /* 引导页4.png in Resources */,
@@ -5896,6 +6018,7 @@
 				DB8C757C1BFC1D580033E5E8 /* 找医生@3x.png in Resources */,
 				DB8C75871BFC1D580033E5E8 /* 椭圆-1-拷贝-2@2x.png in Resources */,
 				185A05871C3A19830075F36A /* u=1000341566,1853476192&fm=21&gp=0.png in Resources */,
+				4812B7DC1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png in Resources */,
 				F4C214F21C2B8BA900CF0343 /* icon_2@2x.png in Resources */,
 				DB8C76501BFC1D580033E5E8 /* iconfont-jianpan-(1).png in Resources */,
 				18F7DA631C44FDC6007A298E /* aaaaa.jsp in Resources */,
@@ -5944,9 +6067,11 @@
 				DB8C76A61BFC1D580033E5E8 /* iconfont-xihuan.png in Resources */,
 				DB8C75D51BFC1D580033E5E8 /* iconfont-cart@2x.png in Resources */,
 				DB8C75261BFC1D580033E5E8 /* iconfont-iconfontscan.png in Resources */,
+				4812B7DF1F8D36480087D2C9 /* 圆角矩形-1-拷贝@2x.png in Resources */,
 				DB8C752F1BFC1D580033E5E8 /* iconfont-shucai.png in Resources */,
 				185A05921C3A47F60075F36A /* 头像@3x.png in Resources */,
 				185A058A1C3A19830075F36A /* u=1000341566,1853476192&fm=21&gp=0.png in Resources */,
+				4812B7E11F8D36480087D2C9 /* 圆角矩形-1.png in Resources */,
 				1896A7701C0444C7009562BF /* u37.png in Resources */,
 				DB8C75211BFC1D580033E5E8 /* iconfont-ertongyouhui@2x.png in Resources */,
 				18F3C1FC1C1BB8E10084EE47 /* ic_error.png in Resources */,
@@ -5968,6 +6093,7 @@
 				DB8C76121BFC1D580033E5E8 /* 组-1-拷贝@2x.png in Resources */,
 				DB8C76A31BFC1D580033E5E8 /* iconfont-xihuan-拷贝.png in Resources */,
 				DB8C75AE1BFC1D580033E5E8 /* shape-23@2x.png in Resources */,
+				4812B7E31F8D36480087D2C9 /* 圆角矩形-1@3x.png in Resources */,
 				DB8C76031BFC1D580033E5E8 /* 圆角矩形-2@2x.png in Resources */,
 				DB8C757E1BFC1D580033E5E8 /* 搜索框@2x.png in Resources */,
 				DB8C763B1BFC1D580033E5E8 /* iconfont-xihuan-拷贝.png in Resources */,
@@ -5987,11 +6113,13 @@
 				DB8C75B51BFC1D580033E5E8 /* 图层-9@3x.png in Resources */,
 				DB8C767E1BFC1D580033E5E8 /* 形状-1@2x.png in Resources */,
 				DB8C769D1BFC1D580033E5E8 /* iconfont-fenxiang-2-拷贝.png in Resources */,
+				4812B7A51F8D35B10087D2C9 /* sexSel.png in Resources */,
 				185A058C1C3A19830075F36A /* u=1000341566,1853476192&fm=21&gp=0@3x.png in Resources */,
 				F4C214EF1C2B8BA900CF0343 /* icon_1@2x.png in Resources */,
 				185A05911C3A47F60075F36A /* 头像@2x.png in Resources */,
 				DB8C752D1BFC1D580033E5E8 /* iconfont-pifu@2x.png in Resources */,
 				DB8C75B31BFC1D580033E5E8 /* 图层-9.png in Resources */,
+				4812B7DE1F8D36480087D2C9 /* 圆角矩形-1-拷贝.png in Resources */,
 				DB8C75641BFC1D580033E5E8 /* 图层-20@3x.png in Resources */,
 				DB8C764E1BFC1D580033E5E8 /* iconfont-biaoqing@2x.png in Resources */,
 				183305AB1C16855D008A4159 /* u133.png in Resources */,
@@ -6057,6 +6185,7 @@
 				DB8C75291BFC1D580033E5E8 /* iconfont-lumigouff580e.png in Resources */,
 				183305B11C16855D008A4159 /* u20.png in Resources */,
 				DB8C769F1BFC1D580033E5E8 /* iconfont-fenxiang-2-拷贝@3x.png in Resources */,
+				4812B7F31F8D36B80087D2C9 /* diagnosis_icon.png in Resources */,
 				5B1DB55E1EC55CD500374BA7 /* Info.plist in Resources */,
 				DB8C75E61BFC1D580033E5E8 /* iconfont-phone-2.png in Resources */,
 				DB8C76AC1BFC1D580033E5E8 /* 知识百科.png in Resources */,
@@ -6069,6 +6198,7 @@
 				F488D0091C16A86E003059D4 /* u184.png in Resources */,
 				DB8C761C1BFC1D580033E5E8 /* 设置@3x.png in Resources */,
 				DB8C76811BFC1D580033E5E8 /* 形状-2@2x.png in Resources */,
+				4812B7E21F8D36480087D2C9 /* 圆角矩形-1@2x.png in Resources */,
 				185A05881C3A19830075F36A /* 201579103655.png in Resources */,
 				DB8C75BF1BFC1D580033E5E8 /* 形状-8.png in Resources */,
 				DB8C75581BFC1D580033E5E8 /* 图层-16@3x.png in Resources */,
@@ -6145,6 +6275,7 @@
 				180420751C2530B20031D099 /* BZHeartRateMonModel.m in Sources */,
 				F4CF59D81C23B5DD005E2E40 /* HLTEditViewController.m in Sources */,
 				18A4F65D1C2A462300C7E13B /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
+				4812B7951F8D35240087D2C9 /* MyPrescriptionViewController.m in Sources */,
 				F484F9671C35210400C39839 /* RongYunTools.m in Sources */,
 				18AFBB7F1C34CB2900FA4420 /* BZOrderCell.m in Sources */,
 				F4A64F361C322F3C00434CC1 /* HLTMRecordCell.m in Sources */,
@@ -6373,6 +6504,7 @@
 				185700E01C1AC12E00AC5488 /* BZMessageCell.m in Sources */,
 				180420721C252AC60031D099 /* BZBooldPressureModel.m in Sources */,
 				18756B001C15422B00FFC1EF /* MJRefreshBackNormalFooter.m in Sources */,
+				4812B7931F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m in Sources */,
 				DB8C786C1BFC1D850033E5E8 /* AFURLSessionManager.m in Sources */,
 				DB8C78BD1BFC1D850033E5E8 /* UIImage+GIF.m in Sources */,
 				189004EB1C2A9F390089F077 /* BZEditLeftRecordController.m in Sources */,
@@ -6578,8 +6710,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: China Mobile Group Heilongjiang Company Limited";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mingcong zhu (8FRP794A86)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mingcong zhu (8FRP794A86)";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = V8N5BU6A3X;
 				ENABLE_BITCODE = NO;
@@ -6791,8 +6923,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: China Mobile Group Heilongjiang Company Limited";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mingcong zhu (8FRP794A86)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mingcong zhu (8FRP794A86)";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = V8N5BU6A3X;
 				ENABLE_BITCODE = NO;

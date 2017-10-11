@@ -15,6 +15,7 @@
 #import "HLTSearch.h"
 #import "HLTSearchCell.h"
 #import "HLTPDetailController.h"
+#import "MyPrescriptionViewController.h"
 
 @interface HLTDiagnoseViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -98,29 +99,32 @@
 #pragma mark - 添加上部分按钮
 -(void)addHeadView
 {
-    NSArray * textArr = @[@"用户申请",@"分组管理",@"我的名片"];
-    NSArray * imageArr = @[@"图层-13",@"iconfont-automatic-configuration",@"iconfont-zhanghu"];
+    NSArray * textArr = @[@"用户申请",@"分组管理",@"我的名片",@"我的处方"];
+    NSArray * imageArr = @[@"图层-13",@"iconfont-automatic-configuration",@"iconfont-zhanghu",@"icon_ChuFang"];
     
-    CGFloat width = (kMainWidth-30*2)/5;
-    
+//    CGFloat width = (kMainWidth-30*2)/5;
+    CGFloat width = (kMainWidth - 30*2 - 90)/4;
     _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, width +70)];
     
     
-    _imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, width+50)];
+//    _imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, width+50)];
+    _imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, width + 60)];
     _imageview.backgroundColor = [UIColor whiteColor];
     _imageview.userInteractionEnabled = YES;
     [_headView addSubview:_imageview];
     
     
-    for (int i = 0; i<3; i++)
+    for (int i = 0; i<4; i++)
     {
-        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(30+i*(width+width), 10, width, width)];
+//        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(30+i*(width+width), 10, width, width)];
+        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(30+i*(width+30), 10, width, width)];
         button.tag = 100+i;
         [button addTarget:self action:@selector(headButton:) forControlEvents:UIControlEventTouchUpInside];
         [button setBackgroundImage:[UIImage imageNamed:imageArr[i]] forState:UIControlStateNormal];
         [_imageview addSubview:button];
         
-        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(25+i*(width+width), CGRectGetMaxY(button.frame)+8, width+10, 20)];
+//        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(25+i*(width+width), CGRectGetMaxY(button.frame)+8, width+10, 20)];
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(25+i*(width+30), CGRectGetMaxY(button.frame)+8, width+10, 20)];
         label.text = textArr[i];
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont systemFontOfSize:14];
@@ -153,6 +157,12 @@
             HLTMycardViewController * myCard = [[HLTMycardViewController alloc] init];
             myCard.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:myCard animated:NO];
+        }
+            break;
+        case 3:
+        {
+            MyPrescriptionViewController *MyPrescriptionVC = [GetPrescriptionStoryboard instantiateViewControllerWithIdentifier:@"MyPrescriptionViewController"];
+            [self.navigationController pushViewController:MyPrescriptionVC animated:YES];
         }
             break;
             
