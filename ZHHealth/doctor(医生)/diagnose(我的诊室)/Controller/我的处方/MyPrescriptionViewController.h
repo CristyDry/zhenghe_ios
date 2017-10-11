@@ -10,9 +10,4 @@
 
 @interface MyPrescriptionViewController : UIViewController
 
-// 处方信息标题图片数据
-@property (nonatomic , strong) NSArray *sectionIconArray;
-// 处方信息标题数据
-@property (nonatomic , strong) NSArray *sectionTitleArray;
-
 @end
