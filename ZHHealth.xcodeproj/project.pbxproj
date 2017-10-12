@@ -358,9 +358,9 @@
 		4812B84D1F8E7B2B0087D2C9 /* btn_reduce@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B8471F8E7B2B0087D2C9 /* btn_reduce@2x.png */; };
 		4812B84E1F8E7B2B0087D2C9 /* btn_reduce@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B8481F8E7B2B0087D2C9 /* btn_reduce@3x.png */; };
 		4812B8521F8E8F240087D2C9 /* SoSlideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B8511F8E8F240087D2C9 /* SoSlideScrollView.m */; };
-		4812B8561F8E929E0087D2C9 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B8541F8E929E0087D2C9 /* OrderTableViewCell.m */; };
-		4812B8571F8E929E0087D2C9 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4812B8551F8E929E0087D2C9 /* OrderTableViewCell.xib */; };
 		4812B85B1F8E93E20087D2C9 /* SpriteImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B85A1F8E93E20087D2C9 /* SpriteImageView.m */; };
+		4812B8711F8F9DD20087D2C9 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B86F1F8F9DD20087D2C9 /* OrderTableViewCell.m */; };
+		4812B8721F8F9DD20087D2C9 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4812B8701F8F9DD20087D2C9 /* OrderTableViewCell.xib */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1671,11 +1671,11 @@
 		4812B8481F8E7B2B0087D2C9 /* btn_reduce@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_reduce@3x.png"; sourceTree = "<group>"; };
 		4812B8501F8E8F240087D2C9 /* SoSlideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoSlideScrollView.h; sourceTree = "<group>"; };
 		4812B8511F8E8F240087D2C9 /* SoSlideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoSlideScrollView.m; sourceTree = "<group>"; };
-		4812B8531F8E929E0087D2C9 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
-		4812B8541F8E929E0087D2C9 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
-		4812B8551F8E929E0087D2C9 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		4812B8591F8E93E20087D2C9 /* SpriteImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteImageView.h; sourceTree = "<group>"; };
 		4812B85A1F8E93E20087D2C9 /* SpriteImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteImageView.m; sourceTree = "<group>"; };
+		4812B86E1F8F9DD20087D2C9 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		4812B86F1F8F9DD20087D2C9 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		4812B8701F8F9DD20087D2C9 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -5330,9 +5330,9 @@
 		F40905D41C1FAAF0005BD3DB /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4812B8531F8E929E0087D2C9 /* OrderTableViewCell.h */,
-				4812B8541F8E929E0087D2C9 /* OrderTableViewCell.m */,
-				4812B8551F8E929E0087D2C9 /* OrderTableViewCell.xib */,
+				4812B86E1F8F9DD20087D2C9 /* OrderTableViewCell.h */,
+				4812B86F1F8F9DD20087D2C9 /* OrderTableViewCell.m */,
+				4812B8701F8F9DD20087D2C9 /* OrderTableViewCell.xib */,
 				4812B8401F8E79DD0087D2C9 /* ShoppingCountView.h */,
 				4812B8411F8E79DD0087D2C9 /* ShoppingCountView.m */,
 				18A4F6171C2A362A00C7E13B /* HLTSearchCell.h */,
@@ -6123,7 +6123,7 @@
 				183305CA1C16855D008A4159 /* u495.png in Resources */,
 				187E50941C29046400AC2A27 /* u58.png in Resources */,
 				DB8C75EA1BFC1D580033E5E8 /* iconfont-pinglun@2x.png in Resources */,
-				4812B8571F8E929E0087D2C9 /* OrderTableViewCell.xib in Resources */,
+				4812B8721F8F9DD20087D2C9 /* OrderTableViewCell.xib in Resources */,
 				DB8C759D1BFC1D580033E5E8 /* 轮播图圆圈@3x.png in Resources */,
 				DB8C75B81BFC1D580033E5E8 /* 底部栏@3x.png in Resources */,
 				DB8C759F1BFC1D580033E5E8 /* 轮播图背景@2x.png in Resources */,
@@ -6475,6 +6475,7 @@
 				183D69971C1EC4A300277DE5 /* BZArticleContentModel.m in Sources */,
 				180420611C252A740031D099 /* BZWeightController.m in Sources */,
 				180420751C2530B20031D099 /* BZHeartRateMonModel.m in Sources */,
+				4812B8711F8F9DD20087D2C9 /* OrderTableViewCell.m in Sources */,
 				F4CF59D81C23B5DD005E2E40 /* HLTEditViewController.m in Sources */,
 				18A4F65D1C2A462300C7E13B /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				4812B7951F8D35240087D2C9 /* MyPrescriptionViewController.m in Sources */,
@@ -6679,7 +6680,6 @@
 				DB8C774A1BFC1D6B0033E5E8 /* WcrStatementViewController.m in Sources */,
 				18F8B19B1C2E2CD9002AA939 /* BZFirstServicesModel.m in Sources */,
 				DB8C77441BFC1D6B0033E5E8 /* WcrReModifyPasController.m in Sources */,
-				4812B8561F8E929E0087D2C9 /* OrderTableViewCell.m in Sources */,
 				18A4F6161C2A361100C7E13B /* HLTSearch.m in Sources */,
 				4812B8331F8E69960087D2C9 /* IQUITextFieldView+Additions.m in Sources */,
 				DB8C78781BFC1D850033E5E8 /* UIView+Extension.m in Sources */,
