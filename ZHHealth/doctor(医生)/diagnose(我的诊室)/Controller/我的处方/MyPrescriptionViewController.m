@@ -27,6 +27,7 @@
     [self addLeftBackItem];
     [self setNavigationBarProperty];
     [self addRightButton];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
 }
 

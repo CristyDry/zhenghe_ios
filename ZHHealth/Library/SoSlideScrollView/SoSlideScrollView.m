@@ -54,12 +54,14 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(i*(kMainWidth/_arrTitle.count), 0,
                                (kMainWidth/_arrTitle.count), KTITLEHEIGHT);
+        btn.backgroundColor = [UIColor redColor];
         btn.tag = i+100;
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         btn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnAtion:) forControlEvents:UIControlEventTouchUpInside];
-        [btn setTitle:_arrTitle[i] forState:UIControlStateNormal];
+//        [btn setTitle:_arrTitle[i] forState:UIControlStateNormal];
+        [btn setTitle:@"呵呵哒" forState:UIControlStateNormal];
         [_titleScrollview addSubview:btn];
         
         if(_isNews){
@@ -149,7 +151,8 @@
 //    _titleScrollview.delegate = self;
     _titleScrollview.alwaysBounceHorizontal = YES;
     _titleScrollview.alwaysBounceVertical = NO;
-    _titleScrollview.backgroundColor = [UIColor whiteColor];//[UIColor colorWithRed:244.0/255 green:244.0/255 blue:244.0/255 alpha:1];
+//    _titleScrollview.backgroundColor = [UIColor whiteColor];//[UIColor colorWithRed:244.0/255 green:244.0/255 blue:244.0/255 alpha:1];
+    _titleScrollview.backgroundColor = [UIColor blueColor];
     [self addSubview:_titleScrollview];
     
     _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, _titleScrollview.frame.size.height, self.frame.size.width, kMainHeight-64-_titleScrollview.frame.size.height)];

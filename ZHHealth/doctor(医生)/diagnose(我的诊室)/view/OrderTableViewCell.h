@@ -14,17 +14,14 @@
 typedef void(^selectButton)(UIButton *btn);
 
 @interface OrderTableViewCell : UITableViewCell
-{
-    
-}
-@property (strong, nonatomic) IBOutlet SpriteImageView *spriteImageView;
-@property (strong, nonatomic) IBOutlet UILabel *orderTime;
-@property (strong, nonatomic) IBOutlet UILabel *goodsPrice;
-@property (strong, nonatomic) IBOutlet UILabel *goodsStatus;
+
+@property (weak, nonatomic) IBOutlet UILabel *chuFangNumLable;
+@property (weak, nonatomic) IBOutlet UILabel *chuFangStutusLable;
+@property (weak, nonatomic) IBOutlet UILabel *chuFangAmountLable;
+@property (weak, nonatomic) IBOutlet UILabel *chuFangTimeLable;
+@property (weak, nonatomic) IBOutlet UIButton *chuFangOptionBtn;
+@property (weak, nonatomic) IBOutlet SpriteImageView *spriteImageView;
+
 @property (copy, nonatomic)selectButton btnBlock;
-
-@property (weak, nonatomic) IBOutlet UIButton *underBlackButton;
-@property (weak, nonatomic) IBOutlet UIButton *underRedButton;
-
 
 @end

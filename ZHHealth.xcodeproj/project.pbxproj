@@ -361,6 +361,7 @@
 		4812B85B1F8E93E20087D2C9 /* SpriteImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B85A1F8E93E20087D2C9 /* SpriteImageView.m */; };
 		4812B8711F8F9DD20087D2C9 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B86F1F8F9DD20087D2C9 /* OrderTableViewCell.m */; };
 		4812B8721F8F9DD20087D2C9 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4812B8701F8F9DD20087D2C9 /* OrderTableViewCell.xib */; };
+		4812B8781F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812B8771F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.m */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1676,6 +1677,8 @@
 		4812B86E1F8F9DD20087D2C9 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
 		4812B86F1F8F9DD20087D2C9 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
 		4812B8701F8F9DD20087D2C9 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		4812B8761F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTPrescriptionDetailViewController.h; sourceTree = "<group>"; };
+		4812B8771F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTPrescriptionDetailViewController.m; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -3689,10 +3692,12 @@
 			isa = PBXGroup;
 			children = (
 				4812B7901F8D35240087D2C9 /* myPrescription.storyboard */,
-				4812B78E1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.h */,
-				4812B78F1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m */,
 				4812B7911F8D35240087D2C9 /* MyPrescriptionViewController.h */,
 				4812B7921F8D35240087D2C9 /* MyPrescriptionViewController.m */,
+				4812B78E1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.h */,
+				4812B78F1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m */,
+				4812B8761F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.h */,
+				4812B8771F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.m */,
 			);
 			path = "我的处方";
 			sourceTree = "<group>";
@@ -6746,6 +6751,7 @@
 				180134EC1C216ABB006A890D /* BZArticleCollectCell.m in Sources */,
 				DB8C78791BFC1D850033E5E8 /* UIViewController+AddLeftBackItem.m in Sources */,
 				DB8C77451BFC1D6B0033E5E8 /* WcrSystemInfoViewController.m in Sources */,
+				4812B8781F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.m in Sources */,
 				F486F03B1C27E7DE00F624C8 /* HLTGroupViewController.m in Sources */,
 				DB8C77471BFC1D6B0033E5E8 /* WcrSettingCell.m in Sources */,
 				F4CF59E21C23B5DD005E2E40 /* HLTMyListCell.m in Sources */,
