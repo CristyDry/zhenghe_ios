@@ -91,7 +91,11 @@ static int count = 0;
     UITextField *textField = [[UITextField alloc]initWithFrame:frame];
     textField.placeholder = placeholder;
     [textField textFieldWithPlaceholder:placeholder andFont:KFont - 4 andSecureTextEntry:NO andReturnKey:UIReturnKeyNext andkeyboardType:0];
-    textField.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    textField.font = [UIFont systemFontOfSize:KFont - 4];
+    textField.layer.cornerRadius = 5.0f;
+    textField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    textField.layer.borderWidth = 1.0f;
+//    textField.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     textField.delegate = self;
     if ([placeholder isEqualToString:@"请输入手机号码"]) {
         textField.keyboardType = UIKeyboardTypePhonePad;

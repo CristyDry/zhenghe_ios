@@ -129,13 +129,13 @@
     
     // 名字
     
-    _nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(_iconIV.maxX_wcr+xPoint , (heightOfHeader-heightOfName)/2, heightOfName+20, heightOfName)];
+    _nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(_iconIV.maxX_wcr+xPoint , (heightOfHeader-heightOfName)/2, heightOfName+40, heightOfName)];
     [_nameLabel labelWithText:_editModel.doctor andTextColor:[UIColor whiteColor] andFontSize:KFont - 2 andBackgroundColor:nil];
     _nameLabel.textAlignment = NSTextAlignmentCenter;
     _nameLabel.opaque = YES;
     [headerView addSubview:_nameLabel];
     
-    _zhiYeLabel = [[UILabel alloc]initWithFrame:CGRectMake(_nameLabel.maxX_wcr+10 , (heightOfHeader-heightOfName)/2, heightOfIcon+20, heightOfName)];
+    _zhiYeLabel = [[UILabel alloc]initWithFrame:CGRectMake(_nameLabel.maxX_wcr+10 , (heightOfHeader-heightOfName)/2, heightOfIcon+30, heightOfName)];
     [_zhiYeLabel labelWithText:_editModel.professional andTextColor:[UIColor whiteColor] andFontSize:KFont - 4 andBackgroundColor:nil];
     _zhiYeLabel.textAlignment = NSTextAlignmentCenter;
     _zhiYeLabel.opaque = YES;

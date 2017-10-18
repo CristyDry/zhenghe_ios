@@ -55,7 +55,10 @@ static int count = 0;
     phoneTF.delegate = self;
     [phoneTF textFieldWithPlaceholder:@"请输入手机号" andFont:KFont - 4 andSecureTextEntry:NO andReturnKey:UIReturnKeyNext andkeyboardType:UIKeyboardTypePhonePad];
     phoneTF.font = [UIFont systemFontOfSize:KFont - 4];
-    phoneTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    phoneTF.layer.cornerRadius = 5.0f;
+    phoneTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    phoneTF.layer.borderWidth = 1.0f;
+//    phoneTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     [self.view addSubview:phoneTF];
     
     yPoint = phoneTF.maxY_wcr + 20;
@@ -66,7 +69,11 @@ static int count = 0;
     codeTF.delegate = self;
     codeTF.font = [UIFont systemFontOfSize:KFont - 4];
     [codeTF textFieldWithPlaceholder:@"请入验证码" andFont:KFont - 4 andSecureTextEntry:NO andReturnKey:UIReturnKeyDone andkeyboardType:0];
-    codeTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    codeTF.font = [UIFont systemFontOfSize:KFont - 4];
+    codeTF.layer.cornerRadius = 5.0f;
+    codeTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    codeTF.layer.borderWidth = 1.0f;
+//    codeTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     [self.view addSubview:codeTF];
     
     xPoint = codeTF.maxX_wcr + 10;

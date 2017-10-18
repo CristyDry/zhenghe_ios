@@ -27,7 +27,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        CGFloat widthOfIconIV = 55.0f;
+        CGFloat widthOfIconIV = 75.0f;
         CGFloat yPoint = (kWcrDoctorCellHeight - widthOfIconIV) / 2.0;
         _iconIV = [[UIImageView alloc]initWithFrame:CGRectMake(kBorder, yPoint, widthOfIconIV, widthOfIconIV)];
         [_iconIV.layer setCornerRadius:widthOfIconIV / 2.0];

@@ -35,7 +35,7 @@
     
     [self setNavigationBarProperty];
     // 预约说明
-    [self addRightBarButton];
+//    [self addRightBarButton];
     // 添加一个tableView
     [self setTableViewProperty];
     // 拨打预约热线

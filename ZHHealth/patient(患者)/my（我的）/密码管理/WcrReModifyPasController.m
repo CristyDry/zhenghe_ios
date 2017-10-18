@@ -50,7 +50,10 @@
     passwordTF.delegate = self;
     [passwordTF textFieldWithPlaceholder:@"重置密码" andFont:KFont - 4 andSecureTextEntry:YES andReturnKey:UIReturnKeyNext andkeyboardType:0];
     passwordTF.font = [UIFont systemFontOfSize:KFont - 4];
-    passwordTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    passwordTF.layer.cornerRadius = 5.0f;
+    passwordTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    passwordTF.layer.borderWidth = 1.0f;
+//    passwordTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     [self.view addSubview:passwordTF];
     
     yPoint = passwordTF.maxY_wcr + 20;
@@ -60,7 +63,11 @@
     rePasswTF.delegate = self;
     rePasswTF.font = [UIFont systemFontOfSize:KFont - 4];
     [rePasswTF textFieldWithPlaceholder:@"确认密码" andFont:KFont - 4 andSecureTextEntry:YES andReturnKey:UIReturnKeyDone andkeyboardType:0];
-    rePasswTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    rePasswTF.font = [UIFont systemFontOfSize:KFont - 4];
+    rePasswTF.layer.cornerRadius = 5.0f;
+    rePasswTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    rePasswTF.layer.borderWidth = 1.0f;
+//    rePasswTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     [self.view addSubview:rePasswTF];
     
     yPoint = rePasswTF.maxY_wcr + 40;

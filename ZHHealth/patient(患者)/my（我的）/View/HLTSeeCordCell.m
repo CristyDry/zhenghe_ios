@@ -14,7 +14,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        CGFloat width = 64.0f;
+        CGFloat width = 74;
         _textlabel = [[UILabel alloc]initWithFrame:CGRectMake(kBorder, 0, width, self.height_wcr)];
         _textlabel.font = [UIFont systemFontOfSize:KFont - 4];
         _textlabel.backgroundColor = [UIColor clearColor];

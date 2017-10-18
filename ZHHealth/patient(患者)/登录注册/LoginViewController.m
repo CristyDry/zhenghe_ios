@@ -136,7 +136,10 @@
     _phoneTF = phoneTF;
     [phoneTF textFieldWithPlaceholder:@"请输入手机号" andFont:KFont - 4 andSecureTextEntry:NO andReturnKey:UIReturnKeyNext andkeyboardType:UIKeyboardTypePhonePad];
     phoneTF.delegate = self;
-    phoneTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    phoneTF.layer.cornerRadius = 5.0f;
+    phoneTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    phoneTF.layer.borderWidth = 1.0f;
+//    phoneTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     [self.view addSubview:phoneTF];
     
     yPoint = phoneTF.maxY_wcr + 15;
@@ -144,7 +147,11 @@
     _passwordTF = passwordTF;
     [passwordTF textFieldWithPlaceholder:@"请输入密码" andFont:KFont - 4 andSecureTextEntry:YES andReturnKey:UIReturnKeyDone andkeyboardType:0];
     passwordTF.delegate = self;
-    passwordTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
+    passwordTF.layer.cornerRadius = 5.0f;
+    passwordTF.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    passwordTF.layer.borderWidth = 1.0f;
+
+//    passwordTF.background = [UIImage imageFileNamed:@"圆角矩形-1-拷贝" andType:YES];
     [self.view addSubview:passwordTF];
     
     yPoint = passwordTF.maxY_wcr + 35;
@@ -190,10 +197,10 @@
     CGFloat offset = 20.0;
     CGFloat qqX = xPoint;
     xPoint = qqX - offset - width;
-    [self setThirdLoginButtonWithImageName:@"微信" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:414];
+//    [self setThirdLoginButtonWithImageName:@"微信" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:414];
     
     xPoint = qqX + offset + width;
-    [self setThirdLoginButtonWithImageName:@"微博" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:415];
+//    [self setThirdLoginButtonWithImageName:@"微博" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:415];
     
     height = 49;
     yPoint = kMainHeight - height;
