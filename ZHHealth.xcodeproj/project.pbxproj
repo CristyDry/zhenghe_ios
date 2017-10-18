@@ -366,6 +366,10 @@
 		48232B221F96FF2E00559BAE /* RCalendarPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B181F96FF2E00559BAE /* RCalendarPickerView.m */; };
 		48232B231F96FF2E00559BAE /* RClockPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B1A1F96FF2E00559BAE /* RClockPickerView.m */; };
 		48232B241F96FF2E00559BAE /* RCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B1C1F96FF2E00559BAE /* RCollectionViewCell.m */; };
+		48232B271F9706C000559BAE /* ChuFangStatementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B261F9706C000559BAE /* ChuFangStatementsViewController.m */; };
+		48232B2B1F97081A00559BAE /* Calender.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B281F97081A00559BAE /* Calender.png */; };
+		48232B2C1F97081A00559BAE /* Calender@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B291F97081A00559BAE /* Calender@2x.png */; };
+		48232B2D1F97081A00559BAE /* Calender@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B2A1F97081A00559BAE /* Calender@3x.png */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1695,6 +1699,11 @@
 		48232B1C1F96FF2E00559BAE /* RCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCollectionViewCell.m; sourceTree = "<group>"; };
 		48232B1D1F96FF2E00559BAE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RCalendarPickerLanguage.strings"; sourceTree = "<group>"; };
 		48232B1E1F96FF2E00559BAE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/RCalendarPickerLanguage.strings"; sourceTree = "<group>"; };
+		48232B251F9706C000559BAE /* ChuFangStatementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChuFangStatementsViewController.h; sourceTree = "<group>"; };
+		48232B261F9706C000559BAE /* ChuFangStatementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChuFangStatementsViewController.m; sourceTree = "<group>"; };
+		48232B281F97081A00559BAE /* Calender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calender.png; sourceTree = "<group>"; };
+		48232B291F97081A00559BAE /* Calender@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calender@2x.png"; sourceTree = "<group>"; };
+		48232B2A1F97081A00559BAE /* Calender@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calender@3x.png"; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -3716,6 +3725,8 @@
 				4812B78F1F8D35240087D2C9 /* HLTPrescriptionHistoryViewControllerViewController.m */,
 				4812B8761F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.h */,
 				4812B8771F8FF5570087D2C9 /* HLTPrescriptionDetailViewController.m */,
+				48232B251F9706C000559BAE /* ChuFangStatementsViewController.h */,
+				48232B261F9706C000559BAE /* ChuFangStatementsViewController.m */,
 			);
 			path = "我的处方";
 			sourceTree = "<group>";
@@ -4465,6 +4476,9 @@
 		DB8C74CD1BFC1D580033E5E8 /* iOS切图 */ = {
 			isa = PBXGroup;
 			children = (
+				48232B281F97081A00559BAE /* Calender.png */,
+				48232B291F97081A00559BAE /* Calender@2x.png */,
+				48232B2A1F97081A00559BAE /* Calender@3x.png */,
 				4812B8431F8E7B2B0087D2C9 /* btn_reduce_disable.png */,
 				4812B8441F8E7B2B0087D2C9 /* btn_reduce_disable@2x.png */,
 				4812B8451F8E7B2B0087D2C9 /* btn_reduce_disable@3x.png */,
@@ -5967,6 +5981,7 @@
 				DB8C763E1BFC1D580033E5E8 /* iconfont-xihuan.png in Resources */,
 				DB8C75BD1BFC1D580033E5E8 /* 形状-3@2x.png in Resources */,
 				DB8C755B1BFC1D580033E5E8 /* 图层-17@3x.png in Resources */,
+				48232B2D1F97081A00559BAE /* Calender@3x.png in Resources */,
 				0FA784EA1BFE1EBF007916B7 /* HZAreaPickerView.xib in Resources */,
 				0FA784E81BFE1EBF007916B7 /* city.plist in Resources */,
 				DB8C754B1BFC1D580033E5E8 /* 儿童专场@2x.png in Resources */,
@@ -6089,6 +6104,7 @@
 				DB8C75191BFC1D580033E5E8 /* arrow.png in Resources */,
 				DB8C765A1BFC1D580033E5E8 /* 后退-拷贝@2x.png in Resources */,
 				DB8C75521BFC1D580033E5E8 /* 12@3x.png in Resources */,
+				48232B2B1F97081A00559BAE /* Calender.png in Resources */,
 				DB8C761F1BFC1D580033E5E8 /* qq@3x.png in Resources */,
 				DB8C753B1BFC1D580033E5E8 /* otc.png in Resources */,
 				DB8C75A31BFC1D580033E5E8 /* 退烧止痛@3x.png in Resources */,
@@ -6248,6 +6264,7 @@
 				DB8C790E1BFC7B850033E5E8 /* 小图.png in Resources */,
 				183305C51C16855D008A4159 /* u456.png in Resources */,
 				DB8C76221BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@3x.png in Resources */,
+				48232B2C1F97081A00559BAE /* Calender@2x.png in Resources */,
 				DB8C75851BFC1D580033E5E8 /* 收藏@3x.png in Resources */,
 				DB8C76B51BFC1D580033E5E8 /* iconfont-iconfontshoucang@2x.png in Resources */,
 				185A05831C3A19830075F36A /* u=1000341566,1853476192&fm=21&gp=0.png in Resources */,
@@ -6638,6 +6655,7 @@
 				DB8C78771BFC1D850033E5E8 /* UITextField+extension.m in Sources */,
 				DB8C78BA1BFC1D850033E5E8 /* SDWebImageManager.m in Sources */,
 				DB8C77351BFC1D6B0033E5E8 /* WCRAuthenticationController.m in Sources */,
+				48232B271F9706C000559BAE /* ChuFangStatementsViewController.m in Sources */,
 				F4C2D47E1C32808A0096551B /* HLTDepartTwoModel.m in Sources */,
 				4812B8351F8E69960087D2C9 /* IQUIViewController+Additions.m in Sources */,
 				1826D43F1C02BDBA004833DC /* SSKeychain.m in Sources */,
