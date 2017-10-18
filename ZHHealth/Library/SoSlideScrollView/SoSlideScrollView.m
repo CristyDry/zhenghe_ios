@@ -8,7 +8,7 @@
 
 #import "SoSlideScrollView.h"
 
-#define KTITLEHEIGHT 38
+#define KTITLEHEIGHT 50
 
 @implementation SoSlideScrollView
 {
@@ -48,41 +48,39 @@
     //分页模式
     _scrollview.pagingEnabled = YES;
     _scrollview.backgroundColor = [UIColor colorWithRed:225.0/255 green:225.0/255 blue:225.0/255 alpha:1];
-
+    
     //顶部UI加上 btn
     for (int i=0; i<_arrTitle.count; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(i*(kMainWidth/_arrTitle.count), 0,
                                (kMainWidth/_arrTitle.count), KTITLEHEIGHT);
-        btn.backgroundColor = [UIColor redColor];
+        btn.backgroundColor = [UIColor clearColor];
         btn.tag = i+100;
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        btn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
-        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+        [btn setTitleColor:UIColorFromHex(0x717171) forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnAtion:) forControlEvents:UIControlEventTouchUpInside];
-//        [btn setTitle:_arrTitle[i] forState:UIControlStateNormal];
-        [btn setTitle:@"呵呵哒" forState:UIControlStateNormal];
+        [btn setTitle:_arrTitle[i] forState:UIControlStateNormal];
         [_titleScrollview addSubview:btn];
         
         if(_isNews){
             UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(btn.frame.origin.x+btn.frame.size.width/2.0 - btn.titleLabel.text.length*12,5, 8, 8)];
             redView.layer.cornerRadius  = 4.0f;
             redView.layer.masksToBounds = YES;
-            redView.backgroundColor     = kNavigationBarColor;
+            redView.backgroundColor     = RGBACOLOR(241, 241, 241, 1.0f);
             [_titleScrollview addSubview:redView];
         }
         
         if(i==0){
-            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//            btn.transform = CGAffineTransformMakeScale(1.0+0.2, 1.0+0.2);
-//            btn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
-            
-            bottomLine = [[UIView alloc]initWithFrame:(CGRect){20,btn.frame.size.height - 2,btn.frame.size.width - 40 ,2}];
-            bottomLine.backgroundColor = [UIColor redColor];
+            [btn setTitleColor:UIColorFromHex(0x717171) forState:UIControlStateNormal];
+            //            btn.transform = CGAffineTransformMakeScale(1.0+0.2, 1.0+0.2);
+            btn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+            bottomLine = [[UIView alloc]initWithFrame:(CGRect){0,btn.frame.size.height - 2,btn.frame.size.width ,2}];
+            bottomLine.backgroundColor = kNavigationBarColor;
             [btn addSubview:bottomLine];
         }
     }
-
+    
     arrView = [[NSMutableArray alloc]initWithArray:self.arrContent];
     
     //ScrollView锁定在中间
@@ -117,16 +115,16 @@
         }
     }else{
         switch (sender.tag) {
-                case 100:{
-                    [_scrollview setContentOffset:CGPointMake(0, 0) animated:YES];
-                    currentIndex = 0;
-                }break;
-                case 101:{
-                    [_scrollview setContentOffset:CGPointMake(kMainWidth, 0) animated:YES];
-                    currentIndex = 1;
-                }break;
-                default:
-                    break;
+            case 100:{
+                [_scrollview setContentOffset:CGPointMake(0, 0) animated:YES];
+                currentIndex = 0;
+            }break;
+            case 101:{
+                [_scrollview setContentOffset:CGPointMake(kMainWidth, 0) animated:YES];
+                currentIndex = 1;
+            }break;
+            default:
+                break;
         }
     }
     
@@ -148,11 +146,12 @@
     currentIndex = 0;
     _titleScrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, KTITLEHEIGHT)];
     _titleScrollview.showsHorizontalScrollIndicator = NO;
-//    _titleScrollview.delegate = self;
-    _titleScrollview.alwaysBounceHorizontal = YES;
+    //    _titleScrollview.delegate = self;
+    _titleScrollview.alwaysBounceHorizontal = NO;
     _titleScrollview.alwaysBounceVertical = NO;
-//    _titleScrollview.backgroundColor = [UIColor whiteColor];//[UIColor colorWithRed:244.0/255 green:244.0/255 blue:244.0/255 alpha:1];
-    _titleScrollview.backgroundColor = [UIColor blueColor];
+    //    _titleScrollview.backgroundColor = [UIColor whiteColor];
+    //[UIColor colorWithRed:244.0/255 green:244.0/255 blue:244.0/255 alpha:1];
+    _titleScrollview.backgroundColor = RGBACOLOR(241, 241, 241, 1.0f);
     [self addSubview:_titleScrollview];
     
     _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, _titleScrollview.frame.size.height, self.frame.size.width, kMainHeight-64-_titleScrollview.frame.size.height)];
@@ -177,16 +176,16 @@
     if(_arrTitle.count == 2) {
         offsetX = scrollView.contentOffset.x;
     }
-
+    
     NSInteger tempValue = currentIndex;
     UIButton *currBtn = (UIButton *)[_titleScrollview viewWithTag:100+currentIndex];
     // 当通过btn执行 不需要该缩小动画
-//    if(!isBtnSelect) {
-//        if (_arrTitle.count == 2 && currentIndex == 1)
-//            currBtn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
-//        else
-//            currBtn.transform = CGAffineTransformMakeScale(1.2-abs((int)offsetX)/kMainWidth*0.2, 1.2-abs((int)offsetX)/kMainWidth*0.2);
-//    }
+    //    if(!isBtnSelect) {
+    //        if (_arrTitle.count == 2 && currentIndex == 1)
+    //            currBtn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
+    //        else
+    //            currBtn.transform = CGAffineTransformMakeScale(1.2-abs((int)offsetX)/kMainWidth*0.2, 1.2-abs((int)offsetX)/kMainWidth*0.2);
+    //    }
     
     if(_arrTitle.count>=4){
         if (offsetX<0) {     // 设置字体放大动画
@@ -194,8 +193,8 @@
             if (tempValue>=arrView.count) {
                 tempValue = 0;
             }
-//            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:tempValue + 100];
-//            btn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
+            //            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:tempValue + 100];
+            //            btn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
             
         }else
         {
@@ -203,24 +202,24 @@
             if (tempValue < 0) {
                 tempValue = arrView.count-1;
             }
-//            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:tempValue + 100];
-//            btn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
+            //            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:tempValue + 100];
+            //            btn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
             
-            }
+        }
     }
     
     if (_arrTitle.count==2) {
-//        if (currentIndex == 0) {
-//            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:101];
-//            btn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
-//        }else {
-//            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:100];
-//            btn.transform = CGAffineTransformMakeScale(1.2-abs((int)offsetX)/kMainWidth*0.2, 1.2-abs((int)offsetX)/kMainWidth*0.2);
-//        }
-
+        //        if (currentIndex == 0) {
+        //            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:101];
+        //            btn.transform = CGAffineTransformMakeScale(1.0+abs((int)offsetX)/kMainWidth*0.2, 1.0+abs((int)offsetX)/kMainWidth*0.2);
+        //        }else {
+        //            UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:100];
+        //            btn.transform = CGAffineTransformMakeScale(1.2-abs((int)offsetX)/kMainWidth*0.2, 1.2-abs((int)offsetX)/kMainWidth*0.2);
+        //        }
+        
         if (scrollView.contentOffset.x == kMainWidth) {
             UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:101];
-//            btn.transform = CGAffineTransformMakeScale(1.0+0.2, 1.0+0.2);
+            //            btn.transform = CGAffineTransformMakeScale(1.0+0.2, 1.0+0.2);
             currentIndex  = 1;
             if (!btnAction) {
                 [self btnAtion:btn];
@@ -228,7 +227,7 @@
             }
         }else if (scrollView.contentOffset.x ==0){
             UIButton *btn = (UIButton *)[_titleScrollview viewWithTag:100];
-//            btn.transform = CGAffineTransformMakeScale(1.0+0.2, 1.0+0.2);
+            //            btn.transform = CGAffineTransformMakeScale(1.0+0.2, 1.0+0.2);
             currentIndex  = 0;
             if (!btnAction) {
                 [self btnAtion:btn];
@@ -237,7 +236,7 @@
         }
         isBtnSelect = NO;
         CGRect frmae = bottomLine.frame;
-        frmae.origin.x  = (frmae.size.width + 20 )* currentIndex + (20* (currentIndex+1));
+        frmae.origin.x  = (frmae.size.width)* currentIndex;
         bottomLine.frame = frmae;
         return;
     }
@@ -271,7 +270,7 @@
     
     
     CGRect frmae = bottomLine.frame;
-    frmae.origin.x  = (frmae.size.width + 20 )* currentIndex + (20* (currentIndex+1));
+    frmae.origin.x  = (frmae.size.width )* currentIndex;
     bottomLine.frame = frmae;
 }
 
@@ -290,7 +289,7 @@
     [self arrContents];
     //加上SubView
     NSInteger counter = 0;
-    //设置内容页（遍历每一页的内容）        
+    //设置内容页（遍历每一页的内容）
     for (UIView *contentView in _arrContent) {
         //设置内容尺寸和位移
         CGRect frame = contentView.frame;
