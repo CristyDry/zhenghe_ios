@@ -48,7 +48,7 @@
 -(void)customChannelUI {
     NSMutableArray *seletBtnArray = [NSMutableArray array];
     _seletBtnArray = seletBtnArray;
-    CGFloat width = 65;
+    CGFloat width = 80;
     CGFloat height = 30;
     
     CGFloat offsetX = (kMainWidth - width * 4) / 5.0;
