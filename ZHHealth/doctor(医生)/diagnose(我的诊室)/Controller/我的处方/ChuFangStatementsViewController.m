@@ -11,17 +11,20 @@
 #import "RClockPickerView.h"
 #import "DateHelper.h"
 
-@interface ChuFangStatementsViewController ()
+@interface ChuFangStatementsViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     __weak IBOutlet UIView *CurrentView;
-    
+    __weak IBOutlet UITableView *ChufangStateTableView;
     __weak IBOutlet UIView *StartView;
     __weak IBOutlet UILabel *StartLable;
     __weak IBOutlet UIView *EndView;
     __weak IBOutlet UILabel *EndLable;
     NSString *startTimeStr;
     NSString *endTimeStr;
+    NSMutableArray *delegateArray;
+    NSArray *ChuFangStatemaentArr;
 }
+@property (nonatomic, strong)NSIndexPath * selectedIndex;
 
 @end
 
@@ -39,6 +42,10 @@
 }
 
 - (void)setSetUIAction {
+    
+    ChufangStateTableView.dataSource = self;
+    ChufangStateTableView.delegate = self;
+    delegateArray = [[NSMutableArray alloc]init];
     StartView.layer.cornerRadius = 5.0f;
     StartView.layer.borderWidth = 1.0f;
     StartView.layer.borderColor = [UIColor darkGrayColor].CGColor;
@@ -64,7 +71,7 @@
         endTimeStr = [NSString stringWithFormat:@"%@",[formater stringFromDate:[NSDate date]]];
         StartLable.text = endTimeStr;
     }
-
+    
     StartLable.text = startTimeStr;
     EndLable.text = endTimeStr;
     [self requestChuFangStatementData];
@@ -81,10 +88,18 @@
     
     [httpUtil doPostRequest:@"api/ZhengheRx/report" args:args targetVC:self response:^(ResponseModel *responseMd) {
         if (responseMd.isResultOk) {
-            
+            ChuFangStatemaentArr = responseMd.response;
+            delegateArray = [[NSMutableArray alloc]init];
+            for (int i = 0; i < ChuFangStatemaentArr.count; i++) {
+                UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+                [btn addTarget:self action:@selector(putawayOrderListAction:) forControlEvents:UIControlEventTouchUpInside];
+                btn.tag = i;
+                [delegateArray addObject:btn];
+            }
+            [ChufangStateTableView reloadData];
         }
     }];
-
+    
 }
 
 #pragma mark Click Action
@@ -110,13 +125,108 @@
     calendarPicker.selectDate = [NSDate date]; //选择时间
     calendarPicker.complete = ^(NSInteger day, NSInteger month, NSInteger year, NSDate *date){
         EndLable.text = [NSString stringWithFormat:@"%d-%d-%d", (int)year,(int)month,(int)day];
-        startTimeStr = EndLable.text;
+        endTimeStr = EndLable.text;
         // 保存选择的数据
         [[NSUserDefaults standardUserDefaults] setObject:EndLable.text forKey:@"endTimeStr"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [self requestChuFangStatementData];
     };
     [CurrentView addSubview:calendarPicker];
+}
+
+#pragma mark UITableView DataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{    
+    return 44;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 40;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSDictionary *drugCategoryDic = ChuFangStatemaentArr[section];
+    NSArray *drugStateArray = drugCategoryDic[@"child"];
+    // 店
+    UIButton *btn = delegateArray[section];
+    if (btn.selected) {
+        return 0;
+    }
+    return drugStateArray.count;
+
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return ChuFangStatemaentArr.count;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSDictionary *drugCategoryDic = ChuFangStatemaentArr[section];
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, 40)];
+    header.backgroundColor = kBackgroundColor;
+    
+    UILabel *countLable = [[UILabel alloc] initWithFrame:CGRectMake(kMainWidth - 50, 15, 50, 18)];
+    countLable.font = [UIFont systemFontOfSize:14];
+    countLable.textColor = [UIColor redColor];
+    countLable.text = [NSString stringWithFormat:@"%@",drugCategoryDic[@"nums"]];
+    [header addSubview:countLable];
+    
+    // 增加点击收起的按钮
+    UIButton *btn = delegateArray[section];
+    [header addSubview:btn];
+    [btn setFrame:CGRectMake(0, 0, kMainWidth, 40)];
+    [btn setImage:[UIImage imageNamed:@"listOn"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"listOFF"] forState:UIControlStateSelected];
+    
+    if (ChuFangStatemaentArr > 0) {
+        [btn setTitle:[NSString stringWithFormat:@"%@",drugCategoryDic[@"classifyName"]] forState:UIControlStateNormal];
+    } else {
+        [btn setTitle:@"普通分类" forState:UIControlStateNormal];
+    }
+    btn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [btn setTitleColor:UIColorFromHex(0x5C5E66) forState:UIControlStateNormal];
+    [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, kMainWidth-120)];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, kMainWidth-60)];
+    return header;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier = @"drugStateCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    @try {
+        UILabel *drugLable = [cell viewWithTag:777];
+        UILabel *drugTitle = [cell viewWithTag:778];
+        NSDictionary *drugsDic = ChuFangStatemaentArr[indexPath.section];
+        NSArray *drugArr = drugsDic[@"child"];
+        NSDictionary *dic = drugArr[indexPath.row];
+        drugLable.text = [NSString stringWithFormat:@"%@",dic[@"productName"]];
+        drugTitle.text = [NSString stringWithFormat:@"%@",dic[@"nums"]];
+    } @catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+#pragma mark = 收起统计列表 =
+-(void)putawayOrderListAction:(UIButton*)sender{
+    if (!sender.selected) {
+        sender.selected = YES;
+    } else {
+        sender.selected = NO;
+    }
+    
+    [(UITableView*)[[sender superview] superview] reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

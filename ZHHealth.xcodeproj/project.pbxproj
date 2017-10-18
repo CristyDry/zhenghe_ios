@@ -373,6 +373,15 @@
 		48232B311F9709F200559BAE /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B2E1F9709F200559BAE /* edit.png */; };
 		48232B321F9709F200559BAE /* edit的@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B2F1F9709F200559BAE /* edit的@2x.png */; };
 		48232B331F9709F200559BAE /* edit的@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B301F9709F200559BAE /* edit的@3x.png */; };
+		48262D161F977A09000A0286 /* listOFF.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D101F977A09000A0286 /* listOFF.png */; };
+		48262D171F977A09000A0286 /* listOFF@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D111F977A09000A0286 /* listOFF@2x.png */; };
+		48262D181F977A09000A0286 /* listOFF@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D121F977A09000A0286 /* listOFF@3x.png */; };
+		48262D191F977A09000A0286 /* listOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D131F977A09000A0286 /* listOn.png */; };
+		48262D1A1F977A09000A0286 /* listOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D141F977A09000A0286 /* listOn@2x.png */; };
+		48262D1B1F977A09000A0286 /* listOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D151F977A09000A0286 /* listOn@3x.png */; };
+		48262D1F1F9780F6000A0286 /* stethoscope_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D1C1F9780F6000A0286 /* stethoscope_icon.png */; };
+		48262D201F9780F6000A0286 /* stethoscope_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D1D1F9780F6000A0286 /* stethoscope_icon@2x.png */; };
+		48262D211F9780F6000A0286 /* stethoscope_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48262D1E1F9780F6000A0286 /* stethoscope_icon@3x.png */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1710,6 +1719,15 @@
 		48232B2E1F9709F200559BAE /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		48232B2F1F9709F200559BAE /* edit的@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit的@2x.png"; sourceTree = "<group>"; };
 		48232B301F9709F200559BAE /* edit的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit的@3x.png"; sourceTree = "<group>"; };
+		48262D101F977A09000A0286 /* listOFF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listOFF.png; sourceTree = "<group>"; };
+		48262D111F977A09000A0286 /* listOFF@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "listOFF@2x.png"; sourceTree = "<group>"; };
+		48262D121F977A09000A0286 /* listOFF@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "listOFF@3x.png"; sourceTree = "<group>"; };
+		48262D131F977A09000A0286 /* listOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listOn.png; sourceTree = "<group>"; };
+		48262D141F977A09000A0286 /* listOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "listOn@2x.png"; sourceTree = "<group>"; };
+		48262D151F977A09000A0286 /* listOn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "listOn@3x.png"; sourceTree = "<group>"; };
+		48262D1C1F9780F6000A0286 /* stethoscope_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stethoscope_icon.png; sourceTree = "<group>"; };
+		48262D1D1F9780F6000A0286 /* stethoscope_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stethoscope_icon@2x.png"; sourceTree = "<group>"; };
+		48262D1E1F9780F6000A0286 /* stethoscope_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stethoscope_icon@3x.png"; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -4482,6 +4500,15 @@
 		DB8C74CD1BFC1D580033E5E8 /* iOS切图 */ = {
 			isa = PBXGroup;
 			children = (
+				48262D1C1F9780F6000A0286 /* stethoscope_icon.png */,
+				48262D1D1F9780F6000A0286 /* stethoscope_icon@2x.png */,
+				48262D1E1F9780F6000A0286 /* stethoscope_icon@3x.png */,
+				48262D101F977A09000A0286 /* listOFF.png */,
+				48262D111F977A09000A0286 /* listOFF@2x.png */,
+				48262D121F977A09000A0286 /* listOFF@3x.png */,
+				48262D131F977A09000A0286 /* listOn.png */,
+				48262D141F977A09000A0286 /* listOn@2x.png */,
+				48262D151F977A09000A0286 /* listOn@3x.png */,
 				48232B2E1F9709F200559BAE /* edit.png */,
 				48232B2F1F9709F200559BAE /* edit的@2x.png */,
 				48232B301F9709F200559BAE /* edit的@3x.png */,
@@ -6124,6 +6151,7 @@
 				DB8C755A1BFC1D580033E5E8 /* 图层-17@2x.png in Resources */,
 				DB8C76631BFC1D580033E5E8 /* 圆角矩形-1-拷贝-2@2x.png in Resources */,
 				DB8C76411BFC1D580033E5E8 /* 后退12.png in Resources */,
+				48262D161F977A09000A0286 /* listOFF.png in Resources */,
 				1896A76D1C0444C7009562BF /* u21.png in Resources */,
 				DB8C76AF1BFC1D580033E5E8 /* iconfont-bianji-5@2x.png in Resources */,
 				4812B7F91F8D36CF0087D2C9 /* icon_ChuFang.png in Resources */,
@@ -6138,6 +6166,7 @@
 				DB8C760D1BFC1D580033E5E8 /* 添加@3x.png in Resources */,
 				0FA784E71BFE1EBF007916B7 /* area.plist in Resources */,
 				DB8C763F1BFC1D580033E5E8 /* iconfont-xihuan@2x.png in Resources */,
+				48262D1F1F9780F6000A0286 /* stethoscope_icon.png in Resources */,
 				DB8C76601BFC1D580033E5E8 /* 图文咨询框@2x.png in Resources */,
 				DB8C75491BFC1D580033E5E8 /* 五官用药@3x.png in Resources */,
 				DB8C76CB1BFC1D580033E5E8 /* 引导页2.png in Resources */,
@@ -6148,6 +6177,7 @@
 				F4A874691C58668B0016788A /* Emoji.plist in Resources */,
 				DB8C766A1BFC1D580033E5E8 /* 圆角矩形-1@3x.png in Resources */,
 				F47C06EF1C2138C700DAB002 /* iconfont-jingyin-2@2x.png in Resources */,
+				48262D201F9780F6000A0286 /* stethoscope_icon@2x.png in Resources */,
 				DB8C76C71BFC1D580033E5E8 /* 后退-拷贝@2x.png in Resources */,
 				DB8C75371BFC1D580033E5E8 /* iconfont-weizhengxing@3x.png in Resources */,
 				DB8C75F31BFC1D580033E5E8 /* iconfont-yijianfankui@2x.png in Resources */,
@@ -6167,6 +6197,7 @@
 				DB8C76021BFC1D580033E5E8 /* 圆角矩形-2.png in Resources */,
 				DB8C76051BFC1D580033E5E8 /* 心率.png in Resources */,
 				DB8C76671BFC1D580033E5E8 /* 圆角矩形-1-拷贝@3x.png in Resources */,
+				48262D1B1F977A09000A0286 /* listOn@3x.png in Resources */,
 				187C17FE1F7DF9D100A02BA9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				DB8C76961BFC1D580033E5E8 /* 在线接诊_spec.png in Resources */,
 				183CFEC01C17DBBC00029DC0 /* rx@3x.png in Resources */,
@@ -6293,6 +6324,7 @@
 				F4C214F21C2B8BA900CF0343 /* icon_2@2x.png in Resources */,
 				DB8C76501BFC1D580033E5E8 /* iconfont-jianpan-(1).png in Resources */,
 				18F7DA631C44FDC6007A298E /* aaaaa.jsp in Resources */,
+				48262D181F977A09000A0286 /* listOFF@3x.png in Resources */,
 				DB8C76A11BFC1D580033E5E8 /* iconfont-fenxiang-2@2x.png in Resources */,
 				DB8C75791BFC1D580033E5E8 /* 扫瞄条@3x.png in Resources */,
 				183305B31C16855D008A4159 /* u24.png in Resources */,
@@ -6304,6 +6336,7 @@
 				DB8C75C21BFC1D580033E5E8 /* 背景-拷贝.png in Resources */,
 				DB8C75271BFC1D580033E5E8 /* iconfont-iconfontscan@2x.png in Resources */,
 				DB8C751A1BFC1D580033E5E8 /* iconfont-cha.png in Resources */,
+				48262D211F9780F6000A0286 /* stethoscope_icon@3x.png in Resources */,
 				DB8C756B1BFC1D580033E5E8 /* 图层-23.png in Resources */,
 				183305D61C16855D008A4159 /* 背景_u42.png in Resources */,
 				DB8C75BB1BFC1D580033E5E8 /* 形状-12@3x.png in Resources */,
@@ -6380,6 +6413,7 @@
 				DB8C75971BFC1D580033E5E8 /* 轮播图圆圈-拷贝-2@3x.png in Resources */,
 				DB8C751B1BFC1D580033E5E8 /* iconfont-cha@2x.png in Resources */,
 				DB8C75B51BFC1D580033E5E8 /* 图层-9@3x.png in Resources */,
+				48262D1A1F977A09000A0286 /* listOn@2x.png in Resources */,
 				DB8C767E1BFC1D580033E5E8 /* 形状-1@2x.png in Resources */,
 				DB8C769D1BFC1D580033E5E8 /* iconfont-fenxiang-2-拷贝.png in Resources */,
 				4812B7A51F8D35B10087D2C9 /* sexSel.png in Resources */,
@@ -6390,6 +6424,7 @@
 				DB8C75B31BFC1D580033E5E8 /* 图层-9.png in Resources */,
 				4812B7DE1F8D36480087D2C9 /* 圆角矩形-1-拷贝.png in Resources */,
 				4812B84A1F8E7B2B0087D2C9 /* btn_reduce_disable@2x.png in Resources */,
+				48262D191F977A09000A0286 /* listOn.png in Resources */,
 				DB8C75641BFC1D580033E5E8 /* 图层-20@3x.png in Resources */,
 				DB8C764E1BFC1D580033E5E8 /* iconfont-biaoqing@2x.png in Resources */,
 				183305AB1C16855D008A4159 /* u133.png in Resources */,
@@ -6436,6 +6471,7 @@
 				1896A75E1C0442C8009562BF /* BZShoppingCartCell.xib in Resources */,
 				183305C01C16855D008A4159 /* u446.png in Resources */,
 				DB8C75A81BFC1D580033E5E8 /* iconfont-zhishiku@2x.png in Resources */,
+				48262D171F977A09000A0286 /* listOFF@2x.png in Resources */,
 				DB8C76BC1BFC1D580033E5E8 /* iconfont-shezhi-2@3x.png in Resources */,
 				DB8C76C31BFC1D580033E5E8 /* u=1300738000,3023233166&fm=21&gp=0.png in Resources */,
 				DB8C768C1BFC1D580033E5E8 /* iconfont-automatic-configuration.png in Resources */,

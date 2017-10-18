@@ -1667,16 +1667,44 @@
                                             <constraint firstItem="DvB-SN-g46" firstAttribute="centerY" secondItem="ocZ-Sw-kk2" secondAttribute="centerY" id="ubp-ph-3g4"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-dL-0A6">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-dL-0A6">
                                         <rect key="frame" x="0.0" y="70" width="375" height="577"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="ohH-Xz-8BJ">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="52"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugStateCell" rowHeight="52" id="ohH-Xz-8BJ">
+                                                <rect key="frame" x="0.0" y="40" width="375" height="52"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ohH-Xz-8BJ" id="2N7-7y-jTq">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="777" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-DT-v8V">
+                                                            <rect key="frame" x="15" y="16.5" width="294" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="maq-Y9-UNb"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="778" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-UX-tAg">
+                                                            <rect key="frame" x="317" y="16.5" width="50" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="Zim-mU-fDV"/>
+                                                                <constraint firstAttribute="height" constant="18" id="vQv-EO-WJX"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="hOO-UX-tAg" secondAttribute="trailing" constant="8" id="TFL-zQ-SVn"/>
+                                                        <constraint firstItem="yIX-DT-v8V" firstAttribute="centerY" secondItem="2N7-7y-jTq" secondAttribute="centerY" id="hkH-UY-sQK"/>
+                                                        <constraint firstItem="hOO-UX-tAg" firstAttribute="leading" secondItem="yIX-DT-v8V" secondAttribute="trailing" constant="8" id="kPZ-fw-Af5"/>
+                                                        <constraint firstItem="hOO-UX-tAg" firstAttribute="centerY" secondItem="yIX-DT-v8V" secondAttribute="centerY" id="mnO-EC-wlY"/>
+                                                        <constraint firstItem="yIX-DT-v8V" firstAttribute="leading" secondItem="2N7-7y-jTq" secondAttribute="leading" constant="15" id="nA9-xt-ikd"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
@@ -1703,6 +1731,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ChufangStateTableView" destination="VdY-dL-0A6" id="cBJ-Ch-BlC"/>
                         <outlet property="CurrentView" destination="oME-aB-Fvy" id="O47-WC-vfE"/>
                         <outlet property="EndLable" destination="eq9-ei-tAj" id="IDv-CJ-0Dp"/>
                         <outlet property="EndView" destination="DvB-SN-g46" id="g4A-3g-pxg"/>
