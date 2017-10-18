@@ -360,6 +360,12 @@
 		48232B0B1F96F9E800559BAE /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48232B071F96F9E800559BAE /* AlipaySDK.bundle */; };
 		48232B0D1F96F9E800559BAE /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48232B091F96F9E800559BAE /* RongIMKit.framework */; };
 		48232B0E1F96F9E800559BAE /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48232B0A1F96F9E800559BAE /* RongIMLib.framework */; };
+		48232B1F1F96FF2E00559BAE /* RCalendarPickerLanguage.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48232B101F96FF2E00559BAE /* RCalendarPickerLanguage.strings */; };
+		48232B201F96FF2E00559BAE /* ClockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B131F96FF2E00559BAE /* ClockHelper.m */; };
+		48232B211F96FF2E00559BAE /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B151F96FF2E00559BAE /* DateHelper.m */; };
+		48232B221F96FF2E00559BAE /* RCalendarPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B181F96FF2E00559BAE /* RCalendarPickerView.m */; };
+		48232B231F96FF2E00559BAE /* RClockPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B1A1F96FF2E00559BAE /* RClockPickerView.m */; };
+		48232B241F96FF2E00559BAE /* RCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48232B1C1F96FF2E00559BAE /* RCollectionViewCell.m */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1675,6 +1681,20 @@
 		48232B081F96F9E800559BAE /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		48232B091F96F9E800559BAE /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		48232B0A1F96F9E800559BAE /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
+		48232B111F96FF2E00559BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/RCalendarPickerLanguage.strings; sourceTree = "<group>"; };
+		48232B121F96FF2E00559BAE /* ClockHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockHelper.h; sourceTree = "<group>"; };
+		48232B131F96FF2E00559BAE /* ClockHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockHelper.m; sourceTree = "<group>"; };
+		48232B141F96FF2E00559BAE /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateHelper.h; sourceTree = "<group>"; };
+		48232B151F96FF2E00559BAE /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelper.m; sourceTree = "<group>"; };
+		48232B161F96FF2E00559BAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RCalendarPickerLanguage.strings; sourceTree = "<group>"; };
+		48232B171F96FF2E00559BAE /* RCalendarPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCalendarPickerView.h; sourceTree = "<group>"; };
+		48232B181F96FF2E00559BAE /* RCalendarPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCalendarPickerView.m; sourceTree = "<group>"; };
+		48232B191F96FF2E00559BAE /* RClockPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RClockPickerView.h; sourceTree = "<group>"; };
+		48232B1A1F96FF2E00559BAE /* RClockPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RClockPickerView.m; sourceTree = "<group>"; };
+		48232B1B1F96FF2E00559BAE /* RCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCollectionViewCell.h; sourceTree = "<group>"; };
+		48232B1C1F96FF2E00559BAE /* RCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCollectionViewCell.m; sourceTree = "<group>"; };
+		48232B1D1F96FF2E00559BAE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RCalendarPickerLanguage.strings"; sourceTree = "<group>"; };
+		48232B1E1F96FF2E00559BAE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/RCalendarPickerLanguage.strings"; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -3796,6 +3816,24 @@
 			path = SpriteImageView;
 			sourceTree = "<group>";
 		};
+		48232B0F1F96FF2E00559BAE /* RCalendarPickerClass */ = {
+			isa = PBXGroup;
+			children = (
+				48232B101F96FF2E00559BAE /* RCalendarPickerLanguage.strings */,
+				48232B121F96FF2E00559BAE /* ClockHelper.h */,
+				48232B131F96FF2E00559BAE /* ClockHelper.m */,
+				48232B141F96FF2E00559BAE /* DateHelper.h */,
+				48232B151F96FF2E00559BAE /* DateHelper.m */,
+				48232B171F96FF2E00559BAE /* RCalendarPickerView.h */,
+				48232B181F96FF2E00559BAE /* RCalendarPickerView.m */,
+				48232B191F96FF2E00559BAE /* RClockPickerView.h */,
+				48232B1A1F96FF2E00559BAE /* RClockPickerView.m */,
+				48232B1B1F96FF2E00559BAE /* RCollectionViewCell.h */,
+				48232B1C1F96FF2E00559BAE /* RCollectionViewCell.m */,
+			);
+			path = RCalendarPickerClass;
+			sourceTree = "<group>";
+		};
 		DB8C72FF1BFC1CFA0033E5E8 = {
 			isa = PBXGroup;
 			children = (
@@ -4896,6 +4934,7 @@
 		DB8C77511BFC1D840033E5E8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				48232B0F1F96FF2E00559BAE /* RCalendarPickerClass */,
 				4812B8581F8E93E20087D2C9 /* SpriteImageView */,
 				4812B84F1F8E8F240087D2C9 /* SoSlideScrollView */,
 				4812B80C1F8E69960087D2C9 /* IQKeyboardManager */,
@@ -5778,6 +5817,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = DB8C72FF1BFC1CFA0033E5E8;
 			productRefGroup = DB8C73091BFC1CFA0033E5E8 /* Products */;
@@ -5877,6 +5917,7 @@
 				183305BE1C16855D008A4159 /* u404.png in Resources */,
 				DB8C753A1BFC1D580033E5E8 /* iconfont-xinlifudao@3x.png in Resources */,
 				DB8C76741BFC1D580033E5E8 /* 图层-10.png in Resources */,
+				48232B1F1F96FF2E00559BAE /* RCalendarPickerLanguage.strings in Resources */,
 				DB8C76111BFC1D580033E5E8 /* 组-1-拷贝.png in Resources */,
 				DB8C75A01BFC1D580033E5E8 /* 轮播图背景@3x.png in Resources */,
 				F47C06F31C2138C700DAB002 /* iconfont-tianjia@3x.png in Resources */,
@@ -6461,6 +6502,7 @@
 				181E0AC51C0C0933005B3915 /* TAAnimatedDotView.m in Sources */,
 				18A4F6561C2A462300C7E13B /* MLSelectPhotoPickerViewController.m in Sources */,
 				18A4FD9F1C082B7F0020FFC2 /* BZHealthShopViewController.m in Sources */,
+				48232B211F96FF2E00559BAE /* DateHelper.m in Sources */,
 				185A05951C3A5C230075F36A /* BZShoppingCartModelSelected.m in Sources */,
 				18756AF71C15422B00FFC1EF /* MJRefreshAutoFooter.m in Sources */,
 				F4CF59D91C23B5DD005E2E40 /* HLTSetViewController.m in Sources */,
@@ -6474,6 +6516,7 @@
 				180420751C2530B20031D099 /* BZHeartRateMonModel.m in Sources */,
 				4812B8711F8F9DD20087D2C9 /* OrderTableViewCell.m in Sources */,
 				F4CF59D81C23B5DD005E2E40 /* HLTEditViewController.m in Sources */,
+				48232B201F96FF2E00559BAE /* ClockHelper.m in Sources */,
 				18A4F65D1C2A462300C7E13B /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				4812B7951F8D35240087D2C9 /* MyPrescriptionViewController.m in Sources */,
 				F484F9671C35210400C39839 /* RongYunTools.m in Sources */,
@@ -6569,6 +6612,7 @@
 				DB8C773B1BFC1D6B0033E5E8 /* WcrMyListCell.m in Sources */,
 				183CFEC41C182FF100029DC0 /* KxMenu.m in Sources */,
 				18E3122C1C2BDC220070DA12 /* BZProvinceModel.m in Sources */,
+				48232B231F96FF2E00559BAE /* RClockPickerView.m in Sources */,
 				DB8C78DB1BFC2A830033E5E8 /* WCRExpertController.m in Sources */,
 				DB8C772F1BFC1D6B0033E5E8 /* WcrDoctor.m in Sources */,
 				180134C91C210959006A890D /* BZLeftRecordController.m in Sources */,
@@ -6605,6 +6649,7 @@
 				18756B041C15422B00FFC1EF /* MJRefreshStateHeader.m in Sources */,
 				181629501C19362500721C8D /* UIColor+Toos.m in Sources */,
 				DB8C787A1BFC1D850033E5E8 /* AppConfig.m in Sources */,
+				48232B221F96FF2E00559BAE /* RCalendarPickerView.m in Sources */,
 				F47909E81C2E3A15000F975D /* HLTMoveGroupController.m in Sources */,
 				DB8C78EB1BFC51020033E5E8 /* WCRChannelViewController.m in Sources */,
 				F4A64F301C322C5F00434CC1 /* HLTSeeCardController.m in Sources */,
@@ -6753,6 +6798,7 @@
 				18A4F6571C2A462300C7E13B /* MLPhotoPickerImageView.m in Sources */,
 				DB8C790B1BFC791F0033E5E8 /* WCRKnowledge.m in Sources */,
 				182E8BCD1C4340E2003767EE /* BZAliPayModel.m in Sources */,
+				48232B241F96FF2E00559BAE /* RCollectionViewCell.m in Sources */,
 				18E3122F1C2BED970070DA12 /* BZAddressModel.m in Sources */,
 				183305DF1C16C693008A4159 /* BZProductDetailADPictureModel.m in Sources */,
 				DB8C78DF1BFC2C970033E5E8 /* WCRExpertCell.m in Sources */,
@@ -6810,6 +6856,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		48232B101F96FF2E00559BAE /* RCalendarPickerLanguage.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48232B111F96FF2E00559BAE /* Base */,
+				48232B161F96FF2E00559BAE /* en */,
+				48232B1D1F96FF2E00559BAE /* zh-Hans */,
+				48232B1E1F96FF2E00559BAE /* zh-Hant */,
+			);
+			name = RCalendarPickerLanguage.strings;
+			sourceTree = "<group>";
+		};
 		DB8C73191BFC1CFA0033E5E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
