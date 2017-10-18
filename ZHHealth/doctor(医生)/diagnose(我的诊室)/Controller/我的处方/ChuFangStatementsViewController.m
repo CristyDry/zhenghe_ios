@@ -19,6 +19,8 @@
     __weak IBOutlet UILabel *StartLable;
     __weak IBOutlet UIView *EndView;
     __weak IBOutlet UILabel *EndLable;
+    NSString *startTimeStr;
+    NSString *endTimeStr;
 }
 
 @end
@@ -44,6 +46,45 @@
     EndView.layer.cornerRadius = 5.0f;
     EndView.layer.borderWidth = 1.0f;
     EndView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    NSDateFormatter *formater = [[ NSDateFormatter alloc] init];
+    [formater setDateFormat:@"yyyy-MM-dd"];
+    startTimeStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"statrtTimeStr"];
+    endTimeStr= [[NSUserDefaults standardUserDefaults] objectForKey:@"endTimeStr"];
+    // 拿出上次选择的时间
+    if (startTimeStr.length > 0) {
+        StartLable.text = startTimeStr;
+    } else {
+        startTimeStr = [NSString stringWithFormat:@"%@",[formater stringFromDate:[NSDate date]]];
+        StartLable.text = startTimeStr;
+    }
+    
+    if (endTimeStr.length > 0) {
+        StartLable.text = endTimeStr;
+    } else {
+        endTimeStr = [NSString stringWithFormat:@"%@",[formater stringFromDate:[NSDate date]]];
+        StartLable.text = endTimeStr;
+    }
+
+    StartLable.text = startTimeStr;
+    EndLable.text = endTimeStr;
+    [self requestChuFangStatementData];
+}
+
+#pragma mark 请求处方统计数据
+- (void)requestChuFangStatementData {
+    // 处方药品统计
+    NSMutableDictionary *args = [NSMutableDictionary dictionary];
+    HLTLoginResponseAccount * account = [HLTLoginResponseAccount decode];
+    args[@"id"] = account.Id;
+    args[@"startDate"] = startTimeStr;
+    args[@"endDate"] = endTimeStr;
+    
+    [httpUtil doPostRequest:@"api/ZhengheRx/report" args:args targetVC:self response:^(ResponseModel *responseMd) {
+        if (responseMd.isResultOk) {
+            
+        }
+    }];
+
 }
 
 #pragma mark Click Action
@@ -54,6 +95,11 @@
     calendarPicker.selectDate = [NSDate date]; //选择时间
     calendarPicker.complete = ^(NSInteger day, NSInteger month, NSInteger year, NSDate *date){
         StartLable.text = [NSString stringWithFormat:@"%d-%d-%d", (int)year,(int)month,(int)day];
+        startTimeStr = StartLable.text;
+        // 保存选择的数据
+        [[NSUserDefaults standardUserDefaults] setObject:StartLable.text forKey:@"statrtTimeStr"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self requestChuFangStatementData];
     };
     [CurrentView addSubview:calendarPicker];
 }
@@ -64,6 +110,11 @@
     calendarPicker.selectDate = [NSDate date]; //选择时间
     calendarPicker.complete = ^(NSInteger day, NSInteger month, NSInteger year, NSDate *date){
         EndLable.text = [NSString stringWithFormat:@"%d-%d-%d", (int)year,(int)month,(int)day];
+        startTimeStr = EndLable.text;
+        // 保存选择的数据
+        [[NSUserDefaults standardUserDefaults] setObject:EndLable.text forKey:@"endTimeStr"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self requestChuFangStatementData];
     };
     [CurrentView addSubview:calendarPicker];
 }

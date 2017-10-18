@@ -61,19 +61,25 @@
 }
 
 -(void)nothingAction{
-   // 什么都不需要做
+    // 什么都不需要做
 }
 
 -(void)minusAction:(UIButton*)sender
 {
     if(_minusBlock) {
-        _minusBlock([_amountTextField.text integerValue],_dataID,_plus,_minus,_amountTextField);
+        if ([_amountTextField.text integerValue] == 1) {
+            _amountTextField.text = @"1";
+            _minusBlock(0,_dataID,_plus,_minus,_amountTextField);
+        } else {
+            _amountTextField.text = [NSString stringWithFormat:@"%ld",(long)[_amountTextField.text integerValue]-1];
+            _minusBlock([_amountTextField.text integerValue],_dataID,_plus,_minus,_amountTextField);
+        }
     }
 }
 
 -(void)plusAction:(UIButton *)sender
 {
-
+    _amountTextField.text = [NSString stringWithFormat:@"%ld",(long)[_amountTextField.text integerValue]+1];
     if (_plusBlock) {
         _plusBlock([_amountTextField.text integerValue],_dataID,_plus,_minus,_amountTextField);
     }
