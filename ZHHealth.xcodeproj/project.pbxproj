@@ -306,7 +306,6 @@
 		4812B7A51F8D35B10087D2C9 /* sexSel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79C1F8D35B10087D2C9 /* sexSel.png */; };
 		4812B7A61F8D35B10087D2C9 /* sexSel@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79D1F8D35B10087D2C9 /* sexSel@2.png */; };
 		4812B7A71F8D35B10087D2C9 /* sexSel@3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B79E1F8D35B10087D2C9 /* sexSel@3.png */; };
-		4812B7DB1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D21F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png */; };
 		4812B7DC1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D31F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@2x.png */; };
 		4812B7DD1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D41F8D36480087D2C9 /* 圆角矩形-1-拷贝-5@3x.png */; };
 		4812B7DE1F8D36480087D2C9 /* 圆角矩形-1-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812B7D51F8D36480087D2C9 /* 圆角矩形-1-拷贝.png */; };
@@ -650,7 +649,6 @@
 		DB8C761D1BFC1D580033E5E8 /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74561BFC1D570033E5E8 /* qq.png */; };
 		DB8C761E1BFC1D580033E5E8 /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74571BFC1D570033E5E8 /* qq@2x.png */; };
 		DB8C761F1BFC1D580033E5E8 /* qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74581BFC1D570033E5E8 /* qq@3x.png */; };
-		DB8C76201BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74591BFC1D570033E5E8 /* 圆角矩形-1-拷贝-5.png */; };
 		DB8C76211BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C745A1BFC1D570033E5E8 /* 圆角矩形-1-拷贝-5@2x.png */; };
 		DB8C76221BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C745B1BFC1D570033E5E8 /* 圆角矩形-1-拷贝-5@3x.png */; };
 		DB8C76231BFC1D580033E5E8 /* 圆角矩形-1-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C745C1BFC1D570033E5E8 /* 圆角矩形-1-拷贝.png */; };
@@ -747,7 +745,6 @@
 		DB8C76801BFC1D580033E5E8 /* 形状-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74BE1BFC1D580033E5E8 /* 形状-2.png */; };
 		DB8C76811BFC1D580033E5E8 /* 形状-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74BF1BFC1D580033E5E8 /* 形状-2@2x.png */; };
 		DB8C76821BFC1D580033E5E8 /* 形状-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74C01BFC1D580033E5E8 /* 形状-2@3x.png */; };
-		DB8C76831BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74C31BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5.png */; };
 		DB8C76841BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74C41BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@2x.png */; };
 		DB8C76851BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74C51BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5@3x.png */; };
 		DB8C76861BFC1D580033E5E8 /* 圆角矩形-1-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8C74C61BFC1D580033E5E8 /* 圆角矩形-1-拷贝.png */; };
@@ -5983,7 +5980,6 @@
 				DB8C753E1BFC1D580033E5E8 /* rx.png in Resources */,
 				DB8C75A21BFC1D580033E5E8 /* 退烧止痛@2x.png in Resources */,
 				DB8C761A1BFC1D580033E5E8 /* 设置.png in Resources */,
-				4812B7DB1F8D36480087D2C9 /* 圆角矩形-1-拷贝-5.png in Resources */,
 				DB8C76CE1BFC1D580033E5E8 /* 医生头像.png in Resources */,
 				DB8C766B1BFC1D580033E5E8 /* iconfont-zhishiku.png in Resources */,
 				DB8C757A1BFC1D580033E5E8 /* 找医生.png in Resources */,
@@ -6093,7 +6089,6 @@
 				DB8C76281BFC1D580033E5E8 /* 微信@3x.png in Resources */,
 				DB8C761E1BFC1D580033E5E8 /* qq@2x.png in Resources */,
 				DB8C75C51BFC1D580033E5E8 /* iconfont-gengduo-2.png in Resources */,
-				DB8C76831BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5.png in Resources */,
 				DB8C75F91BFC1D580033E5E8 /* 体重显示.png in Resources */,
 				DB8C76461BFC1D580033E5E8 /* 椭圆-1-拷贝-3@3x.png in Resources */,
 				DB8C75CD1BFC1D580033E5E8 /* 患者默认头像@3x.png in Resources */,
@@ -6240,7 +6235,6 @@
 				183305CB1C16855D008A4159 /* u505_line.png in Resources */,
 				DB8C758D1BFC1D580033E5E8 /* 皮肤外用@2x.png in Resources */,
 				DB8C75801BFC1D580033E5E8 /* 收藏-拷贝.png in Resources */,
-				DB8C76201BFC1D580033E5E8 /* 圆角矩形-1-拷贝-5.png in Resources */,
 				DB8C75721BFC1D580033E5E8 /* 心脑血管@2x.png in Resources */,
 				DB8C760F1BFC1D580033E5E8 /* 电子病例@2x.png in Resources */,
 				DB8C764D1BFC1D580033E5E8 /* iconfont-biaoqing.png in Resources */,
@@ -7052,7 +7046,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: mingcong zhu (8FRP794A86)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mingcong zhu (8FRP794A86)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = V8N5BU6A3X;
 				ENABLE_BITCODE = NO;
@@ -7265,7 +7259,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: mingcong zhu (8FRP794A86)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mingcong zhu (8FRP794A86)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = V8N5BU6A3X;
 				ENABLE_BITCODE = NO;
