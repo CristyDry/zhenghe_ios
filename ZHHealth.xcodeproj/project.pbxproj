@@ -370,6 +370,9 @@
 		48232B2B1F97081A00559BAE /* Calender.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B281F97081A00559BAE /* Calender.png */; };
 		48232B2C1F97081A00559BAE /* Calender@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B291F97081A00559BAE /* Calender@2x.png */; };
 		48232B2D1F97081A00559BAE /* Calender@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B2A1F97081A00559BAE /* Calender@3x.png */; };
+		48232B311F9709F200559BAE /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B2E1F9709F200559BAE /* edit.png */; };
+		48232B321F9709F200559BAE /* edit的@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B2F1F9709F200559BAE /* edit的@2x.png */; };
+		48232B331F9709F200559BAE /* edit的@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48232B301F9709F200559BAE /* edit的@3x.png */; };
 		5B1DB55A1EC5556B00374BA7 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */; };
 		5B1DB55B1EC5556B00374BA7 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */; };
 		5B1DB55C1EC5556B00374BA7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */; };
@@ -1704,6 +1707,9 @@
 		48232B281F97081A00559BAE /* Calender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calender.png; sourceTree = "<group>"; };
 		48232B291F97081A00559BAE /* Calender@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calender@2x.png"; sourceTree = "<group>"; };
 		48232B2A1F97081A00559BAE /* Calender@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calender@3x.png"; sourceTree = "<group>"; };
+		48232B2E1F9709F200559BAE /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		48232B2F1F9709F200559BAE /* edit的@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit的@2x.png"; sourceTree = "<group>"; };
+		48232B301F9709F200559BAE /* edit的@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit的@3x.png"; sourceTree = "<group>"; };
 		5B1DB5571EC5556B00374BA7 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		5B1DB5581EC5556B00374BA7 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		5B1DB5591EC5556B00374BA7 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -4476,6 +4482,9 @@
 		DB8C74CD1BFC1D580033E5E8 /* iOS切图 */ = {
 			isa = PBXGroup;
 			children = (
+				48232B2E1F9709F200559BAE /* edit.png */,
+				48232B2F1F9709F200559BAE /* edit的@2x.png */,
+				48232B301F9709F200559BAE /* edit的@3x.png */,
 				48232B281F97081A00559BAE /* Calender.png */,
 				48232B291F97081A00559BAE /* Calender@2x.png */,
 				48232B2A1F97081A00559BAE /* Calender@3x.png */,
@@ -6022,6 +6031,7 @@
 				DB8C75781BFC1D580033E5E8 /* 扫瞄条@2x.png in Resources */,
 				DB8C76B41BFC1D580033E5E8 /* iconfont-iconfontshoucang.png in Resources */,
 				DB8C759B1BFC1D580033E5E8 /* 轮播图圆圈.png in Resources */,
+				48232B311F9709F200559BAE /* edit.png in Resources */,
 				F4C214F11C2B8BA900CF0343 /* icon_2.png in Resources */,
 				DB8C76901BFC1D580033E5E8 /* iconfont-zhanghu@2x.png in Resources */,
 				4812B7A41F8D35B10087D2C9 /* sexNoSel@3x.png in Resources */,
@@ -6149,6 +6159,7 @@
 				183305BF1C16855D008A4159 /* u431.png in Resources */,
 				DB8C76641BFC1D580033E5E8 /* 圆角矩形-1-拷贝-2@3x.png in Resources */,
 				4812B7E01F8D36480087D2C9 /* 圆角矩形-1-拷贝@3x.png in Resources */,
+				48232B331F9709F200559BAE /* edit的@3x.png in Resources */,
 				DB8C75431BFC1D580033E5E8 /* 专家会诊@3x.png in Resources */,
 				DB8C76651BFC1D580033E5E8 /* 圆角矩形-1-拷贝.png in Resources */,
 				F4A8746D1C58668B0016788A /* RongCloud.bundle in Resources */,
@@ -6172,6 +6183,7 @@
 				DB8C76B11BFC1D580033E5E8 /* iconfont-fenxiang-3.png in Resources */,
 				DB8C75BE1BFC1D580033E5E8 /* 形状-3@3x.png in Resources */,
 				DB8C75351BFC1D580033E5E8 /* iconfont-weizhengxing.png in Resources */,
+				48232B321F9709F200559BAE /* edit的@2x.png in Resources */,
 				DB8C75571BFC1D580033E5E8 /* 图层-16@2x.png in Resources */,
 				183305BA1C16855D008A4159 /* u358.png in Resources */,
 				DB8C75941BFC1D580033E5E8 /* 购物车红点@3x.png in Resources */,
