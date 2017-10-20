@@ -197,7 +197,7 @@
     CGFloat offset = 20.0;
     CGFloat qqX = xPoint;
     xPoint = qqX - offset - width;
-//    [self setThirdLoginButtonWithImageName:@"微信" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:414];
+    [self setThirdLoginButtonWithImageName:@"微信" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:414];
     
     xPoint = qqX + offset + width;
 //    [self setThirdLoginButtonWithImageName:@"微博" andRect:CGRectMake(xPoint, yPoint, width, height) andButtonTag:415];
