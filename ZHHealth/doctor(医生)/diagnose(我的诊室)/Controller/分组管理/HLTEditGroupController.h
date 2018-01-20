@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTGroup.h"
+#import <BaseViewControler.h>
 
-@interface HLTEditGroupController : UIViewController
+@interface HLTEditGroupController : BaseViewControler
 
 @property (nonatomic, strong) HLTGroup *groupModel;
 

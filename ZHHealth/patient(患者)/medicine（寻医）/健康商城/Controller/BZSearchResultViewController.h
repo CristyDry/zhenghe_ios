@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZSearchResultViewController : UIViewController
+
+@interface BZSearchResultViewController : BaseViewControler
 @property (nonatomic,copy)  NSString *classifyId;
 // 产品分类信息
 @property (nonatomic,strong)  NSArray *classifyInfos;

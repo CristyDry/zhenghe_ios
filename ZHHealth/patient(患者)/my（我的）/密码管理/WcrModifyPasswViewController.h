@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WcrModifyPasswViewController : UIViewController
+@interface WcrModifyPasswViewController : BaseViewControler
 
 @property (nonatomic, strong) NSString *titleString;
 

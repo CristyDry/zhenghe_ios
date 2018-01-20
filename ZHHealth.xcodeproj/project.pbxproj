@@ -149,7 +149,11 @@
 		185A05951C3A5C230075F36A /* BZShoppingCartModelSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A05941C3A5C230075F36A /* BZShoppingCartModelSelected.m */; };
 		185D84321C2CE74B0056C57E /* BZCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D84311C2CE74B0056C57E /* BZCityModel.m */; };
 		185D84351C2CF79B0056C57E /* BZDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D84341C2CF79B0056C57E /* BZDistrictModel.m */; };
+		18675DE22013A24A00BD9A2A /* BaseViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18675DE12013A24A00BD9A2A /* BaseViewControler.m */; };
+		18675DE52013A40D00BD9A2A /* BaseTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18675DE42013A40D00BD9A2A /* BaseTabViewController.m */; };
+		18675DE82013A71500BD9A2A /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18675DE72013A71500BD9A2A /* BaseTableViewController.m */; };
 		18694ADA1C06BB2F00FC768C /* LoginResponseAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 18694AD91C06BB2F00FC768C /* LoginResponseAccount.m */; };
+		186D02BB200F87720055E6A0 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D02BA200F87720055E6A0 /* ViewModel.m */; };
 		1873C3131C0D439E00860C6C /* BZClassifyInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873C3121C0D439E00860C6C /* BZClassifyInfoCell.m */; };
 		1873C3161C0D579E00860C6C /* BZProductListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873C3151C0D579E00860C6C /* BZProductListModel.m */; };
 		1873C3191C0D78CD00860C6C /* BZSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873C3181C0D78CD00860C6C /* BZSearchResultCell.m */; };
@@ -1343,8 +1347,16 @@
 		185D84311C2CE74B0056C57E /* BZCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZCityModel.m; sourceTree = "<group>"; };
 		185D84331C2CF79B0056C57E /* BZDistrictModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDistrictModel.h; sourceTree = "<group>"; };
 		185D84341C2CF79B0056C57E /* BZDistrictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDistrictModel.m; sourceTree = "<group>"; };
+		18675DE02013A24A00BD9A2A /* BaseViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewControler.h; sourceTree = "<group>"; };
+		18675DE12013A24A00BD9A2A /* BaseViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewControler.m; sourceTree = "<group>"; };
+		18675DE32013A40D00BD9A2A /* BaseTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabViewController.h; sourceTree = "<group>"; };
+		18675DE42013A40D00BD9A2A /* BaseTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabViewController.m; sourceTree = "<group>"; };
+		18675DE62013A71500BD9A2A /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		18675DE72013A71500BD9A2A /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		18694AD81C06BB2F00FC768C /* LoginResponseAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponseAccount.h; sourceTree = "<group>"; };
 		18694AD91C06BB2F00FC768C /* LoginResponseAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponseAccount.m; sourceTree = "<group>"; };
+		186D02B9200F87720055E6A0 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		186D02BA200F87720055E6A0 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		1873C3111C0D439E00860C6C /* BZClassifyInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BZClassifyInfoCell.h; path = ../Model/BZClassifyInfoCell.h; sourceTree = "<group>"; };
 		1873C3121C0D439E00860C6C /* BZClassifyInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BZClassifyInfoCell.m; path = ../Model/BZClassifyInfoCell.m; sourceTree = "<group>"; };
 		1873C3141C0D579E00860C6C /* BZProductListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZProductListModel.h; sourceTree = "<group>"; };
@@ -3210,6 +3222,19 @@
 			path = "drawable-xxxhdpi";
 			sourceTree = "<group>";
 		};
+		18675DD92013A07400BD9A2A /* base */ = {
+			isa = PBXGroup;
+			children = (
+				18675DE02013A24A00BD9A2A /* BaseViewControler.h */,
+				18675DE12013A24A00BD9A2A /* BaseViewControler.m */,
+				18675DE32013A40D00BD9A2A /* BaseTabViewController.h */,
+				18675DE42013A40D00BD9A2A /* BaseTabViewController.m */,
+				18675DE62013A71500BD9A2A /* BaseTableViewController.h */,
+				18675DE72013A71500BD9A2A /* BaseTableViewController.m */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
 		18694AD71C06B92B00FC768C /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -3904,6 +3929,7 @@
 		DB8C730A1BFC1CFA0033E5E8 /* ZHHealth */ = {
 			isa = PBXGroup;
 			children = (
+				18675DD92013A07400BD9A2A /* base */,
 				182E8CFE1C43A894003767EE /* openssl */,
 				182E8D4A1C43A894003767EE /* Util */,
 				F484F9581C35210400C39839 /* 聊天 */,
@@ -4740,6 +4766,8 @@
 			children = (
 				DB8C76DC1BFC1D6B0033E5E8 /* WcrDoctor.h */,
 				DB8C76DD1BFC1D6B0033E5E8 /* WcrDoctor.m */,
+				186D02B9200F87720055E6A0 /* ViewModel.h */,
+				186D02BA200F87720055E6A0 /* ViewModel.m */,
 				DB8C76DE1BFC1D6B0033E5E8 /* WcrFunction.h */,
 				DB8C76DF1BFC1D6B0033E5E8 /* WcrFunction.m */,
 				185700F21C1AC50C00AC5488 /* BZDoctorModel.h */,
@@ -5831,8 +5859,8 @@
 				TargetAttributes = {
 					DB8C73071BFC1CFA0033E5E8 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = V8N5BU6A3X;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 6V4UE57ANF;
+						ProvisioningStyle = Automatic;
 					};
 					DB8C73201BFC1CFA0033E5E8 = {
 						CreatedOnToolsVersion = 7.1;
@@ -6607,6 +6635,7 @@
 				DB8C77411BFC1D6B0033E5E8 /* WcrAddressViewController.m in Sources */,
 				18A4F6101C2A351A00C7E13B /* HLTGroup.m in Sources */,
 				F486F0411C27E8B500F624C8 /* HLTPettitionerController.m in Sources */,
+				18675DE82013A71500BD9A2A /* BaseTableViewController.m in Sources */,
 				DB8C787F1BFC1D850033E5E8 /* MBProgressHUD.m in Sources */,
 				DB8C786B1BFC1D850033E5E8 /* AFURLResponseSerialization.m in Sources */,
 				182E8D601C43A894003767EE /* DataVerifier.m in Sources */,
@@ -6642,6 +6671,7 @@
 				F484F9641C35210400C39839 /* RCDChatViewController.m in Sources */,
 				DB8C773C1BFC1D6B0033E5E8 /* WcrUserHeaderCell.m in Sources */,
 				F4CF59DB1C23B5DD005E2E40 /* HLTCollectModel.m in Sources */,
+				18675DE22013A24A00BD9A2A /* BaseViewControler.m in Sources */,
 				18F519D31C22A74000EFDBE6 /* BZCollectProductListModel.m in Sources */,
 				DB8C772D1BFC1D6B0033E5E8 /* KnowledgeViewController.m in Sources */,
 				DB8C773B1BFC1D6B0033E5E8 /* WcrMyListCell.m in Sources */,
@@ -6694,6 +6724,7 @@
 				1873C33C1C0D8F0800860C6C /* NSString+MJExtension.m in Sources */,
 				182E8D5F1C43A894003767EE /* DataSigner.m in Sources */,
 				18F3C1FF1C1BCF020084EE47 /* BZProfessorDetailViewController.m in Sources */,
+				18675DE52013A40D00BD9A2A /* BaseTabViewController.m in Sources */,
 				F4A64F331C322F1900434CC1 /* HLTMRecordModel.m in Sources */,
 				DB8C78691BFC1D850033E5E8 /* AFURLConnectionOperation.m in Sources */,
 				18A4F6541C2A462300C7E13B /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
@@ -6716,6 +6747,7 @@
 				18A4F6531C2A462300C7E13B /* MLSelectPhotoNavigationViewController.m in Sources */,
 				DB8C78B51BFC1D850033E5E8 /* SDImageCache.m in Sources */,
 				182E8D651C43A894003767EE /* RSADataVerifier.m in Sources */,
+				186D02BB200F87720055E6A0 /* ViewModel.m in Sources */,
 				DB8C77371BFC1D6B0033E5E8 /* WcrMyList.m in Sources */,
 				18A4F6581C2A462300C7E13B /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */,
 				F4A64F3C1C32428000434CC1 /* HLTNewCardCell.m in Sources */,
@@ -7022,9 +7054,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: mingcong zhu (8FRP794A86)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = V8N5BU6A3X;
+				DEVELOPMENT_TEAM = 6V4UE57ANF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7221,10 +7253,10 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.zhenghe.health;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.zhenghong.health;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "81ee044c-e2e9-495d-b6b1-65d8258b009e";
-				PROVISIONING_PROFILE_SPECIFIER = ZhengheHealth;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -7235,9 +7267,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: mingcong zhu (8FRP794A86)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = V8N5BU6A3X;
+				DEVELOPMENT_TEAM = 6V4UE57ANF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7433,10 +7465,10 @@
 					"$(PROJECT_DIR)/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.zhenghe.health;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.zhenghong.health;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a5334a16-b743-4b41-8ac9-4fa91eb48d95";
-				PROVISIONING_PROFILE_SPECIFIER = ZhengheHealth;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

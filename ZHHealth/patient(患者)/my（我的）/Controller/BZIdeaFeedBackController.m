@@ -28,6 +28,8 @@
     [self setCommitBtn];
     // 设置内容视图
     [self setCustomUI];
+    self.view.backgroundColor = kBackgroundColor;
+
 }
 // 设置内容视图
 - (void)setCustomUI{

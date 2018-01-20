@@ -14,7 +14,7 @@
     
     NSMutableArray *array = [NSMutableArray array];
     
-    NSArray *titleStrings = @[@"免责申明",@"关于我们",@"检测新版本"];
+    NSArray *titleStrings = @[@"关于我们",@"检测新版本"];//@"免责申明",
     for (int i = 0; i < titleStrings.count; i++) {
         WcrSettingTitle *setting = [[WcrSettingTitle alloc]init];
         setting.titleString = titleStrings[i];

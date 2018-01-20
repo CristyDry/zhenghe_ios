@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BZAddressModel.h"
-@interface BZEnsureOrderController : UIViewController
+#import <BaseViewControler.h>
+@interface BZEnsureOrderController : BaseViewControler
 @property (nonatomic,assign)  CGFloat totalCost;
 @property (nonatomic,strong)  BZAddressModel *addressModel;
 @property (nonatomic)  BOOL isFormAddress;

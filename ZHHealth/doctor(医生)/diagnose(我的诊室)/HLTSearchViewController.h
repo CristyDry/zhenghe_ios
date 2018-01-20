@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTSearchViewController : UIViewController
+@interface HLTSearchViewController : BaseViewControler
 
 @property (nonatomic) BOOL isFromFind;
 

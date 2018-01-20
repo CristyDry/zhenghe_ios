@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseTableViewController.h>
 
-@interface BZRequestTableViewController : UITableViewController
+@interface BZRequestTableViewController : BaseTableViewController
 
 @end

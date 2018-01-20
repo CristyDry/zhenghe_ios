@@ -7,8 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import <BaseViewControler.h>
 
-@interface HLTLoginViewController : UIViewController
+@interface HLTLoginViewController : BaseViewControler
 @property (nonatomic,copy)  NSString *phoneNumber;
 @property (nonatomic, strong) UITextField *phoneTF;
 @property (nonatomic, strong) UITextField *passwordTF;

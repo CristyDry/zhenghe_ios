@@ -18,4 +18,8 @@
 
 +(NSArray*)createObj;
 
++(NSArray*)createObjALL;
+
++(NSArray*)createObjDoc;
+
 @end

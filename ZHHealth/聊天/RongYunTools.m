@@ -39,7 +39,7 @@
 {
     // 测试：c9kqb3rdku4cj
     // 正式：cpj2xarljd5en
-    [[RCIM sharedRCIM] initWithAppKey:@"c9kqb3rdku4cj"];
+    [[RCIM sharedRCIM] initWithAppKey:@"tdrvipkstq3d5"];
     [RCIM sharedRCIM].userInfoDataSource = RCDDataSource;
 
     if ([LoginResponseAccount isLogin] && [RongYunTools getRongYunToken]) {

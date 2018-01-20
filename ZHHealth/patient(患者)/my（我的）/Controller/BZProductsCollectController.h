@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZProductsCollectController : UIViewController
+@interface BZProductsCollectController : BaseViewControler
 
 @end

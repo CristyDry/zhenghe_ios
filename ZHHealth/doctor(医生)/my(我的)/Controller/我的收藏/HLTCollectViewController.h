@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTCollectViewController : UIViewController
+@interface HLTCollectViewController : BaseViewControler
 
 @end

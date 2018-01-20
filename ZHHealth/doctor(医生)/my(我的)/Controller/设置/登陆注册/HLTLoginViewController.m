@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"医生登录";
+    self.title = @"专家登录";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
@@ -149,7 +149,7 @@
     //联系客服
     yPoint = forgetButton.maxY_wcr+kMainWidth*0.5;
     UILabel * keFuLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, yPoint, kMainWidth, 20)];
-    keFuLabel.text = @"联系客服注册成为医生";
+    keFuLabel.text = @"联系客服注册成为咨询专家";
     keFuLabel.textAlignment = NSTextAlignmentCenter;
     keFuLabel.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:keFuLabel];
@@ -175,7 +175,7 @@
     yPoint = kMainHeight - height;
     // 切换为患者版按钮
     UIButton *changedButton = [[UIButton alloc]initWithFrame:CGRectMake(0, yPoint, kMainWidth, height)];
-    [changedButton buttonWithTitle:@"切换到患者版" andTitleColor:[UIColor whiteColor] andBackgroundImageName:nil andFontSize:KFont - 2];
+    [changedButton buttonWithTitle:@"切换到用户版" andTitleColor:[UIColor whiteColor] andBackgroundImageName:nil andFontSize:KFont - 2];
     changedButton.backgroundColor = [UIColor colorWithHexString:@"#05b7c3"];
     [changedButton addTarget:self action:@selector(changedButtonAction)];
     [self.view addSubview:changedButton];
@@ -231,7 +231,7 @@
     
     NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
     NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-    NSArray *titles = @[@"寻医",@"问诊",@"知识",@"我的"];
+    NSArray *titles = @[@"咨询",@"问诊",@"知识",@"我的"];
     NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
     NSMutableArray *vcArray = [NSMutableArray array];
     

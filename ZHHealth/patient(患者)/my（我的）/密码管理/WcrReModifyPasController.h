@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WcrReModifyPasController : UIViewController
+@interface WcrReModifyPasController : BaseViewControler
 /*  手机号  */
 @property (nonatomic,copy)  NSString *phoneNumber;
 @property (nonatomic, strong) NSString *titleString;

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTDiagnoseViewController : UIViewController
+@interface HLTDiagnoseViewController : BaseViewControler
 
 @end

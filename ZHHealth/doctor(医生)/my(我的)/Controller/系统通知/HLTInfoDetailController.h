@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTInfoModel.h"
-@interface HLTInfoDetailController : UIViewController
+#import <BaseViewControler.h>
+
+@interface HLTInfoDetailController : BaseViewControler
 
 @property (nonatomic, strong) HLTInfoModel *infoModel;
 

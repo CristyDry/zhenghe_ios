@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BZMyOrderController : UIViewController
+#import <BaseViewControler.h>
+@interface BZMyOrderController : BaseViewControler
 
 @end

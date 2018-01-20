@@ -31,45 +31,55 @@
 
 -(void)setTopView{
     
-    CGFloat height = 50;
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kMainWidth, height)];
-    [self.view addSubview:topView];
-    topView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    topView.layer.borderWidth = 1;
+    if([kUserDefaults boolForKey:@"viewAll"]){
+        CGFloat height = 50;
+        UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kMainWidth, height)];
+        [self.view addSubview:topView];
+        topView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        topView.layer.borderWidth = 1;
+        
+        CGFloat pointX = 20;
+        UIButton *articleBtn = [[UIButton alloc] initWithFrame:CGRectMake(pointX, 0, kMainWidth * 0.5 - pointX * 2, height)];
+        [articleBtn setTitle:@"文章" forState:UIControlStateNormal];
+        articleBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+        articleBtn.tag = 1;
+        articleBtn.selected = YES;
+        [articleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [articleBtn setTitleColor:kNavigationBarColor forState:UIControlStateSelected];
+        [articleBtn addTarget:self action:@selector(clickBtn:)];
+        [topView addSubview:articleBtn];
+        
+        _articleBtn = articleBtn;
+        UIButton *productBtn = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(articleBtn.frame) + pointX, 0, articleBtn.bounds.size.width, height)];
+        [productBtn buttonWithTitle:@"药品" andTitleColor:[UIColor blackColor] andBackgroundImageName:nil andFontSize:18];
+        productBtn.tag = 2;
+        [productBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [productBtn setTitleColor:kNavigationBarColor forState:UIControlStateSelected];
+        [productBtn addTarget:self action:@selector(clickBtn:)];
+        [topView addSubview:productBtn];
+        _productBtn = productBtn;
+        
+        // line
+        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(pointX, 48, kMainWidth * 0.5 - pointX * 2, 1)];
+        line.backgroundColor = kNavigationBarColor;
+        [topView addSubview:line];
+        _line = line;
+        
+        // 文章
+        BZArticleCollectController *ArticleCollectVC = [[BZArticleCollectController alloc] init];
+        [self addChildViewController:ArticleCollectVC];
+        
+        // 药品
+        BZProductsCollectController *ProductsCollectVC = [[BZProductsCollectController alloc] init];
+        [self addChildViewController:ProductsCollectVC];
+    }else{
+        // 文章
+        BZArticleCollectController *ArticleCollectVC = [[BZArticleCollectController alloc] init];
+        [self addChildViewController:ArticleCollectVC];
+
+    }
+   
     
-    CGFloat pointX = 20;
-    UIButton *articleBtn = [[UIButton alloc] initWithFrame:CGRectMake(pointX, 0, kMainWidth * 0.5 - pointX * 2, height)];
-    [articleBtn setTitle:@"文章" forState:UIControlStateNormal];
-    articleBtn.titleLabel.font = [UIFont systemFontOfSize:18];
-    articleBtn.tag = 1;
-    articleBtn.selected = YES;
-    [articleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [articleBtn setTitleColor:kNavigationBarColor forState:UIControlStateSelected];
-    [articleBtn addTarget:self action:@selector(clickBtn:)];
-    [topView addSubview:articleBtn];
-    _articleBtn = articleBtn;
-    
-    UIButton *productBtn = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(articleBtn.frame) + pointX, 0, articleBtn.bounds.size.width, height)];
-    [productBtn buttonWithTitle:@"药品" andTitleColor:[UIColor blackColor] andBackgroundImageName:nil andFontSize:18];
-    productBtn.tag = 2;
-    [productBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [productBtn setTitleColor:kNavigationBarColor forState:UIControlStateSelected];
-    [productBtn addTarget:self action:@selector(clickBtn:)];
-    [topView addSubview:productBtn];
-    _productBtn = productBtn;
-    
-    // line
-    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(pointX, 48, kMainWidth * 0.5 - pointX * 2, 1)];
-    line.backgroundColor = kNavigationBarColor;
-    [topView addSubview:line];
-    _line = line;
-    // 文章
-    BZArticleCollectController *ArticleCollectVC = [[BZArticleCollectController alloc] init];
-    [self addChildViewController:ArticleCollectVC];
-    
-    // 药品
-    BZProductsCollectController *ProductsCollectVC = [[BZProductsCollectController alloc] init];
-    [self addChildViewController:ProductsCollectVC];
     
 }
 - (void)clickBtn:(UIButton *)btn{

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTInfoViewController : UIViewController
+@interface HLTInfoViewController : BaseViewControler
 
 @end

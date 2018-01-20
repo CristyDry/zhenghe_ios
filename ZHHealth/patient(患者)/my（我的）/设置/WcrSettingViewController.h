@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WcrSettingViewController : UIViewController
+@interface WcrSettingViewController : BaseViewControler
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTPrescriptionHistoryViewControllerViewController : UIViewController
+@interface HLTPrescriptionHistoryViewControllerViewController : BaseViewControler
 
 @end

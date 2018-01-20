@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTEditModel.h"
-@interface HLTMycardViewController : UIViewController
+#import <BaseViewControler.h>
+
+@interface HLTMycardViewController : BaseViewControler
 
 @property (nonatomic, strong) UIImageView *iconImageview;
 @property (nonatomic, strong) UIImageView *bigImageview;

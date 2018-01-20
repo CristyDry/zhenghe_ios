@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
 @protocol BZDoctorListControllerDelegate<NSObject>
 @optional
@@ -14,7 +15,7 @@
 
 @end
 
-@interface BZDoctorListController : UIViewController
+@interface BZDoctorListController : BaseViewControler
 @property (nonatomic)  BOOL isAddToShoppingcart;
 @property (nonatomic,weak)  id<BZDoctorListControllerDelegate> delegate;
 

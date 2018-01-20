@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WCRAuthenticationController : UIViewController
+@interface WCRAuthenticationController : BaseViewControler
 @property (nonatomic,copy)  NSString *doctorID;
 @end

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BZAllOrderModel.h"
 #import "WXApi.h"
-
-@interface BZPayController : UIViewController
+#import <BaseViewControler.h>
+@interface BZPayController : BaseViewControler
 @property (nonatomic,strong)  NSString *count;// 商品件数
 @property (nonatomic,strong)  NSString *expenseCost;// 运费
 @property (nonatomic,strong)  NSString *orderID;// 订单id

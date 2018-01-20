@@ -21,9 +21,9 @@
 #import "MyViewController.h"
 #import "KnowledgeViewController.h"
 #import "InquiryViewController.h"
-
+#import "ViewModel.h"
 //融云
-#define RONGCLOUD_IM_APPKEY @"c9kqb3rdku4cj"//sfci50a7czyhi
+#define RONGCLOUD_IM_APPKEY @"k51hidwqknr5b"//sfci50a7czyhi
 #import "RongYunTools.h"
 
 //短信验证
@@ -45,7 +45,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
+    [kUserDefaults setBool:NO forKey:@"viewAll"];
+    [kUserDefaults setBool:NO forKey:@"viewDoc"];
+    NSMutableDictionary *args = [NSMutableDictionary dictionary];
+    [httpUtil loadDataPostWithURLString:@"api/ZhengheView/view" args:args response:^(ResponseModel *responseMd) {
+        if (responseMd.isResultOk) {
+            
+            ViewModel *viewModel = [ViewModel mj_objectWithKeyValues:responseMd.response];
+            if([viewModel.view isEqual: @"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewAll"];
+            }else if([viewModel.view isEqual: @"2"]){
+                [kUserDefaults setBool:NO forKey:@"viewAll"];
+                [kUserDefaults setBool:YES forKey:@"viewDoc"];
+            }else{
+                [kUserDefaults setBool:NO forKey:@"viewAll"];
+            }
+            
+        }
+    }];
     // 初始化第三方分享平台
     [self shareSDK];
     //向微信注册
@@ -353,7 +371,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
         
         NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
         NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-        NSArray *titles = @[@"寻医",@"问诊",@"知识",@"我的"];
+        NSArray *titles = @[@"健康",@"咨询",@"知识",@"我的"];
         NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
         NSMutableArray *vcArray = [NSMutableArray array];
         
@@ -402,7 +420,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
         
         NSArray *norArray = @[@"图层-10",@"图层-12",@"iconfont-zhishiku",@"shape-23"];
         NSArray *selArray = @[@"形状-2",@"形状-1",@"形状-12",@"shape-232"];
-        NSArray *titles = @[@"在线接诊",@"我的诊室",@"知识",@"个人中心"];
+        NSArray *titles = @[@"健康在线",@"我的咨询",@"知识",@"个人中心"];
         NSArray *classNames = @[@"MMSChatViewController",@"HLTDiagnoseViewController",@"KnowledgeViewController",@"HLTMyViewController"];
         NSMutableArray *vcArray = [NSMutableArray array];
         

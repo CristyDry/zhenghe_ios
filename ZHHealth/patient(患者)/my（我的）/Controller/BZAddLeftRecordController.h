@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BZAddLeftRecordController : UIViewController
+#import <BaseViewControler.h>
+@interface BZAddLeftRecordController : BaseViewControler
 
 @end

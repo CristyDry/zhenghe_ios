@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZMyMessageViewController : UIViewController
+@interface BZMyMessageViewController : BaseViewControler
 
 @end

@@ -12,7 +12,7 @@
 #import "HLTNewCordController.h"
 #import "HLTSeeCardController.h"
 
-@interface BZMedicalRecordController () <UITableViewDelegate,UITableViewDataSource>
+@interface BZMedicalRecordController () <UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -22,6 +22,13 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //开启iOS7及以上的滑动返回效果
+    
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+        
+    }
     //请求数据
     [self requestCordData];
 }
@@ -148,5 +155,19 @@
 }
 
 
+//UIGestureRecognizerDelegate 重写侧滑协议
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    
+    return [self gestureRecognizerShouldBegin];;
+    
+}
+
+- (BOOL)gestureRecognizerShouldBegin {
+    
+    NSLog(@"~~~~~~~~~~~%@控制器 滑动返回~~~~~~~~~~~~~~~~~~~",[self class]);
+    
+    return YES;
+    
+}
 @end

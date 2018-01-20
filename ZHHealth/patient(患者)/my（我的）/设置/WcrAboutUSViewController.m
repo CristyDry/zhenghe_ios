@@ -51,26 +51,26 @@
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     // 版本号
     NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    [versionLabel labelWithText:[NSString stringWithFormat:@"正合 %@",version] andTextColor:kBlackColor andFontSize:KFont - 2 andBackgroundColor:nil];
+    [versionLabel labelWithText:[NSString stringWithFormat:@"%@",version] andTextColor:kBlackColor andFontSize:KFont - 2 andBackgroundColor:nil];
     versionLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:versionLabel];
     
     frame.origin.y = kMainHeight - 100.0;
     UILabel *contactUsLabel = [[UILabel alloc]initWithFrame:frame];
-    [contactUsLabel labelWithText:@"联系我们" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];
+    [contactUsLabel labelWithText:@"" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];//联系我们
     contactUsLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:contactUsLabel];
     
     
     frame.origin.y = contactUsLabel.maxY_wcr;
     UILabel *emailLabel = [[UILabel alloc]initWithFrame:frame];
-    [emailLabel labelWithText:@"邮箱：cs@zhenghe.com" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];
+    [emailLabel labelWithText:@"" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];//邮箱：cs@zhenghe.com
     emailLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:emailLabel];
     
     frame.origin.y = emailLabel.maxY_wcr;
     UILabel *companyLabel = [[UILabel alloc]initWithFrame:frame];
-    [companyLabel labelWithText:@"Copyright佛山市正和医疗器械有限公司" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];
+    [companyLabel labelWithText:@"" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];//Copyright佛山市正和医疗器械有限公司
     companyLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:companyLabel];
     

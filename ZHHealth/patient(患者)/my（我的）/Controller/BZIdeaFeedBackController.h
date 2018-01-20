@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZIdeaFeedBackController : UIViewController
+@interface BZIdeaFeedBackController : BaseViewControler
 
 @end

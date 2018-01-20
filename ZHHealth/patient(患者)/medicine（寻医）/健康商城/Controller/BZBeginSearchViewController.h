@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZBeginSearchViewController : UIViewController
+@interface BZBeginSearchViewController : BaseViewControler
 @property (nonatomic,strong)  NSArray *classifyInfos;
 @end

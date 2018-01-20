@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface SearchViewController : UIViewController
+@interface SearchViewController : BaseViewControler
 @property (nonatomic,copy)  NSString *keys;
 @property (nonatomic,strong)  NSMutableArray *doctorModelArray;
 @property (nonatomic,assign)  BOOL *isformSearch;

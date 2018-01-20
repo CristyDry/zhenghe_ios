@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BZMyCollectController : UITabBarController
+#import <BaseTabViewController.h>
+@interface BZMyCollectController : BaseTabViewController
 
 @end

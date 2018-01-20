@@ -58,7 +58,9 @@
 #pragma mark - UITableView代理方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
+    if(_myDocter.count < 1){
+        return 1;
+    }
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -144,7 +146,7 @@
         label.font = [UIFont systemFontOfSize:KFont - 2];
         label.textColor = kBlackColor;
         label.frame = CGRectMake(30, 0, kMainWidth, 30);
-        label.text = @"     我的医生";
+        label.text = @"     我的专家";
         return label;
     }
 }

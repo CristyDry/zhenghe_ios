@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTNewGroupViewController : UIViewController
+@interface HLTNewGroupViewController : BaseViewControler
 
 
 

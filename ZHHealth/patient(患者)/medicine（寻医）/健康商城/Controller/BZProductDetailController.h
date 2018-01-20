@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BZProductDetailInfosModel.h"
-@interface BZProductDetailController : UIViewController
+#import <BaseViewControler.h>
+
+@interface BZProductDetailController : BaseViewControler
 /**药品id*/
 @property (nonatomic,strong)  NSString *productId;
 /**保存药品详细信息的模型*/

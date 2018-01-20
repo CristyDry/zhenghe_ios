@@ -69,12 +69,13 @@
     UIButton *patientBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self setButtonPropertyWithButton:patientBtn andYpoint:yPatient andTag:2015 andButtonTitle:@"我是患者"];
     [scrollView addSubview:patientBtn];
-    
-    CGFloat yDoctor = patientBtn.maxY_wcr + 30;
-    UIButton *doctorButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self setButtonPropertyWithButton:doctorButton andYpoint:yDoctor andTag:2016 andButtonTitle:@"我是医生"];
-    [scrollView addSubview:doctorButton];
-    
+    if([kUserDefaults boolForKey:@"viewAll"]){
+
+        CGFloat yDoctor = patientBtn.maxY_wcr + 30;
+        UIButton *doctorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self setButtonPropertyWithButton:doctorButton andYpoint:yDoctor andTag:2016 andButtonTitle:@"我是专家"];
+        [scrollView addSubview:doctorButton];
+    }
     [self.view addSubview:scrollView];
     
     // 分页控件
@@ -126,7 +127,7 @@
         // 患者
         NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
         NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-        NSArray *titles = @[@"寻医",@"问诊",@"知识",@"我的"];
+        NSArray *titles = @[@"咨询",@"问诊",@"知识",@"我的"];
         NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
         NSMutableArray *vcArray = [NSMutableArray array];
         

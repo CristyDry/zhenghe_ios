@@ -14,7 +14,7 @@
     
     NSArray *imageNames = @[@"电子病例",@"iconfont-baoji",@"iconfont-shenghuofuwu",@"iconfont-yijianfankui",@"iconfont-cart",@"iconfont-dongtaiyemianxiaotubiao03",@"iconfont-fenxiang-3",@"iconfont-yijianfankui"];
     
-    NSArray *names = @[@"电子病例",@"健康记录",@"生活日志",@"我的订单",@"购物车",@"我的收藏",@"分享",@"意见反馈"];
+    NSArray *names = @[@"电子档案",@"健康记录",@"生活日志",@"我的订单",@"购物车",@"我的收藏",@"分享",@"意见反馈"];
     
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < imageNames.count; i++) {
@@ -34,7 +34,7 @@
     
     NSArray *imageNames = @[@"电子病例",@"iconfont-baoji",@"iconfont-shenghuofuwu"];
     
-    NSArray *names = @[@"电子病历",@"健康记录",@"生活日志"];
+    NSArray *names = @[@"电子档案",@"健康记录",@"生活日志"];
     
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < imageNames.count; i++) {

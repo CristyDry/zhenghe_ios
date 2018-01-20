@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WcrMyInfoViewController : UIViewController
+#import <BaseViewControler.h>
+@interface WcrMyInfoViewController : BaseViewControler
 
 @end

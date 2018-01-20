@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BZDoctorModel.h"
+#import <BaseViewControler.h>
 
-@interface WCRDoctorDetailController : UIViewController
+@interface WCRDoctorDetailController : BaseViewControler
 
 @property (nonatomic, strong) BZDoctorModel *doctor;
 @property (nonatomic)  BOOL isFormMyDoctor;

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BZProductDetailInfosModel.h"
 #import "BZProductDetailADPictureModel.h"
-@interface BZProductListTwoController : UIViewController
+#import <BaseViewControler.h>
+@interface BZProductListTwoController : BaseViewControler
 @property (nonatomic,strong)  BZProductDetailInfosModel *productDetailInfosModel;
 //@property (nonatomic,strong)  BZProductDetailADPictureModel *adModel;
 @property (nonatomic,strong)  NSString *ADpic;

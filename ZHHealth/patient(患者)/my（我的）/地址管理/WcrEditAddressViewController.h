@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BZAddressModel.h"
-@interface WcrEditAddressViewController : UIViewController
+#import <BaseViewControler.h>
+
+@interface WcrEditAddressViewController : BaseViewControler
 
 @property (nonatomic) BOOL isFromCell;
 @property (nonatomic) BOOL isFromShoppingCart;

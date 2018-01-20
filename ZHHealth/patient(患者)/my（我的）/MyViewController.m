@@ -52,7 +52,9 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     _firstSection = [WcrMyList returnFirstLists];
-    _secondSection = [WcrMyList returnSecondLists];
+    if([kUserDefaults boolForKey:@"viewAll"]){
+        _secondSection = [WcrMyList returnSecondLists];
+    }
     _thirdSection = [WcrMyList returnThirdLists];
     
     // 设置tableView 属性
@@ -273,17 +275,17 @@
     if (indexPath.section == 0){
         list1 = _firstSection[indexPath.row];
         [self.navigationController setNavigationBarHidden:NO animated:NO];
-        if ([list1.name isEqualToString:@"电子病历"]) {
+        if ([list1.name isEqualToString:@"电子档案"]) {
             
             [self.navigationController setNavigationBarHidden:NO animated:NO];
             BZMedicalRecordController *medicalRecordVC = [[BZMedicalRecordController alloc] init];
             medicalRecordVC.isPatient = YES;
             medicalRecordVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:medicalRecordVC animated:YES];
+            [self.navigationController pushViewController:medicalRecordVC animated:false];
 
         }else if ([list1.name isEqualToString:@"健康记录"]){
             
-            [self.navigationController setNavigationBarHidden:NO animated:NO];
+            //[self.navigationController setNavigationBarHidden:NO animated:NO];
             BZHealthRecordController *healthRecordVC = [[BZHealthRecordController alloc] init];
             healthRecordVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:healthRecordVC animated:YES];
@@ -351,10 +353,10 @@
             //if (imageArray) {
             
             NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-            [shareParams SSDKSetupShareParamsByText:@"正合app,与医生在线交流"
+            [shareParams SSDKSetupShareParamsByText:@"正弘app,与医生在线交流"
                                              images:[UIImage imageNamed:@"512"]
                                                 url:[NSURL URLWithString:dic[@"url"]]
-                                              title:@"正合医疗"
+                                              title:@"正弘健康"
                                                type:SSDKContentTypeAuto];
             //2、分享（可以弹出我们的分享菜单和编辑界面）
             [ShareSDK showShareActionSheet:nil //要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的按钮对象或者自己创建小的view 对象，iPhone可以传nil不会影响
@@ -406,6 +408,7 @@
         [self.navigationController pushViewController:loginVC animated:YES];
     }
 }
+
 
 
 

@@ -174,7 +174,7 @@
     
     NSArray *menuItems =
     @[
-      [KxMenuItem menuItem:@"寻医"
+      [KxMenuItem menuItem:@"咨询"
                      image:nil
                     target:self
                     action:@selector(pushMenuItem:)],
@@ -206,7 +206,7 @@
 {
     [self removeBgView];
     
-    if ([sender.title isEqualToString:@"寻医"]) {
+    if ([sender.title isEqualToString:@"咨询"]) {
         
         [self.navigationController popToRootViewControllerAnimated:YES];
         

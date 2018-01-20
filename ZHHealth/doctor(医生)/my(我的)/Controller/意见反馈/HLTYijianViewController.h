@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTYijianViewController : UIViewController
+@interface HLTYijianViewController : BaseViewControler
 
 @end

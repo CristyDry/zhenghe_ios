@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZHealthRecordController : UIViewController
+@interface BZHealthRecordController : BaseViewControler
 
 @end

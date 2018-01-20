@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BZLeftRecordModel.h"
-@interface BZEditLeftRecordController : UIViewController
+#import <BaseViewControler.h>
+@interface BZEditLeftRecordController : BaseViewControler
 @property (nonatomic,strong)  BZLeftRecordModel *leftRecordInfo;
 @end

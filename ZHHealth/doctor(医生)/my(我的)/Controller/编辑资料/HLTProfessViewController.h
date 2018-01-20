@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTEditModel.h"
+#import <BaseViewControler.h>
 
 @protocol HLTProfessViewControllerDelegate <NSObject>
 
@@ -15,7 +16,7 @@
 
 @end
 
-@interface HLTProfessViewController : UIViewController
+@interface HLTProfessViewController : BaseViewControler
 
 @property (nonatomic, strong) HLTEditModel *editmodel;
 

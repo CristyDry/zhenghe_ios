@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface BZSeachViewController : UIViewController
+@interface BZSeachViewController : BaseViewControler
 // 产品分类信息searchResultA
 @property (nonatomic,strong)  NSArray *classifyInfos;
 @property (nonatomic,strong)  NSArray *searchResultA;

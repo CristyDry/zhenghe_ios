@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTDiagnose.h"
+#import <BaseViewControler.h>
 
-@interface HLTPDetailController : UIViewController
+@interface HLTPDetailController : BaseViewControler
 
 @property (nonatomic, strong) huanzhe *huanzheModel;
 

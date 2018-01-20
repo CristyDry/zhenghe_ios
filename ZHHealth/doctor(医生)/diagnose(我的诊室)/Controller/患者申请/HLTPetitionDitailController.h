@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTPatient.h"
+#import <BaseViewControler.h>
 
-@interface HLTPetitionDitailController : UIViewController
+@interface HLTPetitionDitailController : BaseViewControler
 
 @property (nonatomic, strong) HLTPatient *patientModel;
 

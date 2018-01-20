@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ModifyViewController : UIViewController
+#import <BaseViewControler.h>
+@interface ModifyViewController : BaseViewControler
 
 @end

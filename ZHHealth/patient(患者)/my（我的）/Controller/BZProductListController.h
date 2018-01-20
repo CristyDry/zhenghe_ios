@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BZAllOrderModel.h"
-@interface BZProductListController : UIViewController
+#import <BaseViewControler.h>
+@interface BZProductListController : BaseViewControler
 @property (nonatomic,strong)  NSMutableArray *shoppingCartSelectA;
 @property (nonatomic,strong)  NSString *totalCount;
 @property (nonatomic,strong)  BZAllOrderModel *orderModel;

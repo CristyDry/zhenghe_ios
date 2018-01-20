@@ -56,8 +56,11 @@
 
 }
 - (void)initTableView{
-    
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, kMainWidth, kMainHeight - 120) style:UITableViewStylePlain];
+    CGFloat length = 60;
+    if([kUserDefaults boolForKey:@"viewAll"] || [kUserDefaults boolForKey:@"viewDoc"]){
+        length = 120;
+    }
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, length, kMainWidth, kMainHeight - length) style:UITableViewStylePlain];
     _tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
     _tableView.delegate = self;

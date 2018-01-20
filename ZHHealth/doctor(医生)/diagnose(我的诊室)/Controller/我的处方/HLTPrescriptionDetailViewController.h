@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTPrescriptionDetailViewController : UIViewController
+@interface HLTPrescriptionDetailViewController : BaseViewControler
 
 @property (nonatomic , strong) NSDictionary *chuFangDic;
 

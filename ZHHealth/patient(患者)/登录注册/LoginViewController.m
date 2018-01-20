@@ -52,8 +52,8 @@
     UIButton *leftButton = [self getButtonWithButtonTitle:@"取消" andWith:40 andTag:308];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
     
-    UIButton *rightButton = [self getButtonWithButtonTitle:@"快速注册" andWith:70 andTag:309];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+    //UIButton *rightButton = [self getButtonWithButtonTitle:@"快速注册" andWith:70 andTag:309];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
     
 }
 
@@ -204,12 +204,14 @@
     
     height = 49;
     yPoint = kMainHeight - height;
-    // 切换为医生版按钮
-    UIButton *changedButton = [[UIButton alloc]initWithFrame:CGRectMake(0, yPoint, kMainWidth, height)];
-    [changedButton buttonWithTitle:@"切换到医生版" andTitleColor:[UIColor whiteColor] andBackgroundImageName:nil andFontSize:KFont - 2];
-    changedButton.backgroundColor = [UIColor colorWithHexString:@"#05b7c3"];
-    [changedButton addTarget:self action:@selector(changedButtonAction)];
-    [self.view addSubview:changedButton];
+    if([kUserDefaults boolForKey:@"viewAll"] || [kUserDefaults boolForKey:@"viewDoc"]){
+        // 切换为医生版按钮
+        UIButton *changedButton = [[UIButton alloc]initWithFrame:CGRectMake(0, yPoint, kMainWidth, height)];
+        [changedButton buttonWithTitle:@"切换到专家版" andTitleColor:[UIColor whiteColor] andBackgroundImageName:nil andFontSize:KFont - 2];
+        changedButton.backgroundColor = [UIColor colorWithHexString:@"#05b7c3"];
+        [changedButton addTarget:self action:@selector(changedButtonAction)];
+        [self.view addSubview:changedButton];
+    }
     
 }
 -(void)setThirdLoginButtonWithImageName:(NSString*)imageName andRect:(CGRect)ButotnFrame andButtonTag:(int)buttonTag {

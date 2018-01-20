@@ -16,6 +16,7 @@
 #import "BZProfessorDetailViewController.h"
 #import "WCRExpertController.h"
 #import "WCRScanViewController.h"
+#import "ViewModel.h"
 #import "BZHealthShopViewController.h"
 
 @interface MedicineViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -26,6 +27,9 @@
 
 @property (nonatomic, strong) NSArray *professors; // 专家数组
 
+@property (nonatomic, strong) ViewModel *viewModel;
+
+
 @end
 
 @implementation MedicineViewController
@@ -34,9 +38,7 @@
     [super viewDidLoad];
     // 请求专家数据
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self resquestProfessorsInfos];
-
-    _functions = [WcrFunction createObj];
+    [self resquestViewInfos];
     
 }
 // 请求专家数据
@@ -52,6 +54,44 @@
         }
     }];
 }
+
+// 请求专家数据
+- (void)resquestViewInfos{
+    NSMutableDictionary *args = [NSMutableDictionary dictionary];
+    [httpUtil loadDataPostWithURLString:@"api/ZhengheView/view" args:args response:^(ResponseModel *responseMd) {
+        if (responseMd.isResultOk) {
+            [kUserDefaults setBool:NO forKey:@"viewAll"];
+            [kUserDefaults setBool:NO forKey:@"viewDoc"];
+            ViewModel *viewModel = [ViewModel mj_objectWithKeyValues:responseMd.response];
+            if([viewModel.view isEqual: @"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewAll"];
+            }else if([viewModel.view isEqual: @"2"]){
+                [kUserDefaults setBool:NO forKey:@"viewAll"];
+                [kUserDefaults setBool:YES forKey:@"viewDoc"];
+            }else{
+                [kUserDefaults setBool:NO forKey:@"viewAll"];
+            }
+            
+        }
+    }];
+    if([kUserDefaults boolForKey:@"viewAll"]){
+        _functions = [WcrFunction createObjALL];
+        [self resquestProfessorsInfos];
+
+    }else{
+        if([kUserDefaults boolForKey:@"viewDoc"]){
+            _functions = [WcrFunction createObjDoc];
+            [self resquestProfessorsInfos];
+        }else{
+            _functions = [WcrFunction createObj];
+            [self addTableView];
+
+        }
+        
+    }
+    
+}
+
 // 添加一个tableView
 - (void)addTableView{
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kMainWidth, kMainHeight - 84) style:UITableViewStyleGrouped]; // 多分区的话要设置
@@ -63,6 +103,9 @@
 }
 #pragma mark - Table View Data Source
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if(_professors.count==0){
+        return 1;
+    }
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -146,11 +189,11 @@
     if (indexPath.section == 0) {
         
         WcrFunctionListCell *cell = (WcrFunctionListCell*)[tableView cellForRowAtIndexPath:indexPath];
-        if ([cell.function.name isEqualToString:@"找医生"]) {
+        if ([cell.function.name isEqualToString:@"健康咨询"]) {
             FindDoctorViewController *findVC  = [[FindDoctorViewController alloc]init];
             findVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:findVC animated:YES];
-        }else if ([cell.function.name isEqualToString:@"专家会诊"]) {
+        }else if ([cell.function.name isEqualToString:@"专业咨询"]) {
             WCRExpertController *expertVC = [[WCRExpertController alloc]init];
             expertVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:expertVC animated:YES];

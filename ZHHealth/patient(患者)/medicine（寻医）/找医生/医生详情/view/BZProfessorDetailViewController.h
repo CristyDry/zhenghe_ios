@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BZDoctorModel.h"
-@interface BZProfessorDetailViewController : UIViewController
+#import <BaseViewControler.h>
+
+@interface BZProfessorDetailViewController : BaseViewControler
 @property (nonatomic, strong) BZDoctorModel *doctor;
 @end

@@ -99,11 +99,11 @@
 
 #pragma mark - tableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        WcrStatementViewController *statementVC = [[WcrStatementViewController alloc]init];
-        [self.navigationController pushViewController:statementVC animated:YES];
+    if (indexPath.row == 1) {
+        //WcrStatementViewController *statementVC = [[WcrStatementViewController alloc]init];
+        //[self.navigationController pushViewController:statementVC animated:YES];
         
-    }else if (indexPath.row == 1) {
+    }else if (indexPath.row == 0) {
         WcrAboutUSViewController *statementVC = [[WcrAboutUSViewController alloc]init];
         [self.navigationController pushViewController:statementVC animated:YES];
         

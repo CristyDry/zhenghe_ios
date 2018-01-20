@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
 
-@interface WCRKnowledgeDetailController : UIViewController
+@interface WCRKnowledgeDetailController : BaseViewControler
 
 @property (nonatomic, strong) NSString *articleId;
 

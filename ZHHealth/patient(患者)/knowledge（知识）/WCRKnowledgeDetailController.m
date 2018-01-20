@@ -83,7 +83,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+-(void) viewDidDisappear:(BOOL)animated{
+    [_topView removeFromSuperview];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - 分享
 - (void)share:(UIButton *)shareBtn{
     

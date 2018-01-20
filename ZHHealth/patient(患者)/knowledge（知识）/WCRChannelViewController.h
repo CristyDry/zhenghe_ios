@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
 @protocol WCRChannelViewControllerDelegate <NSObject>
 /**
@@ -16,7 +17,7 @@
 - (void)pushKnowledgeViewController:(NSMutableArray *)selectedButtons;
 @end
 
-@interface WCRChannelViewController : UIViewController
+@interface WCRChannelViewController : BaseViewControler
 @property (nonatomic,strong)  NSMutableArray *headerButtons;
 @property (nonatomic,strong)  NSArray *channelListModelA;
 @property (nonatomic,weak)  id<WCRChannelViewControllerDelegate> delegate;

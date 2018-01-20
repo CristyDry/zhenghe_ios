@@ -29,7 +29,7 @@
     // 请求一级科室
     [self requestFirstServices];
     
-    self.title = @"找医生";
+    self.title = @"找专家";
     
     [self addLeftBackItem];
     
@@ -79,7 +79,7 @@
     frame.size.height = frame.size.height - frame.origin.y * 2;
     
     UITextField *textfield = [[UITextField alloc]initWithFrame:frame];
-    [textfield textFieldWithPlaceholder:@"医院、科室、医生名" andFont:KFont - 4 andSecureTextEntry:NO];
+    [textfield textFieldWithPlaceholder:@"搜索" andFont:KFont - 4 andSecureTextEntry:NO];
     UIImage *leftImage = [UIImage imageFileNamed:@"iconfont-sousuo" andType:YES];
     UIButton *leftView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, frame.size.height)];
     [leftView setImage:leftImage forState:0];

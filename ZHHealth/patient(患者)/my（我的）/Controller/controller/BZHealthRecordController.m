@@ -28,7 +28,8 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self addLeftBackItem];
     self.navigationItem.title = @"健康记录";
-    
+    self.view.backgroundColor = kBackgroundColor;
+
     [self setBtn];
 }
 

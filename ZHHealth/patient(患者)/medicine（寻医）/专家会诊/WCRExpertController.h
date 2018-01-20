@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WCRExpertController : UIViewController
+@interface WCRExpertController : BaseViewControler
 
 @end

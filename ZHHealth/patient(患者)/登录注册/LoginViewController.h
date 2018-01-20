@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : BaseViewControler
 @property (nonatomic,copy)  NSString *phoneNumber;
 @property (nonatomic, strong) UITextField *phoneTF;
 @property (nonatomic, strong) UITextField *passwordTF;

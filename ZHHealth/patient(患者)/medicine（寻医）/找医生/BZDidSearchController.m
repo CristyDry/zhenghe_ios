@@ -35,7 +35,7 @@
 - (void)initSearchBar{
     _searchBar = [[HWSearchBar alloc] initWithFrame:CGRectMake(30, 5, kMainWidth - 60, 34)];
     self.navigationItem.titleView = _searchBar;
-    _searchBar.placeholder = @"医院、科室、医生名";
+    _searchBar.placeholder = @"搜索";
     _searchBar.delegate = self;
     _searchBar.clearsOnBeginEditing = YES;
     _searchBar.clearButtonMode = UITextFieldViewModeWhileEditing;

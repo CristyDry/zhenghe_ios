@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BZAllOrderModel.h"
-@interface BZOrderDetailController : UIViewController
+#import <BaseViewControler.h>
+@interface BZOrderDetailController : BaseViewControler
 @property (nonatomic,assign)  CGFloat totalCost;
 @property (nonatomic,strong)  BZAllOrderModel *orderModel;
 @end

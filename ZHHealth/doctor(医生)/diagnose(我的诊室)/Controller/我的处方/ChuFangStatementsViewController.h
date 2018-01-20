@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface ChuFangStatementsViewController : UIViewController
+@interface ChuFangStatementsViewController : BaseViewControler
 
 @end

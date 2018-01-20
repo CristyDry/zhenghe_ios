@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WcrSystemInfoViewController : UIViewController
+@interface WcrSystemInfoViewController : BaseViewControler
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface WCROrderController : UIViewController
+@interface WCROrderController : BaseViewControler
 
 @end

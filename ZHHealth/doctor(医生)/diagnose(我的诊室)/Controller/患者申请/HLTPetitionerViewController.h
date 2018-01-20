@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface HLTPetitionerViewController : UIViewController
+@interface HLTPetitionerViewController : BaseViewControler
 
 @end

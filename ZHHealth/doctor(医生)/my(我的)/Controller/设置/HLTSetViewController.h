@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
 @protocol HLTSetViewControllerDelegate <NSObject>
 
@@ -14,7 +15,7 @@
 
 @end
 
-@interface HLTSetViewController : UIViewController
+@interface HLTSetViewController : BaseViewControler
 
 @property (nonatomic, strong) id<HLTSetViewControllerDelegate> delegate;
 

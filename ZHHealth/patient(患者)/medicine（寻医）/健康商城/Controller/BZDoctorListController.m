@@ -23,7 +23,7 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self addLeftBackBtn];
-    self.title = @"选择医生";
+    self.title = @"选择专家";
     // 请求我的医生数据
     [self requestMyDoctorInfos];
     [self initTableView];

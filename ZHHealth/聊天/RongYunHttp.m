@@ -22,7 +22,8 @@
     }
     
     NSDictionary *dict = @{@"userType":type,
-                           @"userId":userId};
+                           @"userId":userId,
+                           @"rongType":@"1"};
     [httpUtil  loadDataPostWithURLString:@"api/ZhengheDoctor/getRongToken" args:dict response:^(ResponseModel *responseMd) {
         
         if (responseMd.isResultOk) {

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaseViewControler.h>
 
-@interface MyPrescriptionViewController : UIViewController
+@interface MyPrescriptionViewController : BaseViewControler
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BZShoppingCartViewController : UIViewController
+#import <BaseViewControler.h>
+@interface BZShoppingCartViewController : BaseViewControler
 
 @end
