@@ -10,5 +10,6 @@
 
 @interface ViewModel : NSObject
 /** 显示控制*/
+@property (nonatomic, copy) NSString *viewInfo;
 @property (nonatomic, copy) NSString *view;
 @end

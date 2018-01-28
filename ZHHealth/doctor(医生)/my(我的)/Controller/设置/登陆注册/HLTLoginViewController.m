@@ -231,7 +231,7 @@
     
     NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
     NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-    NSArray *titles = @[@"咨询",@"问诊",@"知识",@"我的"];
+    NSArray *titles = @[@"咨询",@"咨询",@"知识",@"我的"];
     NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
     NSMutableArray *vcArray = [NSMutableArray array];
     

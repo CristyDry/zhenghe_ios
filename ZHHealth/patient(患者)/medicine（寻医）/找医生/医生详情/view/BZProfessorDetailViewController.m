@@ -99,7 +99,7 @@
                     target:self
                     action:@selector(pushMenuItem:)],
       
-      [KxMenuItem menuItem:@"问诊"
+      [KxMenuItem menuItem:@"信息"
                      image:nil
                     target:self
                     action:@selector(pushMenuItem:)],
@@ -130,7 +130,7 @@
         
         [self.navigationController popToRootViewControllerAnimated:YES];
         
-    }else if ([sender.title isEqualToString:@"问诊"]){
+    }else if ([sender.title isEqualToString:@"信息"]){
         
         BaseTabBarController *tabBarVC = [BaseTabBarController sharedTabBarController];
         tabBarVC.selectedIndex = 1;

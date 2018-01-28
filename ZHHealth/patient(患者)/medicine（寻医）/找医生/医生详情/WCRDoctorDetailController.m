@@ -34,7 +34,7 @@
     
     [self setNavigationBarProperty];
     
-    self.title = @"医生详情";
+    self.title = @"详情信息";
     
     [self customDetailUI];
     
@@ -72,7 +72,7 @@
     [bottomView addSubview:consultBtn];
     // 删除医生
     UIButton *deleteBtn = [[UIButton alloc]initWithFrame:CGRectMake(kMainWidth * 0.5 + 30, 5, kMainWidth * 0.5 - 60, heightOfBtn - 10)];
-    [deleteBtn buttonWithTitle:@"删除医生" andTitleColor:kBackgroundColor andBackgroundImageName:nil andFontSize:KFont - 3];
+    [deleteBtn buttonWithTitle:@"删除" andTitleColor:kBackgroundColor andBackgroundImageName:nil andFontSize:KFont - 3];
     deleteBtn.layer.cornerRadius = 4;
     deleteBtn.clipsToBounds = YES;
     [deleteBtn addTarget:self action:@selector(deleteDoctor)];
@@ -101,7 +101,7 @@
             if (responseMd.isResultOk) {
                 NSString *status = [responseMd.response objectForKey:@"status"];
                 if ([status isEqualToString:@"1"]) {
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"该医生已是您好友" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"已是您好友" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         
                     }];
@@ -132,7 +132,7 @@
 }
 // 删除医生
 - (void)deleteDoctor{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"删除医生" message:@"同时会将我从对方的列表中删除" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"删除" message:@"同时会将我从对方的列表中删除" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -155,11 +155,11 @@
 // 添加addRightBarButton
 - (void)addRightBarButton{
     
-    UIButton *rightBarButton = [[UIButton alloc] initWithFrame:CGRectMake(kMainWidth - 30, 0, 30, 5)];
+    /*UIButton *rightBarButton = [[UIButton alloc] initWithFrame:CGRectMake(kMainWidth - 30, 0, 30, 5)];
     rightBarButton.contentMode = UIViewContentModeScaleAspectFit;
     [rightBarButton setBackgroundImage:[UIImage imageNamed:@"iconfont-gengduo-2@2x"] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButton];
-    [rightBarButton addTarget:self action:@selector(showRightMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [rightBarButton addTarget:self action:@selector(showRightMenu:) forControlEvents:UIControlEventTouchUpInside];*/
 
 }
 - (void)showRightMenu:(UIButton *)sender{
@@ -179,7 +179,7 @@
                     target:self
                     action:@selector(pushMenuItem:)],
       
-      [KxMenuItem menuItem:@"问诊"
+      [KxMenuItem menuItem:@"信息"
                      image:nil
                     target:self
                     action:@selector(pushMenuItem:)],
@@ -210,7 +210,7 @@
         
         [self.navigationController popToRootViewControllerAnimated:YES];
         
-    }else if ([sender.title isEqualToString:@"问诊"]){
+    }else if ([sender.title isEqualToString:@"信息"]){
         
         BaseTabBarController *tabBarVC = [BaseTabBarController sharedTabBarController];
         tabBarVC.selectedIndex = 1;
@@ -411,7 +411,7 @@
         return [self sectionViewWithText:@"专业领域"];
         
     }else if (section == 2) {
-        return [self sectionViewWithText:@"医生简介"];
+        return [self sectionViewWithText:@"简介"];
     }else {
         return nil;
     }

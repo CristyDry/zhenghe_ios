@@ -57,7 +57,7 @@
     // 取出频道列表数据
     _channelListSelectModelA = [BZChannelListModel decode];
     // 如果为空，从新请求
-    if (_channelListSelectModelA == nil) {
+    //if (_channelListSelectModelA == nil) {
         NSMutableDictionary *channelArgs = [NSMutableDictionary dictionary];
         __weak typeof(self) weakSeaf = self;
         [httpUtil doPostRequest:@"api/ZhengheDoctor/knowledgeWikiInit" args:channelArgs targetVC:self response:^(ResponseModel *responseMd) {
@@ -69,7 +69,7 @@
                 [self.tableView reloadData];
             }
         }];
-    }
+    //}
 }
 -(void)initTableView {
     // AUTO_MATE_HEIGHT(40)
@@ -94,6 +94,7 @@
     advertisementSV.autoScrollTimeInterval = 3.0;
     NSMutableDictionary *args = [NSMutableDictionary dictionary];
     __weak typeof(self) weakSelf = self;
+    [advertisementSV setHeight_wcr:0];
     [httpUtil doPostRequest:@"api/ZhengheDoctor/articleCarousel" args:args targetVC:self response:^(ResponseModel *responseMd) {
         if (responseMd.isResultOk) {
             weakSelf.adPictureA = [BZAdPictureModel mj_objectArrayWithKeyValuesArray:responseMd.response];
@@ -102,6 +103,11 @@
             for (BZAdPictureModel *mode in weakSelf.adPictureA) {
                 [imagesURLStrings addObject:mode.avatar];
                 [titles addObject:mode.title];
+            }
+            if(titles.count < 1){
+                [advertisementSV setHeight_wcr:0];
+            }else{
+                [advertisementSV setHeight_wcr:kMainWidth * (380 / 640.0)];
             }
             // 图片
             advertisementSV.imageURLStringsGroup = imagesURLStrings;

@@ -38,7 +38,8 @@
     // 设置导航栏
     [self setNavigationBar];
 //    [self addLeftBackItem];
-    
+    self.view.backgroundColor = kBackgroundColor;
+
     self.automaticallyAdjustsScrollViewInsets = NO;
     
 }
@@ -360,6 +361,7 @@
     yPoint = _imageView.maxY_wcr;
     UILabel *contentlabel = [[UILabel alloc]initWithFrame:CGRectMake(xPoint, yPoint, width, height)];
     [contentlabel labelWithText:_articleContentModel.content andTextColor:kGrayColor andFontSize:KFont - 4 andBackgroundColor:nil];
+    contentlabel.textColor=[UIColor colorWithHexString:@"#333333"];
     contentlabel.numberOfLines = 0;
     [scrollView addSubview:contentlabel];
     

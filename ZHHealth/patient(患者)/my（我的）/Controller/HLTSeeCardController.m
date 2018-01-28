@@ -65,11 +65,11 @@
 #pragma mark - 右边按钮
 - (void)addRightBarButton{
     
-    UIButton *rightBarButton = [[UIButton alloc] initWithFrame:CGRectMake(kMainWidth - 30, 0, 30, 5)];
+    /*UIButton *rightBarButton = [[UIButton alloc] initWithFrame:CGRectMake(kMainWidth - 30, 0, 30, 5)];
     rightBarButton.contentMode = UIViewContentModeScaleAspectFit;
     [rightBarButton setBackgroundImage:[UIImage imageNamed:@"iconfont-gengduo-2@2x"] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButton];
-    [rightBarButton addTarget:self action:@selector(showRightMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [rightBarButton addTarget:self action:@selector(showRightMenu:) forControlEvents:UIControlEventTouchUpInside];*/
     
 }
 
@@ -91,7 +91,7 @@
                     target:self
                     action:@selector(pushMenuItem:)],
       
-      [KxMenuItem menuItem:@"问诊"
+      [KxMenuItem menuItem:@"信息"
                      image:nil
                     target:self
                     action:@selector(pushMenuItem:)],
@@ -124,7 +124,7 @@
         BaseTabBarController *tabBarVC = [BaseTabBarController sharedTabBarController];
         tabBarVC.selectedIndex = 0;
         
-    }else if ([sender.title isEqualToString:@"问诊"]){
+    }else if ([sender.title isEqualToString:@"信息"]){
         
         BaseTabBarController *tabBarVC = [BaseTabBarController sharedTabBarController];
         tabBarVC.selectedIndex = 1;

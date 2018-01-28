@@ -70,7 +70,7 @@
     
     frame.origin.y = emailLabel.maxY_wcr;
     UILabel *companyLabel = [[UILabel alloc]initWithFrame:frame];
-    [companyLabel labelWithText:@"" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];//Copyright佛山市正和医疗器械有限公司
+    [companyLabel labelWithText:@"Copyright佛山正弘医药有限公司" andTextColor:kBlackColor andFontSize:KFont - 5 andBackgroundColor:nil];
     companyLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:companyLabel];
     

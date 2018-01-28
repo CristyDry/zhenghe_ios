@@ -38,6 +38,11 @@
     [super viewDidLoad];
     // 请求专家数据
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
     [self resquestViewInfos];
     
 }
@@ -62,7 +67,11 @@
         if (responseMd.isResultOk) {
             [kUserDefaults setBool:NO forKey:@"viewAll"];
             [kUserDefaults setBool:NO forKey:@"viewDoc"];
+            [kUserDefaults setBool:NO forKey:@"viewInfo"];
             ViewModel *viewModel = [ViewModel mj_objectWithKeyValues:responseMd.response];
+            if([viewModel.viewInfo isEqualToString:@"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewInfo"];
+            }
             if([viewModel.view isEqual: @"1"]){
                 [kUserDefaults setBool:YES forKey:@"viewAll"];
             }else if([viewModel.view isEqual: @"2"]){

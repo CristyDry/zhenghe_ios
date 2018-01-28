@@ -146,7 +146,7 @@
         label.font = [UIFont systemFontOfSize:KFont - 2];
         label.textColor = kBlackColor;
         label.frame = CGRectMake(30, 0, kMainWidth, 30);
-        label.text = @"     我的专家";
+        label.text = @"     我的咨询";
         return label;
     }
 }

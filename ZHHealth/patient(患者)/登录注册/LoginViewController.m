@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"患者登录";
+    self.title = @"用户登录";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
@@ -86,7 +86,7 @@
     // 患者
     NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
     NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-    NSArray *titles = @[@"首页",@"问诊",@"知识",@"我的"];
+    NSArray *titles = @[@"首页",@"咨询",@"知识",@"我的"];
     NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
     NSMutableArray *vcArray = [NSMutableArray array];
     

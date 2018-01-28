@@ -45,7 +45,7 @@
 
 -(void)setupDVSwitch{
     // 设置DVSwitch
-    DVSwitch *dvSwitch = [[DVSwitch alloc]initWithStringsArray:@[@"专家",@"消息"]];
+    DVSwitch *dvSwitch = [[DVSwitch alloc]initWithStringsArray:@[@"咨询",@"消息"]];
     _dvSwitch = dvSwitch;
     dvSwitch.frame = CGRectMake(0, 0, kMainWidth * 0.4, 30);
     dvSwitch.backgroundColor = [UIColor colorWithHexString:@"#05b7c3"];

@@ -68,7 +68,7 @@
         if (responseMd.isResultOk) {
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
             hud.mode = MBProgressHUDModeText;
-            hud.labelText = @"发送成功，请等待医生同意";
+            hud.labelText = @"发送成功，请等待同意";
             hud.margin = 10.f;
             hud.removeFromSuperViewOnHide = YES;
             [hud hide:YES afterDelay:3];

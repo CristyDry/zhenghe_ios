@@ -83,7 +83,7 @@
     _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, KTopLayoutGuideHeight+10 , kMainWidth, kMainHeight-KTopLayoutGuideHeight) style:UITableViewStylePlain];
     _tableview.delegate = self;
     _tableview.dataSource = self;
-    _tableview.rowHeight = 140;
+    _tableview.rowHeight = 80;
     _tableview.tableFooterView = [[UIView alloc] init];
     _tableview.backgroundColor = kBackgroundColor;
     [self.view addSubview:_tableview];

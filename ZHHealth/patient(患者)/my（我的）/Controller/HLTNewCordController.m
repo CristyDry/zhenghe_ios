@@ -67,7 +67,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"患者信息";
+    self.title = @"信息";
     _imagesA = [[NSMutableArray alloc] init];
     _imagesB = [[NSMutableArray alloc] init];
     [self addLeftBackItem];

@@ -31,13 +31,16 @@
 }
 
 +(NSArray *)returnFirstLists {
-    
     NSArray *imageNames = @[@"电子病例",@"iconfont-baoji",@"iconfont-shenghuofuwu"];
-    
-    NSArray *names = @[@"电子档案",@"健康记录",@"生活日志"];
+    NSArray *names;
+    if([kUserDefaults boolForKey:@"viewInfo"]){
+        names = @[@"电子档案",@"健康记录",@"生活日志"];
+    }else{
+        names = @[@"生活日志"];
+    }
     
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < imageNames.count; i++) {
+    for (int i = 0; i < names.count; i++) {
         WcrMyList *myList = [[WcrMyList alloc]init];
         myList.imageName = imageNames[i];
         myList.name = names[i];

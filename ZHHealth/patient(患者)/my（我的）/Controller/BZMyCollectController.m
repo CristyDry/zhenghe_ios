@@ -23,6 +23,8 @@
     [super viewDidLoad];
     self.tabBar.hidden = YES;
     [self addLeftBackItem];
+    self.view.backgroundColor = kBackgroundColor;
+
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"我的收藏";
     [self setTopView];

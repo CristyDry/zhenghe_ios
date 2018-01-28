@@ -21,20 +21,20 @@
 
 -(void)Createcell
 {
-    CGFloat xPoint = 20.0;
-    CGFloat yPoint = 20.0;
-    CGFloat width = kMainWidth-xPoint*2;
-    CGFloat height = 130.0;
+    CGFloat xPoint = 10;
+    CGFloat yPoint = 10;
+    CGFloat width = kMainWidth;
+    CGFloat height = 80.0;
     
-    UIView * bgView = [[UIView alloc] initWithFrame:CGRectMake(xPoint, 0, width, height)];
+    UIView * bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     bgView.backgroundColor = [UIColor whiteColor];
-    bgView.layer.cornerRadius = 5;
+    bgView.layer.cornerRadius = 0;
     bgView.clipsToBounds = YES;
     bgView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    bgView.layer.borderWidth = 1;
+    bgView.layer.borderWidth = 0;
     [self.contentView addSubview:bgView];
     
-    width = width-xPoint*2;
+    width = width;//-xPoint*2;
     height = 20.0;
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPoint, yPoint, width, height)];
     _titleLabel.font = [UIFont systemFontOfSize:18];
@@ -43,29 +43,30 @@
     
     _dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPoint, _titleLabel.maxY_wcr +10, width, height)];
     _dataLabel.textAlignment = NSTextAlignmentLeft;
+    _dataLabel.font = [UIFont systemFontOfSize:16];
     [bgView addSubview:_dataLabel];
     
     
-    UIImageView * imageview = [[UIImageView alloc] initWithFrame:CGRectMake(xPoint, _dataLabel.maxY_wcr + 15, width, 1)];
-    imageview.backgroundColor = [UIColor lightGrayColor];
-    [bgView addSubview:imageview];
+    //UIImageView * imageview = [[UIImageView alloc] initWithFrame:CGRectMake(xPoint, _dataLabel.maxY_wcr + 15, width, 1)];
+    //imageview.backgroundColor = [UIColor lightGrayColor];
+    //[bgView addSubview:imageview];
     
     
-    _textLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(xPoint, imageview.maxY_wcr +12, width, height)];
-    _textLabel1.textColor = [UIColor lightGrayColor];
-    _textLabel1.font = [UIFont systemFontOfSize:18];
-    [bgView addSubview:_textLabel1];
+    //_textLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(xPoint, imageview.maxY_wcr +12, width, height)];
+    //_textLabel1.textColor = [UIColor lightGrayColor];
+    //_textLabel1.font = [UIFont systemFontOfSize:18];
+    //[bgView addSubview:_textLabel1];
     
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(width , imageview.maxY_wcr+12, height, height)];
-    [button setImage:[UIImage imageNamed:@"后退-拷贝"] forState:UIControlStateNormal];
-    [bgView addSubview:button];
+    //UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(width , imageview.maxY_wcr+12, height, height)];
+    //[button setImage:[UIImage imageNamed:@"后退-拷贝"] forState:UIControlStateNormal];
+    //[bgView addSubview:button];
 }
 
 -(void)setInfoModel:(HLTInfoModel *)infoModel
 {
     _dataLabel.text = infoModel.date;
     _titleLabel.text = infoModel.title;
-    _textLabel1.text = @"查看详情";
+    //_textLabel1.text = @"查看详情";
     
 }
 

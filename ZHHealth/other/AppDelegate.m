@@ -48,11 +48,15 @@
 
     [kUserDefaults setBool:NO forKey:@"viewAll"];
     [kUserDefaults setBool:NO forKey:@"viewDoc"];
+    [kUserDefaults setBool:NO forKey:@"viewInfo"];
     NSMutableDictionary *args = [NSMutableDictionary dictionary];
     [httpUtil loadDataPostWithURLString:@"api/ZhengheView/view" args:args response:^(ResponseModel *responseMd) {
         if (responseMd.isResultOk) {
             
             ViewModel *viewModel = [ViewModel mj_objectWithKeyValues:responseMd.response];
+            if([viewModel.viewInfo isEqualToString:@"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewInfo"];
+            }
             if([viewModel.view isEqual: @"1"]){
                 [kUserDefaults setBool:YES forKey:@"viewAll"];
             }else if([viewModel.view isEqual: @"2"]){
@@ -371,7 +375,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
         
         NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
         NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-        NSArray *titles = @[@"健康",@"咨询",@"知识",@"我的"];
+        NSArray *titles = @[@"首页",@"咨询",@"知识",@"我的"];
         NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
         NSMutableArray *vcArray = [NSMutableArray array];
         

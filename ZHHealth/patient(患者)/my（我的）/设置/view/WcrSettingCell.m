@@ -45,7 +45,7 @@
         UIImageView *arrowIV = [[UIImageView alloc]initWithFrame:CGRectMake(xPoint, yPoint, width, height)];
         arrowIV.backgroundColor = [UIColor clearColor];
         arrowIV.image = [UIImage imageFileNamed:@"后退-拷贝" andType:YES];
-        [self.contentView addSubview:arrowIV];
+        //[self.contentView addSubview:arrowIV];
         
         UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(kBorder, self.height_wcr - 1, kMainWidth - kBorder, 1)];
         line.backgroundColor = KLineColor;

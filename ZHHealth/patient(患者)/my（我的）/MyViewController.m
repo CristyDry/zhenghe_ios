@@ -353,7 +353,7 @@
             //if (imageArray) {
             
             NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-            [shareParams SSDKSetupShareParamsByText:@"正弘app,与医生在线交流"
+            [shareParams SSDKSetupShareParamsByText:@"正弘app,与专家在线交流"
                                              images:[UIImage imageNamed:@"512"]
                                                 url:[NSURL URLWithString:dic[@"url"]]
                                               title:@"正弘健康"

@@ -261,7 +261,7 @@
     
 //    [self setNavigationBarProperty];
     
-    self.title = @"扫码找医";
+    self.title = @"扫码";
 
     [self customScanUI];
 
@@ -345,7 +345,7 @@
     [httpUtil doPostRequest:@"api/ZhengheDoctor/scanCode" args:args targetVC:self response:^(ResponseModel *responseMd) {
         if (responseMd.isResultOk) {
             if (responseMd.response == nil) {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"找不到该医生，请重新扫描" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"找不到信息，请重新扫描" preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     WCRScanViewController *scanVC = [[WCRScanViewController alloc]init];
