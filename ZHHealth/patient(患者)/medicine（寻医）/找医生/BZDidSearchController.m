@@ -127,7 +127,7 @@
     [httpUtil doPostRequest:@"api/ZhengheDoctor/findDoctorByCriteria" args:args targetVC:self response:^(ResponseModel *responseMd) {
         if (responseMd.isResultOk) {
             if (responseMd.response == nil) {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"没有搜索到您找的医生，请检查搜索信息是否准确" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"没有搜索到您找的专家，请检查搜索信息是否准确" preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 }];

@@ -173,7 +173,7 @@
         
         NSArray *norArray = @[@"图层-10",@"图层-12",@"iconfont-zhishiku",@"shape-23"];
         NSArray *selArray = @[@"形状-2",@"形状-1",@"形状-12",@"shape-232"];
-        NSArray *titles = @[@"在线接诊",@"我的诊室",@"知识",@"个人中心"];
+        NSArray *titles = @[@"健康在线",@"我的咨询",@"知识",@"个人中心"];
         NSArray *classNames = @[@"HLTAdmissionsViewController",@"HLTDiagnoseViewController",@"KnowledgeViewController",@"HLTMyViewController"];
         NSMutableArray *vcArray = [NSMutableArray array];
         

@@ -277,7 +277,12 @@
          NSString *file = [[NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"BZProductDetailADPictureModel.data"];
         NSMutableArray *arrayPic = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
        
-        [_picView sd_setImageWithURL:[NSURL URLWithString:arrayPic[0]] placeholderImage:[UIImage imageNamed:@"ic_error"]];
+        if(arrayPic.count ==0 ){
+            [_picView setImage:[UIImage imageNamed:@"ic_error"]];
+        }else{
+            [_picView sd_setImageWithURL:[NSURL URLWithString:arrayPic[0]] placeholderImage:[UIImage imageNamed:@"ic_error"]];
+        }
+        
     }
 
 }

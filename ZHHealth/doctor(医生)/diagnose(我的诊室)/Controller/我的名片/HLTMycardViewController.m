@@ -45,7 +45,7 @@
     //label1
     UILabel * pleaseLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, yPoint, width, 30)];
     pleaseLabel.textAlignment = NSTextAlignmentCenter;
-    pleaseLabel.text = @"请患者打开正合App扫描下面二维码";
+    pleaseLabel.text = @"请用户打开App扫描下面二维码";
     pleaseLabel.font = [UIFont systemFontOfSize:16];
     pleaseLabel.lineBreakMode = NSLineBreakByWordWrapping;
     pleaseLabel.numberOfLines = 2;

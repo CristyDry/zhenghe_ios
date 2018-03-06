@@ -79,7 +79,7 @@
                 _jyTitleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 120, 40)];
                 UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
                 label.textColor = [UIColor whiteColor];
-                label.text = @"在线接诊";
+                label.text = @"健康在线";
                 label.font = [UIFont systemFontOfSize:22];
                 [_jyTitleView addSubview:label];
                 UIImageView * iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(100, 10, 20, 20)];
@@ -93,7 +93,7 @@
                 titleView.font = [UIFont boldSystemFontOfSize:22];
                 titleView.textColor = [UIColor whiteColor];
                 titleView.textAlignment = NSTextAlignmentCenter;
-                titleView.text =@"在线接诊";
+                titleView.text =@"健康在线";
                 _titleView = titleView;
                 self.navigationItem.titleView = titleView;
             }

@@ -52,9 +52,9 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     _firstSection = [WcrMyList returnFirstLists];
-    if([kUserDefaults boolForKey:@"viewAll"]){
-        _secondSection = [WcrMyList returnSecondLists];
-    }
+    
+    _secondSection = [WcrMyList returnSecondLists];
+
     _thirdSection = [WcrMyList returnThirdLists];
     
     // 设置tableView 属性

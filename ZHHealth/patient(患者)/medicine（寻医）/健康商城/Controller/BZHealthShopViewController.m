@@ -98,7 +98,7 @@
     cycleScrollView2.titleLabelHeight = cycleScrollView2.bounds.size.height * 0.34;
     cycleScrollView2.titleLabelTextFont = [UIFont systemFontOfSize:15];
     cycleScrollView2.titleLabelBackgroundColor = [UIColor colorWithWhite:1 alpha:0.2];
-    cycleScrollView2.dotColor = [UIColor blueColor]; // 自定义分页控件小圆标颜色
+    cycleScrollView2.dotColor = kNavigationBarColor; // 自定义分页控件小圆标颜色
     [headerView addSubview:cycleScrollView2];
     
     NSMutableDictionary *args = [NSMutableDictionary dictionary];

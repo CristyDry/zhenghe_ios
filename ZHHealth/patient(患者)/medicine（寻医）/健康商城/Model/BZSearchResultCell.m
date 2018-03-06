@@ -180,7 +180,7 @@
             _leftView.hidden = YES;
         }else{
             _leftView.hidden = NO;
-            [_imageViewL sd_setImageWithURL:[NSURL URLWithString:productListModel.productPic]];
+            [_imageViewL sd_setImageWithURL:[NSURL URLWithString:productListModel.productPic] placeholderImage:[UIImage imageNamed:@"ic_error"]];
             _productNameL.text = productListModel.productName;
             _standardL.text = productListModel.standard;
             _priceL.text = [NSString stringWithFormat:@"￥%0.2f",productListModel.price];
@@ -197,14 +197,17 @@
             _rightView.hidden = YES;
         }else{
             _rightView.hidden = NO;
-            [_imageViewR sd_setImageWithURL:[NSURL URLWithString:productListModel.productPic]];
+            [_imageViewR sd_setImageWithURL:[NSURL URLWithString:productListModel.productPic] placeholderImage:[UIImage imageNamed:@"ic_error"]];
             _productNameR.text = productListModel.productName;
             _standardR.text = productListModel.standard;
             _priceR.text = [NSString stringWithFormat:@"￥%0.2f",productListModel.price];
-            if ([productListModel.type isEqualToString:@"otc"]) {
-                _typeR.image = [UIImage imageNamed:@"otc"];
-            }else{
+            if ([productListModel.type isEqualToString:@"rx"]) {
                 _typeR.image = [UIImage imageNamed:@"rx"];
+            }else if([productListModel.type isEqualToString:@"otc"]){
+                _typeR.image = [UIImage imageNamed:@"otc"];
+            }
+            else{
+                //_typeR.image = [UIImage imageNamed:@"rx"];
             }
             _rightID = productListModel.ID;
 

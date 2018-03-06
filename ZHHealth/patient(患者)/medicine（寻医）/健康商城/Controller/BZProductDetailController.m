@@ -222,12 +222,13 @@
     [shoppingCartTitle addTarget:self action:@selector(shoppingCartClick) forControlEvents:UIControlEventTouchUpInside];
     [shoppingCartView addSubview:shoppingCartTitle];
     
-    UILabel *countLabel = [[UILabel alloc] initWithFrame:CGRectMake(shoppingCartView.width_wcr - 26, 2, 24, 20)];
+    UILabel *countLabel = [[UILabel alloc] initWithFrame:CGRectMake(shoppingCartView.width_wcr - 26, 2, 24, 24)];
     [shoppingCartView addSubview:countLabel];
-    countLabel.layer.cornerRadius = 8;
+    countLabel.layer.cornerRadius = 12;
     countLabel.layer.masksToBounds = YES;
     _countLabel = countLabel;
     countLabel.text = @"0";
+    countLabel.textColor = [UIColor whiteColor];
     countLabel.textAlignment = NSTextAlignmentCenter;
     countLabel.backgroundColor = [UIColor redColor];
     
@@ -306,7 +307,7 @@
         // 判断购物车是够为空
         if (_shoppingCartModelArray.count == 0) {
             // 购物车为空
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有为您推荐该药品的医生" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有为您推荐该药品的咨询" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 // 否
                 [self addShoppingCartURLWithDoctorID:@""];
@@ -334,7 +335,7 @@
                     [alert addAction:okAction];
                     [self presentViewController:alert animated:YES completion:nil];
                 }else{
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有为您推荐该药品的医生" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有为您推荐该药品的咨询" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                         // 否
                         [self addShoppingCartURLWithDoctorID:@""];
@@ -404,7 +405,7 @@
     // 判断是否已经登录
     if ([LoginResponseAccount isLogin]) {
         // 已经登录
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有为您推荐该药品的医生" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有为您推荐该药品的咨询" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             // 否，跳转到购买界面
             // 把选中的模型保存到本地

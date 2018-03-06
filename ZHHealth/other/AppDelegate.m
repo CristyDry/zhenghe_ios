@@ -49,7 +49,9 @@
     [kUserDefaults setBool:NO forKey:@"viewAll"];
     [kUserDefaults setBool:NO forKey:@"viewDoc"];
     [kUserDefaults setBool:NO forKey:@"viewInfo"];
-    NSMutableDictionary *args = [NSMutableDictionary dictionary];
+    [kUserDefaults setBool:NO forKey:@"viewMall"];
+    [kUserDefaults setBool:NO forKey:@"viewDocLogin"];
+    /*NSMutableDictionary *args = [NSMutableDictionary dictionary];
     [httpUtil loadDataPostWithURLString:@"api/ZhengheView/view" args:args response:^(ResponseModel *responseMd) {
         if (responseMd.isResultOk) {
             
@@ -67,7 +69,7 @@
             }
             
         }
-    }];
+    }];*/
     // 初始化第三方分享平台
     [self shareSDK];
     //向微信注册

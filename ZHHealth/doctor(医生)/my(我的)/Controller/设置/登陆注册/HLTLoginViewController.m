@@ -64,7 +64,7 @@
     
     NSArray *norArray = @[@"图层-10",@"图层-12",@"iconfont-zhishiku",@"shape-23"];
     NSArray *selArray = @[@"形状-2",@"形状-1",@"形状-12",@"shape-232"];
-    NSArray *titles = @[@"在线接诊",@"我的诊室",@"知识",@"个人中心"];
+    NSArray *titles = @[@"健康在线",@"我的咨询",@"知识",@"个人中心"];
     NSArray *classNames = @[@"HLTAdmissionsViewController",@"HLTDiagnoseViewController",@"KnowledgeViewController",@"HLTMyViewController"];
     NSMutableArray *vcArray = [NSMutableArray array];
     
@@ -159,7 +159,7 @@
     yPoint = keFuLabel.maxY_wcr+10;
     xPoint = (kMainWidth - width)*0.5;
     UIButton * KtelButton = [[UIButton alloc] initWithFrame:CGRectMake(xPoint, yPoint, width, height)];
-    [KtelButton setTitle:@"400-123-123" forState:UIControlStateNormal];
+    [KtelButton setTitle:@"" forState:UIControlStateNormal];
     KtelButton.font = [UIFont systemFontOfSize:13];
     [KtelButton addTarget:self action:@selector(KtelButton) forControlEvents:UIControlEventTouchUpInside];
     [KtelButton setTitleColor:kNavigationBarColor forState:UIControlStateNormal];
@@ -231,7 +231,7 @@
     
     NSArray *norArray = @[@"图层-8",@"图层-9",@"iconfont-zhishiku",@"shape-23"];
     NSArray *selArray = @[@"形状-3",@"形状-8",@"形状-12",@"shape-232"];
-    NSArray *titles = @[@"咨询",@"咨询",@"知识",@"我的"];
+    NSArray *titles = @[@"首页",@"咨询",@"知识",@"我的"];
     NSArray *classNames = @[@"MedicineViewController",@"InquiryViewController",@"KnowledgeViewController",@"MyViewController"];
     NSMutableArray *vcArray = [NSMutableArray array];
     

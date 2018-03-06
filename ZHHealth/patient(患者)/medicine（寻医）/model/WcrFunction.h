@@ -16,10 +16,11 @@
 
 @property (nonatomic, strong) NSString *detail;
 
-+(NSArray*)createObj;
++(NSMutableArray*)createObj;
 
-+(NSArray*)createObjALL;
++(NSMutableArray*)createObjALL;
 
-+(NSArray*)createObjDoc;
++(NSMutableArray*)createObjDoc;
 
++(WcrFunction*)getMallFunc;
 @end

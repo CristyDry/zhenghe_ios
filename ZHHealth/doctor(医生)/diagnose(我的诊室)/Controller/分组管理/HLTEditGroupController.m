@@ -105,16 +105,16 @@
     [self.view addSubview:_textLabel];
     
     UILabel * textLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, _textField.frame.size.width, 20)];
-    [self createLabel:textLabel1 withTextString:@"如何给患者分组:"];
+    [self createLabel:textLabel1 withTextString:@"如何给用户分组:"];
     
     UILabel * textLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, textLabel1.maxY_wcr, _textField.frame.size.width, 20)];
     [self createLabel:textLabel2 withTextString:@"1.手动新建一个分组"];
     
     UILabel * textLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(0, textLabel2.maxY_wcr, _textField.frame.size.width,20)];
-    [self createLabel:textLabel3 withTextString:@"2.查看患者详情"];
+    [self createLabel:textLabel3 withTextString:@"2.查看用户详情"];
     
     UILabel * textLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(0, textLabel3.maxY_wcr, _textField.frame.size.width, 20)];
-    [self createLabel:textLabel4 withTextString:@"3.点击分组将该患者分入改组"];
+    [self createLabel:textLabel4 withTextString:@"3.点击分组将该用户分入改组"];
     
     
     // 保存按钮

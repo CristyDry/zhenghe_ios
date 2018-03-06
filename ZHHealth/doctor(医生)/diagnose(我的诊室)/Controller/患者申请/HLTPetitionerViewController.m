@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"患者申请";
+    self.title = @"用户申请";
     self.automaticallyAdjustsScrollViewInsets = NO;
     //添加返回按钮
     [self addLeftBackItem];

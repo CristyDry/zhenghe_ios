@@ -23,7 +23,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSArray *functions;
+@property (nonatomic, strong) NSMutableArray *functions;
 
 @property (nonatomic, strong) NSArray *professors; // 专家数组
 
@@ -38,12 +38,12 @@
     [super viewDidLoad];
     // 请求专家数据
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
+    [self resquestViewInfos];
+
     
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    [self resquestViewInfos];
     
 }
 // 请求专家数据
@@ -68,6 +68,9 @@
             [kUserDefaults setBool:NO forKey:@"viewAll"];
             [kUserDefaults setBool:NO forKey:@"viewDoc"];
             [kUserDefaults setBool:NO forKey:@"viewInfo"];
+            [kUserDefaults setBool:NO forKey:@"viewMall"];
+            [kUserDefaults setBool:NO forKey:@"viewDocLogin"];
+
             ViewModel *viewModel = [ViewModel mj_objectWithKeyValues:responseMd.response];
             if([viewModel.viewInfo isEqualToString:@"1"]){
                 [kUserDefaults setBool:YES forKey:@"viewInfo"];
@@ -80,24 +83,42 @@
             }else{
                 [kUserDefaults setBool:NO forKey:@"viewAll"];
             }
+            if([viewModel.viewMall isEqual: @"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewMall"];
+            }
+            if([viewModel.viewDocLogin isEqual: @"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewDocLogin"];
+            }
+            if([viewModel.viewOnlinePay isEqual: @"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewOnlinePay"];
+            }
+            
+        }
+        if([kUserDefaults boolForKey:@"viewAll"]){
+            _functions = [WcrFunction createObjALL];
+            [self resquestProfessorsInfos];
+        }else{
+            
+            if([kUserDefaults boolForKey:@"viewDoc"]){
+                _functions = [WcrFunction createObjDoc];
+                //显示商城
+                if([kUserDefaults boolForKey:@"viewMall"]){
+                    [_functions addObject:[WcrFunction getMallFunc]];
+                }
+                [self resquestProfessorsInfos];
+            }else{
+                _functions = [WcrFunction createObj];
+                //显示商城
+                if([kUserDefaults boolForKey:@"viewMall"]){
+                    [_functions addObject:[WcrFunction getMallFunc]];
+                }
+                [self addTableView];
+                
+            }
             
         }
     }];
-    if([kUserDefaults boolForKey:@"viewAll"]){
-        _functions = [WcrFunction createObjALL];
-        [self resquestProfessorsInfos];
-
-    }else{
-        if([kUserDefaults boolForKey:@"viewDoc"]){
-            _functions = [WcrFunction createObjDoc];
-            [self resquestProfessorsInfos];
-        }else{
-            _functions = [WcrFunction createObj];
-            [self addTableView];
-
-        }
-        
-    }
+   
     
 }
 

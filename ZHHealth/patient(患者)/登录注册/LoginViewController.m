@@ -204,7 +204,7 @@
     
     height = 49;
     yPoint = kMainHeight - height;
-    if([kUserDefaults boolForKey:@"viewAll"] || [kUserDefaults boolForKey:@"viewDoc"]){
+    if([kUserDefaults boolForKey:@"viewAll"] || [kUserDefaults boolForKey:@"viewDoc"] || [kUserDefaults boolForKey:@"viewDocLogin"]){
         // 切换为医生版按钮
         UIButton *changedButton = [[UIButton alloc]initWithFrame:CGRectMake(0, yPoint, kMainWidth, height)];
         [changedButton buttonWithTitle:@"切换到专家版" andTitleColor:[UIColor whiteColor] andBackgroundImageName:nil andFontSize:KFont - 2];

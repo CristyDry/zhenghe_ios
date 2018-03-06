@@ -71,7 +71,7 @@
             weakSelf.dataArray = [HLTGroup mj_objectArrayWithKeyValuesArray:responseMd.response];
             for (HLTGroup * group in weakSelf.dataArray) {
                 
-                if (![group.groupName isEqualToString:@"我的患者"]) {
+                if (![group.groupName isEqualToString:@"默认分组"]) {
                    [_afterDataArray addObject:group];
                 }
             }
@@ -92,14 +92,14 @@
     
     CGFloat xPoint = 20.0;
     CGFloat yPoint = 10.0;
-    CGFloat width = 100.0;
+    CGFloat width = 200.0;
     CGFloat height = 30.0;
     
     UILabel * patientLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPoint, yPoint, width, height)];
     [_bigView addSubview:patientLabel];
     
     for (HLTGroup * group in _dataArray) {
-        if ([group.groupName isEqualToString:@"我的患者"]) {
+        if ([group.groupName isEqualToString:@"默认分组"]) {
            patientLabel.text = [NSString stringWithFormat:@"%@ (%@)",group.groupName,group.count];
         }
     }

@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"患者详情";
+    self.title = @"用户详情";
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self addLeftBackItem];
     [self setNavigationBarProperty];
@@ -104,7 +104,7 @@
     UIButton * rightButton = [[UIButton alloc] initWithFrame:CGRectMake(leftButton.maxX_wcr+jiange, yPoint, width, height)];
     
     [self createButton:bottonView withLabelStr:@"发消息" andColor:kNavigationBarColor andButton:leftButton andTag:400];
-    [self createButton:bottonView withLabelStr:@"删除患者" andColor:kNavigationBarColor andButton:rightButton andTag:401];
+    [self createButton:bottonView withLabelStr:@"删除用户" andColor:kNavigationBarColor andButton:rightButton andTag:401];
 }
 
 -(void)createButton:(UIView *)view withLabelStr:(NSString *)str andColor:(UIColor *)color andButton:(UIButton *)button andTag:(NSInteger)tag
@@ -136,11 +136,10 @@
         case 1://删除患者
         {
             
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"删除患者" message:@"同时会将我从对方的列表中删除" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"删除用户" message:@"同时会将我从对方的列表中删除" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
-                NSLog(@"删除患者");
                 HLTLoginResponseAccount * account = [HLTLoginResponseAccount decode];
                 NSMutableDictionary * args = [NSMutableDictionary dictionary];
                 args[@"doctorId"] = account.Id;
@@ -192,9 +191,13 @@
     {
         UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 100, 20)];
-        label.text = @"病历";
+        if([kUserDefaults boolForKey:@"viewMr"]){
+            label.text = @"病历";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }else{
+            label.text = @"资料";
+        }
         [cell.contentView addSubview:label];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
         
     }else if (indexPath.section == 1)
@@ -202,6 +205,7 @@
         UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 100, 20)];
         label.text = @"分组";
+        
         [cell.contentView addSubview:label];
         
         _groupLabel = [[UILabel alloc] initWithFrame:CGRectMake(kMainWidth-130, 10, 100, 20)];
@@ -226,6 +230,10 @@
     [_tableview deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
+        if(![kUserDefaults boolForKey:@"viewMr"]){
+            return;
+        }
+        
         //跳转到患者病历
         BZMedicalRecordController * medical = [[BZMedicalRecordController alloc] init];
         medical.huanzheModel = _huanzheModel;

@@ -35,6 +35,9 @@
 		1804207F1C2547DC0031D099 /* BZRecordBloodController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804207E1C2547DC0031D099 /* BZRecordBloodController.m */; };
 		180677F01C32584C0041FD91 /* img_my_editor.png in Resources */ = {isa = PBXBuildFile; fileRef = 180677EF1C32584C0041FD91 /* img_my_editor.png */; };
 		180677F31C32A5EE0041FD91 /* BZDoctorListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180677F11C32A5EE0041FD91 /* BZDoctorListController.m */; };
+		180FBC6E203038E3002A7A44 /* 开箱验货.png in Resources */ = {isa = PBXBuildFile; fileRef = 180FBC6B203038E3002A7A44 /* 开箱验货.png */; };
+		180FBC6F203038E3002A7A44 /* 开箱验货@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180FBC6C203038E3002A7A44 /* 开箱验货@2x.png */; };
+		180FBC70203038E3002A7A44 /* 开箱验货@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180FBC6D203038E3002A7A44 /* 开箱验货@3x.png */; };
 		181628EA1C1923AB00721C8D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181628E91C1923AB00721C8D /* BaseTabBarController.m */; };
 		181629501C19362500721C8D /* UIColor+Toos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816294E1C19362500721C8D /* UIColor+Toos.m */; };
 		181E0AC41C0C0933005B3915 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E0AB71C0C0933005B3915 /* TAAbstractDotView.m */; };
@@ -1104,6 +1107,9 @@
 		180677EF1C32584C0041FD91 /* img_my_editor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_my_editor.png; sourceTree = "<group>"; };
 		180677F11C32A5EE0041FD91 /* BZDoctorListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDoctorListController.m; sourceTree = "<group>"; };
 		180677F21C32A5EE0041FD91 /* BZDoctorListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDoctorListController.h; sourceTree = "<group>"; };
+		180FBC6B203038E3002A7A44 /* 开箱验货.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开箱验货.png"; sourceTree = "<group>"; };
+		180FBC6C203038E3002A7A44 /* 开箱验货@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开箱验货@2x.png"; sourceTree = "<group>"; };
+		180FBC6D203038E3002A7A44 /* 开箱验货@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开箱验货@3x.png"; sourceTree = "<group>"; };
 		181628E81C1923AB00721C8D /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		181628E91C1923AB00721C8D /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		1816294E1C19362500721C8D /* UIColor+Toos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Toos.m"; sourceTree = "<group>"; };
@@ -3172,6 +3178,9 @@
 		185A056C1C3A19830075F36A /* 支付 */ = {
 			isa = PBXGroup;
 			children = (
+				180FBC6B203038E3002A7A44 /* 开箱验货.png */,
+				180FBC6C203038E3002A7A44 /* 开箱验货@2x.png */,
+				180FBC6D203038E3002A7A44 /* 开箱验货@3x.png */,
 				185A056D1C3A19830075F36A /* 201579103655.png */,
 				185A056E1C3A19830075F36A /* 201579103655@2x.png */,
 				185A056F1C3A19830075F36A /* 201579103655@3x.png */,
@@ -5930,6 +5939,7 @@
 				DB8C760A1BFC1D580033E5E8 /* 心率显示@3x.png in Resources */,
 				DB8C76591BFC1D580033E5E8 /* 后退-拷贝.png in Resources */,
 				DB8C78F71BFC65A50033E5E8 /* iconfont-gou-2@3x.png in Resources */,
+				180FBC6E203038E3002A7A44 /* 开箱验货.png in Resources */,
 				4812B80B1F8E64D50087D2C9 /* prescription_icon@3x.png in Resources */,
 				DB8C75E81BFC1D580033E5E8 /* iconfont-phone-2@3x.png in Resources */,
 				DB8C752E1BFC1D580033E5E8 /* iconfont-pifu@3x.png in Resources */,
@@ -5944,6 +5954,7 @@
 				DB8C75CF1BFC1D580033E5E8 /* background@2x.png in Resources */,
 				F4A8746A1C58668B0016788A /* RongCloudKit.strings in Resources */,
 				DB8C762F1BFC1D580033E5E8 /* iconfont-collect.png in Resources */,
+				180FBC6F203038E3002A7A44 /* 开箱验货@2x.png in Resources */,
 				DB8C758C1BFC1D580033E5E8 /* 皮肤外用.png in Resources */,
 				1896A7721C0444C7009562BF /* u60.png in Resources */,
 				DB8C75551BFC1D580033E5E8 /* 图层-15@3x.png in Resources */,
@@ -6256,6 +6267,7 @@
 				DB8C76AB1BFC1D580033E5E8 /* 后退12@3x.png in Resources */,
 				4812B8491F8E7B2B0087D2C9 /* btn_reduce_disable.png in Resources */,
 				4812B7F51F8D36B80087D2C9 /* diagnosis_icon@3x.png in Resources */,
+				180FBC70203038E3002A7A44 /* 开箱验货@3x.png in Resources */,
 				1896A7731C0444C7009562BF /* u74.png in Resources */,
 				DB8C756E1BFC1D580033E5E8 /* 家常必备.png in Resources */,
 				DB8C75C11BFC1D580033E5E8 /* 形状-8@3x.png in Resources */,

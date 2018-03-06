@@ -26,8 +26,8 @@
     
     CGFloat xPoint = 20.0;
     CGFloat yPoint = 20.0;
-    CGFloat width = 60.0;
-    CGFloat height = 100.0;
+    CGFloat width = 40.0;
+    CGFloat height = 60.0;
     
     _avatarImage = [[UIImageView alloc] initWithFrame:CGRectMake(xPoint, yPoint, width, width)];
     _avatarImage.layer.cornerRadius = width*0.5;
@@ -39,11 +39,14 @@
     [self.contentView addSubview:_patientNameLabel];
     
     
-    _genderLabel = [[UILabel alloc] initWithFrame:CGRectMake(_patientNameLabel.maxX_wcr, (height-xPoint)*0.5, xPoint, xPoint)];
+    _genderLabel = [[UILabel alloc] initWithFrame:CGRectMake(_avatarImage.maxX_wcr+xPoint, (height-xPoint)*1, xPoint, xPoint)];
+    _genderLabel.font = [UIFont systemFontOfSize:14];
     [self.contentView addSubview:_genderLabel];
     
     
-    _ageLabel = [[UILabel alloc] initWithFrame:CGRectMake(_genderLabel.maxX_wcr+xPoint, (height-xPoint)*0.5, kMainWidth - _genderLabel.maxX_wcr - xPoint*4, xPoint)];
+    _ageLabel = [[UILabel alloc] initWithFrame:CGRectMake(_genderLabel.maxX_wcr+xPoint, (height-xPoint)*1, kMainWidth - _genderLabel.maxX_wcr - xPoint*4, xPoint)];
+    _ageLabel.font = [UIFont systemFontOfSize:14];
+
     [self.contentView addSubview:_ageLabel];
     
 }

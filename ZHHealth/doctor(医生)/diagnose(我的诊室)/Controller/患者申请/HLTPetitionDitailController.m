@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"患者详情";
+    self.title = @"用户详情";
     self.view.backgroundColor = kBackgroundColor;
     [self addLeftBackItem];
     [self setNavigationBarProperty];

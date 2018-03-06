@@ -133,6 +133,19 @@
         }
     }];
 }
+
+//货到付款支付
+- (void) payTrade{
+    NSMutableDictionary *args = [NSMutableDictionary dictionary];
+    args[@"id"] = _orderID;
+    [httpUtil doPostRequest:@"api/orderApiController/trade" args:args targetVC:self response:^(ResponseModel *responseMd) {
+        if (responseMd.isResultOk) {
+            [self paySuccess];
+        }else{
+            [self payFaile:responseMd.msg];
+        }
+    }];
+}
 //支付成功
 - (void)paySuccess{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"恭喜您，支付成功！" preferredStyle:UIAlertControllerStyleAlert];
@@ -166,7 +179,11 @@
 }
 #pragma tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    if([kUserDefaults boolForKey:@"viewOnlinePay"]){
+        //显示在线付款
+        return 3;
+    }
+    return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -174,10 +191,14 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     // 赋值
     if (indexPath.row == 0) {
+        cell.imageView.image = [UIImage imageNamed:@"开箱验货"];
+        cell.textLabel.text = @"在线登记";
+        cell.detailTextLabel.text = @"登记商品后，需要门店审核！";
+    }else if (indexPath.row == 1) {
         cell.imageView.image = [UIImage imageNamed:@"201579103655"];
         cell.textLabel.text = @"支付宝支付";
         cell.detailTextLabel.text = @"推荐安装支付宝客户端的用户使用";
-    }else if (indexPath.row == 1){
+    }else if (indexPath.row == 2){
     
        cell.imageView.image = [UIImage imageNamed:@"u=1000341566,1853476192&fm=21&gp=0@3x"];
         cell.textLabel.text = @"微信支付";
@@ -199,9 +220,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     if (indexPath.row == 0) {
+        //货到
+        [self payTrade];
+    }else if (indexPath.row == 1) {
         //支付宝支付
         [self aliPay];
-    }else if (indexPath.row == 1){
+    }else if (indexPath.row == 2){
         //微信支付
         [self payWechat];
     }

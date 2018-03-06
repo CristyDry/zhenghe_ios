@@ -12,33 +12,17 @@
 #import "BZDoctorModel.h"
 #define QRCodeWidth  260.0   //正方形二维码的边长
 @interface WCRScanViewController ()<AVCaptureMetadataOutputObjectsDelegate>
-@property (strong,nonatomic)AVCaptureDevice *device;
-@property (strong,nonatomic)AVCaptureDeviceInput *input;//调用所有的输入硬件。例如摄像头和麦克风
-@property (strong,nonatomic)AVCaptureMetadataOutput *output;
-@property (strong,nonatomic)AVCaptureSession *session;// 控制输入和输出设备之间的数据传递
-@property (strong,nonatomic)AVCaptureVideoPreviewLayer *preview;//镜头捕捉到得预览图层
-@property (nonatomic,strong)  UIView *scanLine;
+@property (strong,nonatomic)AVCaptureDevice * device;
+@property (strong,nonatomic)AVCaptureDeviceInput * input;
+@property (strong,nonatomic)AVCaptureMetadataOutput * output;
+@property (strong,nonatomic)AVCaptureSession * session;
+@property (strong,nonatomic)AVCaptureVideoPreviewLayer * preview;
+@property (strong,nonatomic)UIView * scanLine;
+
 
 @end
 
 @implementation WCRScanViewController
-//- (void)viewDidLoad {
-//    
-//    [super viewDidLoad];
-//    
-////    [self onSetTitleView:@"二维码扫描结果"type:TitleLogo];//调用根视图的方法，自定义导航控制器的样式。这个根据读者的实际情况而定。
-//    
-////    self.navigationController.toolbarHidden = YES;//如果你的根视图有底部工具栏，这行代码可以隐藏底部的工具栏
-//    
-//    [self setupMaskView];//设置扫描区域之外的阴影视图
-//    
-//    
-//    [self setupScanWindowView];//设置扫描二维码区域的视图
-//    
-//    
-//    [self beginScanning];//开始扫二维码
-//    
-//}
 
 - (void)setupMaskView
 
@@ -130,36 +114,6 @@
     }];
 
     
-    //设置扫描区域的四个角的边框
-//    
-//    CGFloat buttonWH = 18;
-//    
-//    UIButton *topLeft = [[UIButton alloc]initWithFrame:CGRectMake(0,0, buttonWH, buttonWH)];
-//    
-//    [topLeft setImage:[UIImage imageNamed:@"accept_btn_normal"]forState:UIControlStateNormal];
-//    
-//    [scanWindow addSubview:topLeft];
-//    
-//    
-//    UIButton *topRight = [[UIButton alloc]initWithFrame:CGRectMake(QRCodeWidth - buttonWH,0, buttonWH, buttonWH)];
-//    
-//    [topRight setImage:[UIImage imageNamed:@"accept_btn_normal"]forState:UIControlStateNormal];
-//    
-//    [scanWindow addSubview:topRight];
-//    
-//    
-//    UIButton *bottomLeft = [[UIButton alloc]initWithFrame:CGRectMake(0,QRCodeWidth - buttonWH, buttonWH, buttonWH)];
-//    
-//    [bottomLeft setImage:[UIImage imageNamed:@"accept_btn_normal"]forState:UIControlStateNormal];
-//    
-//    [scanWindow addSubview:bottomLeft];
-//    
-//    
-//    UIButton *bottomRight = [[UIButton alloc]initWithFrame:CGRectMake(QRCodeWidth-buttonWH,QRCodeWidth-buttonWH, buttonWH, buttonWH)];
-//    
-//    [bottomRight setImage:[UIImage imageNamed:@"accept_btn_normal"]forState:UIControlStateNormal];
-//    
-//    [scanWindow addSubview:bottomRight];
     
 }
 
@@ -232,28 +186,6 @@
     
 }
 
-//-(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray*)metadataObjects fromConnection:(AVCaptureConnection *)connection{
-//    
-//    if (metadataObjects.count>0) {
-//        
-//        [_session stopRunning];
-//        
-//        //得到二维码上的所有数据
-//        
-//        AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex :0 ];
-//        
-//        NSString *str = metadataObject.stringValue;
-//        
-//        NSLog(@"%@",str);
-//        
-//    }
-//    
-//}
-
-
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -263,12 +195,45 @@
     
     self.title = @"扫码";
 
-    [self customScanUI];
+    //[self customScanUI];
 
     [self setupScanWindowView];//设置扫描二维码区域的视图
     [self setupMaskView];//设置扫描区域之外的阴影视图
+    // Device
+    _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
+    // Input
+    _input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
+    
+    // Output
+    _output = [[AVCaptureMetadataOutput alloc]init];
+    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    
+    // Session
+    _session = [[AVCaptureSession alloc]init];
+    [_session setSessionPreset:AVCaptureSessionPresetHigh];
+
+    if ([_session canAddInput:self.input])
+    {
+        [_session addInput:self.input];
+    }
+    
+    if ([_session canAddOutput:self.output])
+    {
+        [_session addOutput:self.output];
+    }
+    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+    _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
+    _preview.videoGravity =AVLayerVideoGravityResizeAspectFill;
+    _preview.frame =self.view.layer.bounds;
+    [self.view.layer insertSublayer:_preview atIndex:0];
+
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [_session startRunning];
+}
+
 -(void)addLeftBackBtn
 {
     
@@ -288,44 +253,6 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
     self.tabBarController.selectedIndex = 0;
 }
--(void)customScanUI {
-
-    // 初始化
-    // Device
-    self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    
-    // Input
-    self.input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
-    
-    // Output
-    self.output = [[AVCaptureMetadataOutput alloc]init];
-    [self.output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    [ _output setRectOfInterest : CGRectMake (( 124 )/ kMainHeight ,(( kMainWidth - 220 )/ 2 )/ kMainWidth , 220 / kMainHeight , 220 / kMainWidth )];
-    
-    // Session
-    self.session = [[AVCaptureSession alloc]init];
-    [self.session setSessionPreset:AVCaptureSessionPresetHigh];
-    if ([self.session canAddInput:self.input])
-    {
-        [self.session addInput:self.input];
-    }
-    if ([self.session canAddOutput:self.output])  
-    {
-        [self.session addOutput:self.output];
-    } 
-    
-    // 条码类型
-    self.output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
-    
-    // Preview
-    self.preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
-    self.preview.videoGravity =AVLayerVideoGravityResizeAspectFill;
-    self.preview.frame =CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height);
-    [self.view.layer addSublayer:self.preview];
-    
-    // Start
-    [self.session startRunning];
-}
 
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
@@ -338,7 +265,7 @@
         
     }
       [_session stopRunning];
-    [_scanLine removeFromSuperview];
+    //[_scanLine removeFromSuperview];
     // 跳转到医生界面
     NSMutableDictionary *args = [NSMutableDictionary dictionary];
     args[@"id"] = stringValue;

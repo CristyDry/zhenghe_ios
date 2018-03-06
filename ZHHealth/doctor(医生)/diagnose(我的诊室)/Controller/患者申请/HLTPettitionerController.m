@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"患者申请";
+    self.title = @"用户申请";
     self.view.backgroundColor = kBackgroundColor;
     [self addLeftBackItem];
     [self setNavigationBarProperty];
@@ -146,7 +146,6 @@
             }
         }];
     }else if (button.tag == 102){
-        NSLog(@"患者详情");
         HLTPetitionDitailController * petientDetail = [[HLTPetitionDitailController alloc] init];
         petientDetail.patientModel = _patientModel;
         [self.navigationController pushViewController:petientDetail animated:YES];

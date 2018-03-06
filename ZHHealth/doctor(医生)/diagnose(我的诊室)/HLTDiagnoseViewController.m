@@ -12,6 +12,7 @@
 #import "HLTMycardViewController.h"
 #import "HLTSearchViewController.h"
 #import "HLTDiagnose.h"
+#import "ViewModel.h"
 #import "HLTSearch.h"
 #import "HLTSearchCell.h"
 #import "HLTPDetailController.h"
@@ -32,7 +33,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;//tableview
 @property (nonatomic, strong) UITextField *textfield;//搜索框
-
+@property (nonatomic, strong) NSString *viewRx;//是否显示处方
 @end
 
 @implementation HLTDiagnoseViewController
@@ -54,11 +55,27 @@
     }
     //添加搜索框
     [self addSearchBar];
-    //添加上部按钮
-    [self addHeadView];
+    
+    [self resquestViewInfos];
+}
+- (void)resquestViewInfos{
+    NSMutableDictionary *args = [NSMutableDictionary dictionary];
+    [httpUtil loadDataPostWithURLString:@"api/ZhengheView/view" args:args response:^(ResponseModel *responseMd) {
+        if (responseMd.isResultOk) {
+            ViewModel *viewModel = [ViewModel mj_objectWithKeyValues:responseMd.response];
+            _viewRx = viewModel.viewRx;
+            if([viewModel.viewMr isEqualToString:@"1"]){
+                [kUserDefaults setBool:YES forKey:@"viewMr"];
+            }
+        }
+        //添加上部按钮
+        [self addHeadView];
+        
+        
+    }];
+    
     
 }
-
 
 #pragma mark - 添加搜索框
 -(void)addSearchBar
@@ -101,7 +118,11 @@
 {
     NSArray * textArr = @[@"用户申请",@"分组管理",@"我的名片",@"我的处方"];
     NSArray * imageArr = @[@"图层-13",@"iconfont-automatic-configuration",@"iconfont-zhanghu",@"icon_ChuFang"];
-    
+    if([_viewRx isEqualToString:@"1"]){
+        
+    }else{
+        textArr = @[@"用户申请",@"分组管理",@"我的名片"];
+    }
 //    CGFloat width = (kMainWidth-30*2)/5;
     CGFloat width = (kMainWidth - 30*2 - 90)/4;
     _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, width +70)];
@@ -114,7 +135,7 @@
     [_headView addSubview:_imageview];
     
     
-    for (int i = 0; i<4; i++)
+    for (int i = 0; i< textArr.count; i++)
     {
 //        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(30+i*(width+width), 10, width, width)];
         UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(30+i*(width+30), 10, width, width)];
@@ -201,7 +222,7 @@
     _tableView.backgroundColor = kBackgroundColor;
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.rowHeight = 100;
+    _tableView.rowHeight = 80;
     _tableView.tableHeaderView = _headView;
     _tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
@@ -242,14 +263,14 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     
-    return 35;
+    return 45;
 }
 //自定义的header
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     HLTDiagnose * diagnoseModel = [_groupArray objectAtIndex:section];
     
-    UIView * headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, 35)];
+    UIView * headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, 45)];
     headView.backgroundColor =[UIColor whiteColor];
     
     _button= [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, 34)];
